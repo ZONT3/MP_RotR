@@ -17,7 +17,7 @@ MPF_splash_newPlayer = {
     "<br/><t align='center'><t size='1' color='#09F009'>Приветствуем тебя, боец!</t><br/>" +
     "<t size='1.2'>Поскольку ты в первый раз зашел на наш сервер,<br/>" +
     "убедись, что ты ознакомился с правилами и уставом!</t><br/>" +
-    "<a size='2.7' href='https://discord.gg/MYHY27DrSQ'><img image='pic\dis.paa'/></a><br/>" +
+    "<a size='2.9' href='https://discord.gg/MYHY27DrSQ'><img image='pic\dis.paa'/></a><br/>" +
     "<a size='1.8' href='https://docs.google.com/document/d/16r7T-iu-q0XcEom3wJscB209_QQhxK3hwyK5Tzgbero/edit'>" +
     "<img image='pic\doc.paa'/><t color='#0788ff'> Устав</t></a><br/>"
   )
