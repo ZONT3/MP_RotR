@@ -2,7 +2,7 @@ waitUntil {vehicle player == player};
 
 
 MPC_canSave = false;
-[] spawn { call ZONT_fnc_prs_loadProfile; MPC_canSave = true; };
+[] spawn ZONT_fnc_prs_loadProfile;
 
 
 /*****                              Auto save                             *****/
