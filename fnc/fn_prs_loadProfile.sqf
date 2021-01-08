@@ -13,7 +13,7 @@ MPF_splash = {
 };
 
 MPF_splash_newPlayer = {
-  "Clone Wars RP" hintC parseText (
+  "Revenge of the Republic" hintC parseText (
     "<br/><t align='center'><t size='1' color='#09F009'>Приветствуем тебя, боец!</t><br/>" +
     "<t size='1.2'>Поскольку ты в первый раз зашел на наш сервер,<br/>" +
     "убедись, что ты ознакомился с правилами и уставом!</t><br/>" +
@@ -37,7 +37,7 @@ MPF_splash_newPlayer = {
     if not (typeName [] == typeName _loc and {count _loc == 3}) exitWith { };
     private _spawn = getPosATL player;
     player setPosATL _loc;
-    private _tp = ["Телепортироваться обратно на спавн? Сейчас вы находитесь на последнем сохраненном месте.", "Union ArmA 3 SW RP", "Да", "Нет"]
+    private _tp = ["Телепортироваться обратно на спавн? Сейчас вы находитесь на последнем сохраненном месте.", "Revenge of the Republic RP", "Да", "Нет"]
         call BIS_fnc_guiMessage;
     if (_tp) then { player setPosATL _spawn };
   } else { call MPF_splash_newPlayer };
