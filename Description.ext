@@ -23,6 +23,7 @@ class CfgFunctions {
 
       class prs_saveProfile { };
       class prs_loadProfile { };
+      class prs_autoSaveInit { };
     };
   };
   #include "VVS\Functions.h"

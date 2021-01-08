@@ -12,6 +12,17 @@ MPF_splash = {
     "PLAIN DOWN", 1.5, false, true];
 };
 
+MPF_splash_newPlayer = {
+  "Clone Wars RP" hintC parseText (
+    "<br/><t align='center'><t size='1' color='#09F009'>Приветствуем тебя, боец!</t><br/>" +
+    "<t size='1.2'>Поскольку ты в первый раз зашел на наш сервер,<br/>" +
+    "убедись, что ты ознакомился с правилами и уставом!</t><br/>" +
+    "<a size='2.7' href='https://discord.gg/MYHY27DrSQ'><img image='pic\dis.paa'/></a><br/>" +
+    "<a size='1.8' href='https://docs.google.com/document/d/16r7T-iu-q0XcEom3wJscB209_QQhxK3hwyK5Tzgbero/edit'>" +
+    "<img image='pic\doc.paa'/><t color='#0788ff'> Устав</t></a><br/>"
+  )
+};
+
 [{
   params ["_uid", "_name"];
   private _res = [MPS_BDL_pres, "loadPlayer", [_uid]] call ZONT_fnc_bd_customRequest;
@@ -24,10 +35,12 @@ MPF_splash = {
     (_this select 0) params ["_equip", "_loc"];
     if (typeName [] == typeName _equip and {count _equip > 0}) then { player setUnitLoadout _equip };
     if not (typeName [] == typeName _loc and {count _loc == 3}) exitWith { };
-    private _tp = ["Телепортироваться на последнее сохраненное место? Экипировка восстановлена в любом случае", "Union ArmA 3 SW RP", "Да", "Нет"]
+    private _spawn = getPosATL player;
+    player setPosATL _loc;
+    private _tp = ["Телепортироваться обратно на спавн? Сейчас вы находитесь на последнем сохраненном месте.", "Union ArmA 3 SW RP", "Да", "Нет"]
         call BIS_fnc_guiMessage;
-    if (_tp) then { player setPosATL _loc };
-  } else { hint "TODO: Написать новичку важную инфу" };
+    if (_tp) then { player setPosATL _spawn };
+  } else { call MPF_splash_newPlayer };
   call MPF_splash;
   MPC_canSave = true;
 }, [_uid, name player]] call ZONT_fnc_remoteExecCallback;
