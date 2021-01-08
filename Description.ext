@@ -1,0 +1,79 @@
+#include "infiSTAR_AdminMenu.hpp"
+#include "VVS\menu.h"
+
+respawnOnStart = -1;
+cba_settings_hasSettingsFile = 1;
+
+class CfgFunctions {
+  class ZONT {
+    class Functions {
+      file = "fnc";
+      class remoteExecCallback { };
+
+      class giveZeus { };
+      class retrieveCurators { };
+      class updTeleportTerminals { };
+      class addTeleportTerminal { };
+      class showTextLC { };
+      class addChatCommand { };
+
+      class bd_initBasic { };
+      class bd_initCustom { };
+      class bd_customRequest { };
+
+      class prs_saveProfile { };
+      class prs_loadProfile { };
+    };
+  };
+  #include "VVS\Functions.h"
+};
+
+class CfgDebriefing {
+  class loser1 {
+    title = "Пиздец";
+		subtitle = "Совсем ебанутые?";
+		description = "Вы долбоебы. Сожалеем.";
+		pictureBackground = "";
+		picture = "pic\monk.paa";
+  };
+  class inczeus {
+    title = "Нет прав играть на зевсе";
+    subtitle = "Ты либо додик, либо тебя не добавили";
+		description = "Если ты действительно ГМ, свяжись с администрацией";
+		pictureBackground = "";
+		picture = "pic\monk.paa";
+  };
+  class incwest {
+    title = "Нет прав играть на синих";
+    subtitle = "Ты либо додик, либо тебя не добавили";
+		description = "Если ты действительно считаешь, что можешь играть за синих, свяжись с администрацией";
+		pictureBackground = "";
+		picture = "pic\monk.paa";
+  };
+  class inceast {
+    title = "Нет прав играть на красных";
+    subtitle = "Ты либо додик, либо тебя не добавили";
+		description = "Если ты действительно считаешь, что можешь играть за красных, свяжись с администрацией";
+		pictureBackground = "";
+		picture = "pic\monk.paa";
+  };
+  class incguer {
+    title = "Нет прав играть на зеленых";
+    subtitle = "Ты либо додик, либо тебя не добавили";
+		description = "Если ты действительно считаешь, что можешь играть за бабахов, свяжись с администрацией";
+		pictureBackground = "";
+		picture = "pic\monk.paa";
+  };
+};
+
+//Discord info
+/* class CfgDiscordRichPresence {
+    applicationID="---";				                        	// Provided by discord
+    defaultDetails="May the Force be with You!";	        // Upper text
+    defaultState="";			                                // Lower text
+    defaultLargeImageKey="pic";					                	// Large image
+    defaultLargeImageText="Arma 3 Union RP";            	// Large image hover text
+    defaultSmallImageKey="arma3";					              	// Small image
+    defaultSmallImageText="Arma 3";				            		// Small image hover text
+    useTimeElapsed=1;								                    	// Show time elapsed since the player connected (1 - true, 0 - false)
+}; */
