@@ -1,5 +1,6 @@
 #include "infiSTAR_AdminMenu.hpp"
 #include "VVS\menu.h"
+#include "roles.hpp"
 
 respawnOnStart = -1;
 cba_settings_hasSettingsFile = 1;
@@ -16,6 +17,9 @@ class CfgFunctions {
       class addTeleportTerminal { };
       class showTextLC { };
       class addChatCommand { };
+
+      class initSkills { };
+      class addSkillActions { };
 
       class bd_initBasic { };
       class bd_initCustom { };
