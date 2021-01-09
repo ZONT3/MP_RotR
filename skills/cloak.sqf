@@ -71,7 +71,7 @@ switch (_mode) do {
     };
     sleep 1;
 		player setVariable ['s_clk_on', true];
-		player hideObjectGlobal true;
+		[player, true] remoteExec ["hideObjectGlobal", 0];
 		hint parseText format ["<t color='#00FF00'>Маскировка активирована</t>"];
 		player setCaptive true;
 		player allowDamage true;
@@ -90,7 +90,7 @@ switch (_mode) do {
   case (3): {
     sleep 0.1;
     player setVariable ['s_clk_on', false];
-    player hideObjectGlobal false;
+    [player, false] remoteExec ["hideObjectGlobal", 0];
     player setCaptive false;
     player AllowDamage true;
   };

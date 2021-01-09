@@ -72,13 +72,13 @@ class CfgDebriefing {
 };
 
 //Discord info
-/* class CfgDiscordRichPresence {
-    applicationID="---";				                        	// Provided by discord
+class CfgDiscordRichPresence {
+    applicationID="797527397447761940";				                        	// Provided by discord
     defaultDetails="May the Force be with You!";	        // Upper text
     defaultState="";			                                // Lower text
     defaultLargeImageKey="pic";					                	// Large image
-    defaultLargeImageText="Arma 3 Union RP";            	// Large image hover text
+    defaultLargeImageText="Revenge of the Republic RP";            	// Large image hover text
     defaultSmallImageKey="arma3";					              	// Small image
     defaultSmallImageText="Arma 3";				            		// Small image hover text
     useTimeElapsed=1;								                    	// Show time elapsed since the player connected (1 - true, 0 - false)
-}; */
+};
