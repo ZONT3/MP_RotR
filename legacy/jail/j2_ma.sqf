@@ -21,7 +21,7 @@ h = [] spawn {
 			_number = parseNumber _text;
 			//условие, по которому происходит открытие карцера
 			if (_number isEqualTo 8520) then {
-			[[_this select 0], "scripts\jail\j2_un.sqf"] remoteExec ["execVM", 0, true];hint "Доступ предоставлен, карцер разблокирован"} else {
+			[[_this select 0], "legacy\jail\j2_un.sqf"] remoteExec ["execVM", 0, true];hint "Доступ предоставлен, карцер разблокирован"} else {
 			hint "В доступе отказано."};
 			};
 	}];

@@ -6,9 +6,9 @@ if (!("765" in _uid)) exitWith {diag_log "ZONT_PRS: UID IS INVALID"; []};
 
 MPF_splash = {
   titleText [
-    "<t valign='bottom'><t size='2.0'><t color='#10F810'>Добро Пожаловать на сервер</t></t>" +
-      "<br/><t size='3.5'><t color='#fc9803'></t><t color='#050505'>ArmA</t><t color='#f5f5f5'>III " +
-      "</t><t color='#ffe401'>Clone Wars </t><t color='#AA0000'>RP</t></t></t>",
+    "<t valign='bottom'><t size='2.0'><t color='#ffffff'>Добро Пожаловать на сервер</t></t>" +
+      "<br/><t size='3.5'><t color='#5da4de'>Revenge of the Republic</t></t><br/>" +
+      "<t size='2.2'><t color='#ffffff'>Thanks to <t color='#5da4de'>Sachelin, YARGYS, Stinger, Last Project</t></t></t>",
     "PLAIN DOWN", 1.5, false, true];
 };
 

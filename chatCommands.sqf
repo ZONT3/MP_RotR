@@ -62,7 +62,7 @@ call {
     },{  // code
       params ["_target", "_caller", "_inpt", "_args", "_res"];
       _res params ["_from", "_to", "_rs"];
-      systemChat format ["** %1 бросает кубик [%2-%3] : %4 **",
+      systemChat format ["** [%2-%3] Удача блогосклонна к %1 на %4 **",
               name _caller, _from, _to - 1, _rs ];
     },{  // pre-call
       params ["_caller", "_inpt", "_args"];
