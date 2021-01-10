@@ -18,25 +18,6 @@ titleText [_text, "PLAIN", 0.2, true, true];
 	"dynamicBlur" ppEffectCommit 5;
 };
 
-disableUserInput true;
-player switchMove "";
-player switchMove
-		(["UnconsciousReviveHead_A","UnconsciousReviveHead_C","UnconsciousReviveArms_A",
-		"UnconsciousReviveArms_B","UnconsciousReviveArms_C","UnconsciousReviveBody_A",
-		"UnconsciousReviveBody_B","UnconsciousReviveDefault_A","UnconsciousReviveDefault_B",
-		"UnconsciousReviveDefault_C","UnconsciousReviveLegs_A","UnconsciousReviveLegs_B"]
-				call BIS_fnc_selectRandom);
-cutText ["","BLACK IN",5];
-sleep 5;
-cutText ["","BLACK OUT",5];
-sleep 5;
-player switchMove "UnconsciousReviveHead";
-sleep 3;
-cutText ["","BLACK IN",1];
-disableUserInput false;
-disableUserInput true;
-disableUserInput false;
-
 [player, {
 private _curators = call ZONT_fnc_retrieveCurators;
 if not ((getPlayerUID _this) in _curators) exitWith { };
