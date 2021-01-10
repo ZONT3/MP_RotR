@@ -8,7 +8,7 @@ MPF_splash = {
   titleText [
     "<t valign='bottom'><t size='2.0'><t color='#ffffff'>Добро Пожаловать на сервер</t></t>" +
       "<br/><t size='3.5'><t color='#5da4de'>Revenge of the Republic</t></t><br/>" +
-      "<t size='2.2'><t color='#ffffff'>Thanks to <t color='#5da4de'>Sachelin, YARGYS, Stinger, Last Project</t></t></t>",
+      "<t size='2.2'><t color='#ffffff'>Thanks to <t color='#5da4de'>Sachelin, YARGYS, Stinger, Last Force Project</t></t></t>",
     "PLAIN DOWN", 1.5, false, true];
 };
 
