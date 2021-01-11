@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=12031;
+		nextID=12042;
 	};
 	class Camera
 	{
-		pos[]={9469.5996,61.656292,552.48138};
+		pos[]={9493.1787,104.22979,528.67163};
 		dir[]={-0.35096389,-0.77360696,0.52773052};
 		up[]={-0.42841566,0.63363856,0.64419216};
 		aside[]={0.83273119,-7.7974983e-007,0.55380529};
@@ -895,7 +895,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -955,7 +955,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -16017,8 +16017,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -16027,10 +16027,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="WhiteHead_01";
+									value=0;
 								};
 							};
 						};
@@ -16093,8 +16093,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -16103,10 +16103,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="WhiteHead_01";
 								};
 							};
 						};
@@ -18818,7 +18818,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=28962;
@@ -45635,7 +45634,7 @@ class Mission
 			};
 			id=29734;
 			type="MEOP_st_furn_int_TableCoffee";
-			atlOffset=0.95522606;
+			atlOffset=0.95661485;
 		};
 		class Item312
 		{
@@ -46180,7 +46179,7 @@ class Mission
 			};
 			id=29700;
 			type="MEOP_st_furn_bar_Wineglass";
-			atlOffset=0.99911404;
+			atlOffset=0.99911427;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48022,12 +48021,13 @@ class Mission
 				angles[]={0,5.5514832,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
 			id=29372;
 			type="medammobox";
-			atlOffset=4.81394;
+			atlOffset=0.067511559;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -73265,7 +73265,7 @@ class Mission
 			};
 			id=29420;
 			type="repammobox";
-			atlOffset=0.00024604797;
+			atlOffset=0.00024700165;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -85739,8 +85739,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -85749,10 +85749,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="WhiteHead_01";
+									value=0;
 								};
 							};
 						};
@@ -85815,8 +85815,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -85825,10 +85825,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="WhiteHead_01";
 								};
 							};
 						};
@@ -85908,8 +85908,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -85918,10 +85918,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="WhiteHead_01";
+									value=0;
 								};
 							};
 						};
@@ -85984,8 +85984,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -85994,10 +85994,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="WhiteHead_01";
 								};
 							};
 						};
@@ -86077,8 +86077,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -86087,10 +86087,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="WhiteHead_01";
+									value=0;
 								};
 							};
 						};
@@ -86153,8 +86153,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -86163,10 +86163,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="WhiteHead_01";
 								};
 							};
 						};
@@ -86245,8 +86245,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -86255,10 +86255,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="WhiteHead_01";
+									value=0;
 								};
 							};
 						};
@@ -86321,8 +86321,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -86331,10 +86331,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="WhiteHead_01";
 								};
 							};
 						};
@@ -92501,8 +92501,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -92511,10 +92511,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="WhiteHead_01";
 								};
 							};
 						};
@@ -92577,8 +92577,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -92587,10 +92587,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="WhiteHead_01";
+									value=0;
 								};
 							};
 						};
@@ -92963,7 +92963,7 @@ class Mission
 			};
 			id=29240;
 			type="Land_RepairDepot_01_civ_F";
-			atlOffset=0.65579414;
+			atlOffset=0.65579033;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -98557,8 +98557,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -98567,10 +98567,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="WhiteHead_01";
 								};
 							};
 						};
@@ -98633,8 +98633,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -98643,10 +98643,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="WhiteHead_01";
+									value=0;
 								};
 							};
 						};
@@ -98705,8 +98705,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -98715,10 +98715,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="WhiteHead_01";
 								};
 							};
 						};
@@ -98781,8 +98781,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -98791,10 +98791,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="WhiteHead_01";
+									value=0;
 								};
 							};
 						};
@@ -98866,8 +98866,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -98876,10 +98876,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="WhiteHead_01";
 								};
 							};
 						};
@@ -98942,8 +98942,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -98952,10 +98952,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="WhiteHead_01";
+									value=0;
 								};
 							};
 						};
@@ -102775,7 +102775,6 @@ class Mission
 					};
 					id=4868;
 					type="Box_EAF_Equip_F";
-					atlOffset=0.00024795532;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -107493,7 +107492,7 @@ class Mission
 					};
 					id=27994;
 					type="SW_LOOTBOX_spec";
-					atlOffset=9.2717381;
+					atlOffset=9.2717361;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -116475,7 +116474,7 @@ class Mission
 				};
 			};
 			id=29946;
-			atlOffset=9.2753906;
+			atlOffset=9.2753277;
 		};
 		class Item508
 		{
@@ -116490,13 +116489,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4323.79,2.4238887,9395.21};
-						angles[]={0,1.5818025,0};
+						angles[]={0,1.5818093,0};
 					};
 					side="Empty";
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['ZTT_sideSpec', resistance]; [this, ""Переместиться на базу Наемников"", [], ""#33c208""] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, ""Переместиться на базу Наемников"", [], ""#33c208"", ""side player == resistance""] call ZONT_fnc_addTeleportTerminal}";
+						name="ztt_merc";
 					};
 					id=4875;
 					type="Land_OPTRE_vidphone_terminal";
@@ -116537,7 +116537,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['ZTT_sideSpec', resistance]; [this, ""Переместиться к гражданским"", [], ""#f2eb83""] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, ""Переместиться к гражданским"", [], ""#f2eb83"", ""side player == resistance""] call ZONT_fnc_addTeleportTerminal}";
+						name="ztt_civ";
 					};
 					id=4935;
 					type="Land_OPTRE_vidphone_terminal";
@@ -116571,14 +116572,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9400.0361,19.80583,453.07452};
-						angles[]={0,4.3499169,0};
+						position[]={9400.0361,19.80583,453.07501};
+						angles[]={0,4.3499188,0};
 					};
 					side="Empty";
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['ZTT_sideSpec', west]; [this, ""Переместиться на базу ВАР"", [], ""#1b9be0""] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, ""Переместиться на базу ВАР"", [], ""#1b9be0"", ""side player == west"", 7] call ZONT_fnc_addTeleportTerminal}";
+						name="ztt_gar";
 					};
 					id=9950;
 					type="Land_OPTRE_vidphone_terminal";
@@ -116618,7 +116620,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['ZTT_sideSpec', west]; [this, ""Переместиться в Храм Джедаев"", [], ""#6603fc""] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, ""Переместиться в Храм Джедаев"", [], ""#6603fc"", ""side player == west""] call ZONT_fnc_addTeleportTerminal}";
+						name="ztt_temple";
 					};
 					id=27043;
 					type="Land_OPTRE_vidphone_terminal";
@@ -116659,7 +116662,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['ZTT_sideSpec', west]; [this, ""Переместиться на Базу РС"", [], ""#EEEEEE""] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, ""Переместиться на Базу РС"", [], ""#EEEEEE"", ""side player == west""] call ZONT_fnc_addTeleportTerminal}";
+						name="ztt_rs";
 					};
 					id=27106;
 					type="Land_OPTRE_vidphone_terminal";
@@ -116766,7 +116770,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['ZTT_sideSpec', west]; [this, ""Переместиться на Аккламатор"", [], ""#ff0000""] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, ""Переместиться на Аккламатор"", [], ""#ff0000"", ""side player == west"", 5] call ZONT_fnc_addTeleportTerminal}";
+						name="ztt_akk";
 					};
 					id=10088;
 					type="Land_OPTRE_vidphone_terminal";
@@ -116807,7 +116812,8 @@ class Mission
 					flags=1;
 					class Attributes
 					{
-						init="call{this setVariable ['ZTT_masterTerm', true]; [this, ""Переместиться в НОН-РП Зону"", [], ""#101010""] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, ""Переместиться в НОН-РП Зону"", [], ""#101010"", ""true"", 1] call ZONT_fnc_addTeleportTerminal}";
+						name="ztt_nonrp";
 					};
 					id=27123;
 					type="Land_OPTRE_vidphone_terminal";
@@ -116848,7 +116854,8 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['ZTT_masterTerm', true]; [this, ""Переместиться в KILL-HOUSE"", [], ""#101010""] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, ""Переместиться в KILL-HOUSE"", [], ""#101010"", ""true"", 1] call ZONT_fnc_addTeleportTerminal}";
+						name="ztt_kh";
 					};
 					id=27945;
 					type="Land_OPTRE_vidphone_terminal";
@@ -116888,7 +116895,8 @@ class Mission
 					flags=1;
 					class Attributes
 					{
-						init="call{this setVariable ['ZTT_sideSpec', west]; [this, ""Переместиться на базу БСО"", [], ""#383838""] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, ""Переместиться на базу БСО"", [], ""#383838"", ""side player == west""] call ZONT_fnc_addTeleportTerminal}";
+						name="ztt_bso";
 					};
 					id=29389;
 					type="Land_OPTRE_vidphone_terminal";
@@ -116930,7 +116938,7 @@ class Mission
 				angles[]={0,5.6964293,0};
 			};
 			title="Использование: Телепорты";
-			description="Если нужно добавить точку для телепорта для конкретной стороны:" \n "1. Скопируйте терминал на базе ВАР, затем вставьте куда надо." \n "2. Откройте поле инициализации и поменяйте следующее" \n "- Строку ""Переместьтся на..."" замените на нужную вам (будет означать это место назначения)" \n "- Строка, в которой указан хэш (типа ""#012ABC"") - это цвет пункта в меню действий. Можете просто набрать в гугле ""RGB Color Picker"" и прямо там выбрать цвет, затем скопировать HEX. Не забудьте про шарп (#), он обязателен." \n "- В начале стоит setVariable [""..."", west]. Если телепорт не для синей стороны, замение west на east (красные) или resistance (зеленые). " \n "" \n "ЕСЛИ ВАМ НУЖЕ ТЕЛЕПОРТ, В КОТОРЫЙ МОЖНО ПОПАСТЬ С ЛЮБОГО ДРУГОГО (без привязки к стороне), то вам нужно скопировать терминал не с базы ВАР, а с килл-хауса. Выполнять все остальные пункты так же, но последний пропустить." \n "" \n "Точка , в которую телепортируется игрок - два метра перед терминалом. Там, где пустой массив ( [] ) можно указать другие координаты. ИМЕННО КООРДИНАТЫ, НЕ ОБЪЕКТ" \n "by ZONT_";
+			description="Если нужно добавить точку для телепорта для конкретной стороны:" \n "1. Скопируйте терминал на базе ВАР, затем вставьте куда надо." \n "2. Откройте поле инициализации и поменяйте следующее" \n "- Строку ""Переместьтся на..."" замените на нужную вам (будет означать это место назначения)" \n "- Строка, в которой указан хэш (типа ""#012ABC"") - это цвет пункта в меню действий. Можете просто набрать в гугле ""RGB Color Picker"" и прямо там выбрать цвет, затем скопировать HEX. Не забудьте про шарп (#), он обязателен." \n "- Если телепорт не для синей стороны, замение west на east (красные) или resistance (зеленые) в строке ""side player == west"". " \n "- В конце стоит цифра, это приоритет в списке. Больше = выше. База ВАР имеет 7, Аккламатор - 4, Килл-хаус и нонрп - 1" \n "" \n "ЕСЛИ ВАМ НУЖЕ ТЕЛЕПОРТ, В КОТОРЫЙ МОЖНО ПОПАСТЬ С ЛЮБОГО ДРУГОГО (без привязки к стороне), то вам нужно скопировать терминал не с базы ВАР, а с килл-хауса. Выполнять все остальные пункты так же, но последний пропустить." \n "" \n "Точка , в которую телепортируется игрок - два метра перед терминалом. Там, где пустой массив ( [] ) можно указать другие координаты. ИМЕННО КООРДИНАТЫ, НЕ ОБЪЕКТ" \n "by ZONT_";
 			id=29948;
 			atlOffset=5.9127808e-005;
 		};
@@ -124197,8 +124205,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
@@ -124207,10 +124215,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=0;
+											value="WhiteHead_01";
 										};
 									};
 								};
@@ -124273,8 +124281,8 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
@@ -124283,10 +124291,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"BOOL"
 												};
 											};
-											value="WhiteHead_01";
+											value=0;
 										};
 									};
 								};
@@ -132074,8 +132082,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
@@ -132084,10 +132092,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=0;
+											value="WhiteHead_01";
 										};
 									};
 								};
@@ -132150,8 +132158,8 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
@@ -132160,10 +132168,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"BOOL"
 												};
 											};
-											value="WhiteHead_01";
+											value=0;
 										};
 									};
 								};
@@ -132234,8 +132242,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
@@ -132244,10 +132252,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=0;
+											value="WhiteHead_01";
 										};
 									};
 								};
@@ -132310,8 +132318,8 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
@@ -132320,10 +132328,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"BOOL"
 												};
 											};
-											value="WhiteHead_01";
+											value=0;
 										};
 									};
 								};
@@ -138179,8 +138187,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
@@ -138189,10 +138197,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=0;
+											value="WhiteHead_01";
 										};
 									};
 								};
@@ -138255,8 +138263,8 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
@@ -138265,10 +138273,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"BOOL"
 												};
 											};
-											value="WhiteHead_01";
+											value=0;
 										};
 									};
 								};
@@ -152652,8 +152660,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
@@ -152662,10 +152670,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=0;
+											value="WhiteHead_01";
 										};
 									};
 								};
@@ -152728,8 +152736,8 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
@@ -152738,10 +152746,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"BOOL"
 												};
 											};
-											value="WhiteHead_01";
+											value=0;
 										};
 									};
 								};
@@ -152812,8 +152820,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
@@ -152822,10 +152830,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=0;
+											value="WhiteHead_01";
 										};
 									};
 								};
@@ -152888,8 +152896,8 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
@@ -152898,10 +152906,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"BOOL"
 												};
 											};
-											value="WhiteHead_01";
+											value=0;
 										};
 									};
 								};
@@ -162776,8 +162784,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
@@ -162786,10 +162794,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=0;
+											value="WhiteHead_01";
 										};
 									};
 								};
@@ -162852,8 +162860,8 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
@@ -162862,10 +162870,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"BOOL"
 												};
 											};
-											value="WhiteHead_01";
+											value=0;
 										};
 									};
 								};
@@ -165360,8 +165368,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
@@ -165370,10 +165378,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=0;
+											value="WhiteHead_01";
 										};
 									};
 								};
@@ -165436,8 +165444,8 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
@@ -165446,10 +165454,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"BOOL"
 												};
 											};
-											value="WhiteHead_01";
+											value=0;
 										};
 									};
 								};
@@ -167469,8 +167477,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
@@ -167479,10 +167487,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=0;
+											value="WhiteHead_01";
 										};
 									};
 								};
@@ -167545,8 +167553,8 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
@@ -167555,10 +167563,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"BOOL"
 												};
 											};
-											value="WhiteHead_01";
+											value=0;
 										};
 									};
 								};

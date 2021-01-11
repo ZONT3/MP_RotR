@@ -6,4 +6,6 @@ MPC_canSave = false;
 
 [] spawn ZONT_fnc_initSkills;
 
+[] spawn ZONT_fnc_initTeleportTerminals;
+
 [] execVM "chatCommands.sqf";

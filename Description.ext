@@ -13,7 +13,7 @@ class CfgFunctions {
 
       class giveZeus { };
       class retrieveCurators { };
-      class updTeleportTerminals { };
+      class initTeleportTerminals { };
       class addTeleportTerminal { };
       class showTextLC { };
       class addChatCommand { };
@@ -31,6 +31,10 @@ class CfgFunctions {
     };
   };
   #include "VVS\Functions.h"
+};
+
+class CfgConsts {
+  ztt_terminals[] = {"Land_OPTRE_vidphone_terminal"};
 };
 
 class CfgDebriefing {
