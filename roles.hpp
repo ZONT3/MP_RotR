@@ -19,7 +19,8 @@ class CfgSkills {
       "SWOP_CloneShadowtrooper_Sniper_F_CombatUniform","CloneShadowBastint","CloneShadow",
       "SWOP_CloneShadowtrooper_F_CombatUniform","Shadow_Uniform","JLTS_CloneArmor_Shadow",
       "JLTS_CloneArmorGrenadier_Shadow","JLTS_CloneArmor_Shadow_medic","Soulless_Uniform",
-      "Shadow_v1_Uniform","SLDT_CloneShadowKrmine","SLDT_CloneShadow","SLDT_CloneShadowBastint"
+      "Shadow_v1_Uniform","SLDT_CloneShadowKrmine","SLDT_CloneShadow","SLDT_CloneShadowBastint",
+      "JLTS_CloneHelmetP2_GD"
     };
     init = "player setVariable ['s_clk_type', 'shadow']; [_thisConfig, _thisFlag, 1] execVM 'skills\cloak.sqf'";
     generalCondition = "(vehicle player == player) && (uniform player in _thisFlag)";
