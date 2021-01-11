@@ -32,7 +32,8 @@ MPF_splash_newPlayer = {
   _res
 },{
   if (count _this >= 1) then {
-    (_this select 0) params ["_equip", "_loc"];
+    (_this select 0) params ["_equip", "_loc", "_side"];
+    if (str _side != str side player) exitWith { };
     if (typeName [] == typeName _equip and {count _equip > 0}) then { player setUnitLoadout _equip };
     if not (typeName [] == typeName _loc and {count _loc == 3}) exitWith { };
     private _spawn = getPosATL player;

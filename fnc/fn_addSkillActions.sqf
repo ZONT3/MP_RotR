@@ -13,6 +13,9 @@ private _fn_replaceAll = {
     _return + _str;
 };
 
+private _onrs = _thisConfig >> "onRespawn";
+if (isText _onrs) then {call compile getText _onrs};
+
 {
   private _tooltip = "";
   private _script = "";

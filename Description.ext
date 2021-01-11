@@ -17,9 +17,11 @@ class CfgFunctions {
       class addTeleportTerminal { };
       class showTextLC { };
       class addChatCommand { };
+      class removeAllVars { };
 
       class initSkills { };
       class addSkillActions { };
+      class checkFlag { };
 
       class bd_initBasic { };
       class bd_initCustom { };

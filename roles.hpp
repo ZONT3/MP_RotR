@@ -7,6 +7,9 @@ class CfgRoles {
   class c99 { id = 6; };
 };
 
+#define FLAG_RC  "SWLB_clone_commando_uniform_k1","RCClone","SWLB_CEE_Gregor_Uniform","SWLA_416th_Bridger_Uniform","SWLA_416th_Commando_Uniform","SWLB_AiwhaSarge_Uniform","SWLB_AiwhaDikut_Uniform","SWLB_AiwhaTyto_Uniform","SWLB_AiwhaZag_Uniform","SWLB_Bravo2_Uniform","SWLB_Bravo3_Uniform","SWLB_Bravo4_Uniform","SWLB_BravoRam_Uniform","SWLB_DeltaFixer_Uniform","SWLB_DeltaBoss_Uniform","SWLB_DeltaScorch_Uniform","SWLB_DeltaSev_Uniform","SWLA_Dev_Corvus_Uniform","SWLA_Dev_Dutch_Uniform","SWLA_Dev_Nerf_Uniform","SWLB_MPGunner_Uniform","SWLB_CEE_Hodasal_Squad_Jungle_Commando_Uniform","SWLB_MPMarksman_Uniform","SWLB_Omega_Uniform",\
+"SWLB_MPRecon_Uniform","SWLB_MPStealth_Uniform","SWLB_YayaxCov_Uniform","SWLB_YayaxDev_Uniform","SWLB_YayaxJind_Uniform","SWLB_YayaxYover_Uniform","SLDT_RCBase","SLDT_RC_Delta_Boss","SLDT_RC_Delta_Fixer","SLDT_RC_Delta_Scorch","SLDT_RC_Delta_Sev","SLDT_RC_SpectrS","SLDT_RC_SpectrL","SLDT_RC_SpectrM","SLDT_RC_SpectrG","SLDT_RC_CG","SLDT_RCBase_gud","SLDT_RCBase_AiawaRed","SLDT_RCBase_AiawaBlack","SLDT_RCBase_AiawaBlue","SLDT_RCBase_AiawaGreen"
+
 class CfgSkills {
   class cloak {
     roleRequired = false;
@@ -24,14 +27,14 @@ class CfgSkills {
       tooltip = "<t color='#00FF00'>Включить маскировку</t>";
       script = "[_thisConfig, _thisFlag, 2] execVM 'skills\cloak.sqf'";
       priority = 7;
-      condition = "!(player getVariable ['s_clk_on', false]) and {(vehicle player == player) && (uniform player in _thisFlag)}";
+      condition = "!(player getVariable ['s_clk_on', false]) and {(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag}";
       params = "[]";
     };
     class action2 {
       tooltip = "<t color='#FF0000'>Выключить маскировку</t>";
       script = "[_thisConfig, _thisFlag, 3] execVM 'skills\cloak.sqf'";
       priority = 6;
-      condition = "(player getVariable ['s_clk_on', false]) && {(vehicle player == player) && (uniform player in _thisFlag)}";
+      condition = "(player getVariable ['s_clk_on', false]) && {(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag}";
       params = "[]";
     };
     threshold = 900;
@@ -43,7 +46,7 @@ class CfgSkills {
   class jedi_cloak : cloak {
     flagItems[] = {"SLSW_Jedi_Shadow_Crystal"};
     init = "player setVariable ['s_clk_type', 'jedi']; [_thisConfig, _thisFlag, 1] execVM 'skills\cloak.sqf'";
-    generalCondition = "(vehicle player == player) && ('SLSW_Jedi_Shadow_Crystal' in (items player))";
+    generalCondition = "(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag";
     threshold = 300;
     maxEnergy = 600;
     rateOn= -1;
@@ -67,7 +70,7 @@ class CfgSkills {
       tooltip = "<t color='#00FF00'>Впасть в ярость</t>";
       script = "[_thisConfig, 2] execVM 'skills\berserk.sqf'";
       priority = 6;
-      condition = "(vehicle player == player) && ((uniform player in _thisFlag) || (backpack player in _thisFlag)) && ('JLTS_drugs_bacta_red' in (items player))";
+      condition = "(vehicle player == player) && [_thisFlag, [1]] call ZONT_fnc_checkFlag";
       params = "[]";
     };
     timerCD = 600;
@@ -83,7 +86,7 @@ class CfgSkills {
       tooltip = "<t color='#00FF00'>Накинуть масхалат: джунгли</t>";
       script = "[_thisConfig, 3, (_this # 2)] execVM 'skills\ghillie.sqf'";
       priority = 7;
-      condition = "(vehicle player == player) && (backpack player in _thisFlag) && ('JLTS_drugs_bacta_red' in (items player))";
+      condition = "(vehicle player == player) && [_thisFlag, [1]] call ZONT_fnc_checkFlag";
       params = "[]";
     };
     class action2 : action1 {
@@ -104,13 +107,13 @@ class CfgSkills {
     roleRequired = false;
     roles[] = {};
     condition = "true";
-    flagItems[] = { "SWLB_clone_commando_uniform_k1","RCClone","SWLB_CEE_Gregor_Uniform","SWLA_416th_Bridger_Uniform","SWLA_416th_Commando_Uniform","SWLB_AiwhaSarge_Uniform","SWLB_AiwhaDikut_Uniform","SWLB_AiwhaTyto_Uniform","SWLB_AiwhaZag_Uniform","SWLB_Bravo2_Uniform","SWLB_Bravo3_Uniform","SWLB_Bravo4_Uniform","SWLB_BravoRam_Uniform","SWLB_DeltaFixer_Uniform","SWLB_DeltaBoss_Uniform","SWLB_DeltaScorch_Uniform","SWLB_DeltaSev_Uniform","SWLA_Dev_Corvus_Uniform","SWLA_Dev_Dutch_Uniform","SWLA_Dev_Nerf_Uniform","SWLB_MPGunner_Uniform","SWLB_CEE_Hodasal_Squad_Jungle_Commando_Uniform","SWLB_MPMarksman_Uniform","SWLB_Omega_Uniform","SWLB_MPRecon_Uniform","SWLB_MPStealth_Uniform","SWLB_YayaxCov_Uniform","SWLB_YayaxDev_Uniform","SWLB_YayaxJind_Uniform","SWLB_YayaxYover_Uniform","SLDT_RCBase","SLDT_RC_Delta_Boss","SLDT_RC_Delta_Fixer","SLDT_RC_Delta_Scorch","SLDT_RC_Delta_Sev","SLDT_RC_SpectrS","SLDT_RC_SpectrL","SLDT_RC_SpectrM","SLDT_RC_SpectrG","SLDT_RC_CG","SLDT_RCBase_gud","SLDT_RCBase_AiawaRed","SLDT_RCBase_AiawaBlack","SLDT_RCBase_AiawaBlue","SLDT_RCBase_AiawaGreen" };
+    flagItems[] = {FLAG_RC};
     init = "";
     class action1 {
       tooltip = "<t color='#00FF00'>Усилить броню</t>";
       script = "[_thisConfig] execVM 'skills\armor.sqf'";
       priority = 6;
-      condition = "(vehicle player == player) && (uniform player in _thisFlag)";
+      condition = "(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag";
       params = "[]";
     };
     timerCD = 180;
@@ -126,8 +129,25 @@ class CfgSkills {
       tooltip = "<t color='#2299EE'>Impulse</t>";
       script = "[] execVM 'skills\impulse.sqf'";
       priority = 6;
-      condition = "(vehicle player != player) && (driver (vehicle player) == player) && (headgear player in _thisFlag)";
+      condition = "(vehicle player != player) && (driver (vehicle player) == player) && [_thisFlag] call ZONT_fnc_checkFlag";
       params = "[]";
     };
+  };
+  class bacta {
+    roleRequired = false;
+    roles[] = {};
+    condition = "true";
+    flagItems[] = {"ACE_personalAidKit", FLAG_RC};
+    init = "_thisFlag execVM 'skills\bacta_init.sqf'";
+    onRespawn = "'s_b_' call ZONT_fnc_removeAllVars";
+    class action1 {
+      tooltip = "<t color='#2ECC71'>Использовать бакту</t>";
+      script = "[] execVM 'skills\bacta.sqf'";
+      priority = 10;
+      condition = "(vehicle player == player) && [_thisFlag, [0]] call ZONT_fnc_checkFlag";
+      params = "[]";
+    };
+    maxUses = 3;
+    cd = 1800;
   };
 };

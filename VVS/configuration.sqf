@@ -79,6 +79,7 @@ VVS_Air = [
 	"3as_arc_170_green",
 	"3as_arc_170_yellow",
 	"3as_arc_170_Orange",
+	"lsd_air_v19",
 	"3as_Z95_Republic"
 	];
 
@@ -153,6 +154,7 @@ VVS_Air_Mercenary = [
 	"MEOP_veh_ta62_BS",
 	"MEOP_f61fighter_veh_BS_F",
 	"MEOP_SX3fighter_veh_BS_F",
+	"lsd_air_v19",
 	"MEOP_veh_aerocar_Civ"
 	];
 
