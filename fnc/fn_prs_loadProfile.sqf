@@ -33,9 +33,9 @@ MPF_splash_newPlayer = {
 },{
   if (count _this >= 1) then {
     (_this select 0) params ["_equip", "_loc", "_side"];
-    if (str _side != str side player) exitWith { };
+    if (str _side != str side player) exitWith { MPC_canSave = true };
     if (typeName [] == typeName _equip and {count _equip > 0}) then { player setUnitLoadout _equip };
-    if not (typeName [] == typeName _loc and {count _loc == 3}) exitWith { };
+    if not (typeName [] == typeName _loc and {count _loc == 3}) exitWith { MPC_canSave = true };
     private _spawn = getPosATL player;
     player setPosATL _loc;
     private _tp = ["Телепортироваться обратно на спавн? Сейчас вы находитесь на последнем сохраненном месте.", "Revenge of the Republic RP", "Да", "Нет"]
