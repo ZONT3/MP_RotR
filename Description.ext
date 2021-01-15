@@ -30,6 +30,7 @@ class CfgFunctions {
       class prs_saveProfile { };
       class prs_loadProfile { };
       class prs_autoSaveInit { };
+      class commitInfo { };
     };
   };
   #include "VVS\Functions.h"
@@ -79,11 +80,11 @@ class CfgDebriefing {
 
 //Discord info
 class CfgDiscordRichPresence {
-    applicationID="797527397447761940";				                        	// Provided by discord
+    applicationID="797527397447761940";				            // Provided by discord
     defaultDetails="May the Force be with You!";	        // Upper text
     defaultState="";			                                // Lower text
     defaultLargeImageKey="pic";					                	// Large image
-    defaultLargeImageText="Revenge of the Republic RP";            	// Large image hover text
+    defaultLargeImageText="Revenge of the Republic RP";   // Large image hover text
     defaultSmallImageKey="arma3";					              	// Small image
     defaultSmallImageText="Arma 3";				            		// Small image hover text
     useTimeElapsed=1;								                    	// Show time elapsed since the player connected (1 - true, 0 - false)
