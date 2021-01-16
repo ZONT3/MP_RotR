@@ -11,10 +11,10 @@ MPC_canSave = false;
 [] execVM "chatCommands.sqf";
 
 /******                            Zeus list                             ******/
-[{
+MCH_ZEUS_LIST = [{
   if (isnull (finddisplay 312)) exitWith {};
-  private mpc_cc_name = format ["%1 (%2)", name player, getPlayerUID player];
-  if (isNil 'mpv_current_curators') {mpv_current_curators = []};
+  mpc_cc_name = format ["%1 (%2)", name player, getPlayerUID player];
+  if (isNil 'mpv_current_curators') then {mpv_current_curators = []};
 
   if (!(mpc_cc_name in mpv_current_curators)) then {
       mpv_current_curators pushBack mpc_cc_name;
