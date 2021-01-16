@@ -64,7 +64,7 @@ class CfgSkills {
       tooltip = "<t color='#00FF00'>Впасть в ярость</t>";
       script = "[_thisConfig, 1] execVM 'skills\berserk.sqf'";
       priority = 7;
-      condition = "(vehicle player == player) && (backpack player in ['RD501_JLTS_Clone_jumppack_hq_1']) && ('JLTS_drugs_bacta_red' in (items player))";
+      condition = "(vehicle player == player) && (backpack player in ['RD501_JLTS_Clone_jumppack_mc_hq_1']) && ('JLTS_drugs_bacta_red' in (items player))";
       params = "[]";
     };
     class action2 {

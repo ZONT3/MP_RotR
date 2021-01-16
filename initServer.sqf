@@ -7,7 +7,7 @@ MPS_spawn_BDINIT = [] spawn {
       ["status"] call ZONT_fnc_bd_initCustom;
 };
 
-[{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHandler;
+MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHandler;
 
 /******                               ???                                ******/
 private _fortif_list = [
