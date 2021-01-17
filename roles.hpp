@@ -138,14 +138,14 @@ class CfgSkills {
     roleRequired = false;
     roles[] = {};
     condition = "true";
-    flagItems[] = {"ACE_personalAidKit", FLAG_RC};
+    flagItems[] = {"ACE_personalAidKit"};
     init = "_thisFlag execVM 'skills\bacta_init.sqf'";
     onRespawn = "'s_b_' call ZONT_fnc_removeAllVars";
     class action1 {
       tooltip = "<t color='#2ECC71'>Использовать бакту</t>";
       script = "[] execVM 'skills\bacta.sqf'";
       priority = 10;
-      condition = "(vehicle player == player) && [_thisFlag, [0]] call ZONT_fnc_checkFlag";
+      condition = "(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag";
       params = "[]";
     };
     maxUses = 3;
