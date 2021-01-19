@@ -89,3 +89,15 @@ class CfgDiscordRichPresence {
     defaultSmallImageText="Arma 3";				            		// Small image hover text
     useTimeElapsed=1;								                    	// Show time elapsed since the player connected (1 - true, 0 - false)
 };
+
+class CfgSounds
+{
+    sounds[] = {};
+    class GeoSound1 // для вызова
+    {
+        name = "GeoSound";
+        // путь, громкость, хуй пойми что
+        sound[] = {"media\GEONOSIS_CAVE_AMBIENT.ogg", 1, 1};
+    titles[] = { 0, " " };
+    };
+};
