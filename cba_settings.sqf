@@ -204,7 +204,7 @@ force ace_map_gestures_onlyShowFriendlys = false;
 ace_maptools_drawStraightLines = true;
 ace_maptools_rotateModifierKey = 1;
 
-// ACE Медицина
+// ACE Medical
 force ace_medical_ai_enabledFor = 0;
 force ace_medical_AIDamageThreshold = 20;
 force ace_medical_bleedingCoefficient = 0.1;
@@ -247,7 +247,7 @@ force ace_medical_treatment_consumePAK = 1;
 force ace_medical_treatment_consumeSurgicalKit = 1;
 force ace_medical_treatment_convertItems = 0;
 force ace_medical_treatment_cprSuccessChance = 0.895316;
-force ace_medical_treatment_holsterRequired = 4;
+force ace_medical_treatment_holsterRequired = 0;
 force ace_medical_treatment_litterCleanupDelay = 60;
 force ace_medical_treatment_locationEpinephrine = 0;
 force ace_medical_treatment_locationPAK = 0;
@@ -267,7 +267,6 @@ force ace_medical_treatment_treatmentTimeSplint = 7;
 force ace_medical_treatment_treatmentTimeTourniquet = 7;
 force ace_medical_treatment_woundReopenChance = 1;
 force ace_medical_treatment_woundStitchTime = 5;
-
 
 // ACE Name Tags
 ace_nametags_defaultNametagColor = [1,0.6,0,1];
@@ -793,7 +792,7 @@ force ANOMALY_DETECTOR_ITEM = "AnomalyDetector";
 force ANOMALY_GAS_MASKS = "GP5_RaspiratorPS,GP5Filter_RaspiratorPS,GP7_RaspiratorPS,GP21_GasmaskPS,SE_S10,G_Respirator_white_F,MASK_M40_OD,MASK_M40,MASK_M50";
 force ANOMALY_IDLE_DISTANCE = 350;
 force ANOMALY_TRIGGER_DISTANCE = 300;
-force diwako_anomalies_enable = false;
+force diwako_anomalies_enable = true;
 
 // DUI - Squad Radar - Indicators
 force diwako_dui_indicators_crew_range_enabled = false;
@@ -1004,12 +1003,3 @@ Fat_Lurch_ShowAz = false;
 Fat_Lurch_ShowEl = false;
 Fat_Lurch_ShowNorth = false;
 Fat_Lurch_ShowTarget = false;
-
-// Аномалии как в S.T.A.L.K.E.R. от Diwako
-force ANOMALY_DEBUG = false;
-force ANOMALY_DETECTION_RANGE = 20;
-force ANOMALY_DETECTOR_ITEM = "AnomalyDetector";
-force ANOMALY_GAS_MASKS = "GP5_RaspiratorPS,GP5Filter_RaspiratorPS,GP7_RaspiratorPS,GP21_GasmaskPS,SE_S10,G_Respirator_white_F,MASK_M40_OD,MASK_M40,MASK_M50";
-force ANOMALY_IDLE_DISTANCE = 350;
-force ANOMALY_TRIGGER_DISTANCE = 300;
-force diwako_anomalies_enable = true;
