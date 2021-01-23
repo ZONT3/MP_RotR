@@ -476,7 +476,7 @@ force force acex_field_rations_timeWithoutWater = 6;
 force force acex_field_rations_waterSourceActions = 0;
 
 // ACEX Fortify
-force force acex_fortify_settingHint = 1;
+force force acex_fortify_settingHint = 0;
 
 // ACEX Headless
 force force acex_headless_delay = 0;
