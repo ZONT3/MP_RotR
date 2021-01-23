@@ -36,11 +36,9 @@ MPF_splash_newPlayer = {
     if (_side != str side player) exitWith { MPC_canSave = true };
     if (typeName [] == typeName _equip and {count _equip > 0}) then { player setUnitLoadout _equip };
     if not (typeName [] == typeName _loc and {count _loc == 3}) exitWith { MPC_canSave = true };
-    private _spawn = getPosATL player;
-    player setPosATL _loc;
-    private _tp = ["Телепортироваться обратно на спавн? Сейчас вы находитесь на последнем сохраненном месте.", "Revenge of the Republic RP", "Да", "Нет"]
+    private _tp = ["Телепортироваться на последнее сохраненное место? Нужно, если у вас вылетела игра или т.п.", "Revenge of the Republic RP", "Да", "Нет"]
         call BIS_fnc_guiMessage;
-    if (_tp) then { player setPosATL _spawn };
+    if (_tp) then { player setPosATL _loc };
   } else { call MPF_splash_newPlayer };
   call MPF_splash;
   MPC_canSave = true;
