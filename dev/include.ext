@@ -1,0 +1,4 @@
+class Dev {
+  file = "dev";
+  class dev_update { };
+};

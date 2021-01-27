@@ -1,6 +1,6 @@
-#include "infiSTAR_AdminMenu.hpp"
-#include "VVS\menu.h"
-#include "roles.hpp"
+#include "infiSTAR_AdminMenu.ext"
+#include "VVS\menu.ext"
+#include "roles.ext"
 
 respawnOnStart = -1;
 cba_settings_hasSettingsFile = 1;
@@ -32,8 +32,9 @@ class CfgFunctions {
       class prs_autoSaveInit { };
       class commitInfo { };
     };
+    #include "dev\include.ext"
   };
-  #include "VVS\Functions.h"
+  #include "VVS\Functions.ext"
 };
 
 class CfgConsts {
