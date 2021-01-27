@@ -4,21 +4,4 @@
 Здесь вы можете ознакомиться с [обновлениями](https://github.com/ZONT3/MP_RotR/commits/master), а так же, [сообщить](https://github.com/ZONT3/MP_RotR/issues) о баге, или [предложить](https://github.com/ZONT3/MP_RotR/pulls) свои изменения в коде.
 Для того, что бы предложить свои правки, вы должны понимать, как работает `git`, и уметь создавать `pull-реквесты`. *[Узнать как](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests)*
 
-### Список целей в разработке
-
-#### Нововведения
-- [ ] Отображение игроков на карте
-- [ ] Привязка способностей к ролям в ДС
-	- [ ] Слоты красных для ГМов
-	- [ ] Запрет на способности
-- [ ] Различные способности
-	- [x] Капсулы для 502
-	- [x] Бакта
-- [x] Базовые способности
-- [x] Терминалы телепортов
-
-#### Фиксы
-- [ ] Медицина
-- [ ] Сложность
-- [ ] Урон
-- [x] infiSTAR
+### [Список целей в разработке](https://docs.google.com/document/d/1VV6Hbr9lbsiRvnYEkfAsrkm2fAmaF0p9xOq9VPSbXdw/edit?usp=sharing)
