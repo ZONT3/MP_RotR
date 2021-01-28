@@ -1,7 +1,8 @@
 [{
+  (_this select 0) params ["_cfg", "_flag"];
   if (lifeState player == "INCAPACITATED"
-    && {[_this select 0, [0]] call ZONT_fnc_checkFlag
-    && {player getVariable ["s_b_tnu", 0] <= time}}) then {
-      [] execVM 'skills\bacta.sqf';
+    && {[_flag] call ZONT_fnc_checkFlag
+    && {player getVariable [[_cfg, "tnu"] call ZONT_fnc_skillVar, 0] <= time}}) then {
+      _cfg execVM 'skills\bacta.sqf';
   }
 }, 0.1, _this] call CBA_fnc_addPerFrameHandler;
