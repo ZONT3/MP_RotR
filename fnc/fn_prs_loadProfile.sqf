@@ -5,11 +5,11 @@ private _uid = getPlayerUID player;
 if (!("765" in _uid)) exitWith {diag_log "ZONT_PRS: UID IS INVALID"; []};
 
 MPF_splash = {
-  titleText [
+  /* titleText [
     "<t valign='bottom'><t size='2.0'><t color='#ffffff'>Добро Пожаловать на сервер</t></t>" +
       "<br/><t size='3.5'><t color='#5da4de'>Revenge of the Republic</t></t><br/>" +
       "<t size='2.2'><t color='#ffffff'>Thanks to <t color='#5da4de'>Sachelin, YARGYS, Stinger, Last Force Project</t></t></t>",
-    "PLAIN DOWN", 1.5, false, true];
+    "PLAIN DOWN", 1.5, false, true]; */
 };
 
 MPF_splash_newPlayer = {
