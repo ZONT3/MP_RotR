@@ -5,7 +5,7 @@
   "<t color='#19FF19'>Осталось использований: %1</t>",
   {
     player playMove "AinvPknlMstpSlayWrflDnon_medic";
-    sleep 5;
+    sleep 5.15;
     addCamShake [6, 8, 3];
     titleText ["", "WHITE IN", 2];
     player call ace_medical_treatment_fnc_fullHealLocal;

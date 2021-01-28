@@ -28,8 +28,8 @@ if (_used >= _maxUses - 1) then {
 } else {
   _used = _used + 1;
   hint parseText format [_msgLeft, _maxUses - _used];
-  player setVariable [_var_tnu, time + _cd];
   player setVariable [_var_used, _used];
 };
+player setVariable [_var_tnu, time + _cd];
 
 call _code;
