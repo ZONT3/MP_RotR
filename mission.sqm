@@ -8,7 +8,7 @@ class EditorData
 	toggles=1546;
 	class ItemIDProvider
 	{
-		nextID=33267;
+		nextID=33268;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9394.3672,65.33139,504.07153};
-		dir[]={-0.57927984,-0.69459563,-0.42660862};
-		up[]={-0.55929875,0.71939874,-0.41189355};
-		aside[]={-0.59299809,7.7416189e-008,0.80521435};
+		pos[]={9392.0254,21.226583,470.50781};
+		dir[]={-0.77064371,-0.62906104,0.10214003};
+		up[]={-0.62362474,0.77734667,0.082653321};
+		aside[]={0.13138893,6.7424844e-007,0.99134719};
 	};
 };
 binarizationWanted=0;
@@ -198,13 +198,14 @@ addons[]=
 	"ls_commandPost",
 	"A3_Structures_F_Exp_A_VR_Blocks",
 	"A3_Structures_F_Mark_VR_Shapes",
-	"A3_Structures_F_Bootcamp_VR_Helpers"
+	"A3_Structures_F_Bootcamp_VR_Helpers",
+	"RD501_patch_jumppack"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=147;
+		items=148;
 		class Item0
 		{
 			className="OPTRE_UNSC_Structure_Buildings";
@@ -1090,6 +1091,12 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item147
+		{
+			className="RD501_patch_jumppack";
+			name="RD501_patch_jumppack";
+			author="RD501";
+		};
 	};
 };
 randomSeed=2912398;
@@ -1939,7 +1946,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=623;
+		items=624;
 		class Item0
 		{
 			dataType="Object";
@@ -190288,6 +190295,44 @@ class Mission
 			id=27105;
 			type="Land_Highway_bridge_down";
 			atlOffset=-9.9271908;
+		};
+		class Item623
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9389.4385,18.751942,470.41};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=33267;
+			type="RD501_JLTS_Clone_jumppack_mc";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[""Corp99_FuelInjector"",""Corp99_BactaCell"",""SLSW_Jedi_Shadow_Crystal"",""Corp99_Visor"",""Corp99_MedCoreTerminal""],[1,1,1,1,1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
