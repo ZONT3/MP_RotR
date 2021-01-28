@@ -21,6 +21,7 @@ class CfgFunctions {
 
       class initSkills { };
       class addSkillActions { };
+      class consumableSkillBase { };
       class checkFlag { };
       class skillVar { };
       class getSkillVar { };

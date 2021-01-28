@@ -149,7 +149,7 @@ class CfgSkills {
       params = "[]";
     };
     maxUses = 3;
-    cd = 1800;
+    cd = 30 * 60;
   };
   class bacta99 : bacta {
     flagItems[] = {"Corp99_BactaCell"};
@@ -158,6 +158,26 @@ class CfgSkills {
     };
     maxUses = 3;
     cd = 5 * 60;
+  };
+  class injector {
+    roleRequired = false;
+    roles[] = {};
+    condition = "true";
+    flagItems[] = {"Corp99_FuelInjector"};
+    jumppacks[] = {"RD501_JLTS_Clone_jumppack_mc"};
+    init = "";
+    onRespawn = "_thisConfig call ZONT_fnc_removeAllVars";
+    class action1 {
+      tooltip = "<t color='#b87777'>Использовать топливный инжектор</t>";
+      script = "_thisConfig execVM 'skills\injector.sqf'";
+      priority = 8;
+      condition = "(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag";
+      params = "[]";
+    };
+    maxUses = 1;
+    cd = 10 * 60;
+    time = 45;
+    eps = 10; // energy per second
   };
 };
 
