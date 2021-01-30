@@ -1,3 +1,12 @@
+// Аномалии как в S.T.A.L.K.E.R. от Diwako
+force ANOMALY_DEBUG = false;
+force ANOMALY_DETECTION_RANGE = 20;
+force ANOMALY_DETECTOR_ITEM = "AnomalyDetector";
+force ANOMALY_GAS_MASKS = "GP5_RaspiratorPS,GP5Filter_RaspiratorPS,GP7_RaspiratorPS,GP21_GasmaskPS,SE_S10,G_Respirator_white_F,MASK_M40_OD,MASK_M40,MASK_M50";
+force ANOMALY_IDLE_DISTANCE = 350;
+force ANOMALY_TRIGGER_DISTANCE = 300;
+force diwako_anomalies_enable = true;
+
 // 3AS
 force TAS_jetcoolset = 1;
 force TAS_jetfuelset = 1;
