@@ -44,8 +44,9 @@ class CfgFunctions {
     };
     class Skills {
       file = "skills";
+      class showGroupHeartRate { };
     };
-    #include "dev\include.ext"
+    //#include "dev\include.ext"
   };
   #include "external\VVS\Functions.ext"
   #include "external\tts_beam\cfgFunctions.ext"
