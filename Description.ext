@@ -36,7 +36,7 @@ class CfgFunctions {
       class prs_autoSaveInit { };
       class commitInfo { };
     };
-    #include "dev\include.ext"
+    //#include "dev\include.ext"
   };
   #include "VVS\Functions.ext"
 };
@@ -94,4 +94,3 @@ class CfgDiscordRichPresence {
     defaultSmallImageText="Arma 3";				            		// Small image hover text
     useTimeElapsed=1;								                    	// Show time elapsed since the player connected (1 - true, 0 - false)
 };
-
