@@ -179,8 +179,24 @@ class CfgSkills {
     time = 45;
     eps = 10; // energy per second
   };
+  class medcore {
+    roleRequired = false;
+    roles[] = {};
+    condition = "true";
+    flagItems[] = {"Corp99_MedCoreTerminal"};
+    init = "";
+    onRespawn = "";
+    class action1 {
+      tooltip = "<t color='#3bffd1'>Мед. терминал</t>";
+      script = "_thisConfig call ZONT_fnc_showGroupHeartRate";
+      priority = 7;
+      condition = "[_thisFlag] call ZONT_fnc_checkFlag";
+      params = "[]";
+    };
+  };
 };
 
+// "Corp99_Visor","Corp99_MedCoreTerminal","Corp99_WardenDETerminal"
 /*
   INIT and CONDITION FIELDs:
   _thisConfig

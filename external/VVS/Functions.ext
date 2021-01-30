@@ -3,7 +3,7 @@ class VVS
 	tag = "VVS";
 	class functions
 	{
-		file = "VVS\functions";
+		file = "external\VVS\functions";
 		class openVVS {};
 		class mainInit {postInit = 1;};
 		class buildCfg {};

@@ -1,9 +1,6 @@
 if (!hasInterface) exitWith { };
 
-private _types = [];
-private _conf = missionConfigFile >> "CfgConsts" >> "ztt_terminals";
-if (isArray _conf)
-then {_types = getArray _conf};
+private _types = ["ztt_terminals", []] call ZONT_fnc_getConst;
 
 private _teleportTerms = [];
 {{
