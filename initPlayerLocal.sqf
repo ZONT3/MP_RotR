@@ -1,7 +1,5 @@
 waitUntil {vehicle player == player};
 
-/* ["media\GEONOSISINTRO.ogv"] call BIS_fnc_playVideo; */
-
 MPC_canSave = false;
 [] spawn ZONT_fnc_prs_loadProfile;
 [] spawn ZONT_fnc_prs_autoSaveInit;

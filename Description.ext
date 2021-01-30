@@ -1,6 +1,6 @@
 /**********                    Framework includes                    **********/
 #include "infiSTAR_AdminMenu.ext"
-#include "roles.ext"
+#include "skills_framework\skills.ext"
 /**********                       RSC includes                       **********/
 #include "external\VVS\menu.ext"
 
@@ -14,9 +14,7 @@ class CfgFunctions {
     class Functions {
       file = "fnc";
       class remoteExecCallback { };
-
       class giveZeus { };
-      class retrieveCurators { };
       class initTeleportTerminals { };
       class addTeleportTerminal { };
       class showTextLC { };
@@ -24,15 +22,9 @@ class CfgFunctions {
       class removeAllVars { };
       class getConst { };
       class getConfigField { };
-
-      class initSkills { };
-      class addSkillActions { };
-      class consumableSkillBase { };
-      class checkFlag { };
-      class skillVar { };
-      class getSkillVar { };
-      class setSkillVar { };
-
+    };
+    class Database {
+      file = "database_framework";
       class bd_initBasic { };
       class bd_initCustom { };
       class bd_customRequest { };
@@ -40,11 +32,31 @@ class CfgFunctions {
       class prs_saveProfile { };
       class prs_loadProfile { };
       class prs_autoSaveInit { };
+
       class commitInfo { };
+      class retrieveCurators { };
+    };
+    class SkillsFramework {
+      file = "skills_framework";
+      class initSkills { };
+      class addSkillActions { };
+      class checkFlag { };
+      class skillVar { };
+      class getSkillVar { };
+      class setSkillVar { };
     };
     class Skills {
       file = "skills";
+      class consumableSkillBase { };
       class showGroupHeartRate { };
+      class skill_armor { };
+      class skill_bacta_init { };
+      class skill_bacta { };
+      class skill_berserk { };
+      class skill_cloak { };
+      class skill_ghillie { };
+      class skill_impulse { };
+      class skill_injector { };
     };
     //#include "dev\include.ext"
   };

@@ -1,5 +1,6 @@
 if (!hasInterface) exitWith { };
 
+diag_log "ZSkills INIT START";
 MPC_skills_actions = [];
 waitUntil {sleep 1; vehicle player == player};
 {
@@ -9,6 +10,8 @@ waitUntil {sleep 1; vehicle player == player};
   private _roleRequiredC = (_thisConfig >> "roleRequired");
   private _rolesC = (_thisConfig >> "roles");
   private _conditionC = (_thisConfig >> "condition");
+
+  diag_log "ZSkills init: " + str _thisConfig;
 
   private _thisFlag = [];
   if (isArray _thisFlagC)
@@ -24,6 +27,7 @@ waitUntil {sleep 1; vehicle player == player};
   then {_thisCondition = getText _conditionC};
 
   // TODO role check
+  private _actions = 0;
   if (call compile _thisCondition) then {
     if (isText _init)
     then { call compile getText _init };
@@ -34,8 +38,10 @@ waitUntil {sleep 1; vehicle player == player};
       }
     } foreach ("true" configClasses _thisConfig);
 
+    _actions = count _toAdd;
     private _params = [_thisConfig, _thisCondition, _thisRoles, _thisFlag, _toAdd];
     _params spawn ZONT_fnc_addSkillActions;
     MPC_skills_actions pushBack _params;
-  }
+  };
+  diag_log format ["ZSkills: Registred %1 action(s)", _actions];
 } foreach ("true" configClasses (missionConfigFile >> "CfgSkills"));
