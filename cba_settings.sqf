@@ -16,10 +16,10 @@ force ace_advanced_ballistics_simulationInterval = 0.05;
 force ace_advanced_fatigue_enabled = true;
 force ace_advanced_fatigue_enableStaminaBar = true;
 ace_advanced_fatigue_fadeStaminaBar = true;
-force ace_advanced_fatigue_loadFactor = 1;
+force ace_advanced_fatigue_loadFactor = 0.2;
 force ace_advanced_fatigue_performanceFactor = 1;
-force ace_advanced_fatigue_recoveryFactor = 1;
-force ace_advanced_fatigue_swayFactor = 1;
+force ace_advanced_fatigue_recoveryFactor = 3;
+force ace_advanced_fatigue_swayFactor = 0.2;
 force ace_advanced_fatigue_terrainGradientFactor = 1;
 
 // ACE Advanced Throwing
@@ -172,15 +172,15 @@ force ace_magazinerepack_timePerBeltLink = 8;
 force ace_magazinerepack_timePerMagazine = 2;
 
 // ACE Map
-force ace_map_BFT_Enabled = false;
+force ace_map_BFT_Enabled = true;
 force ace_map_BFT_HideAiGroups = false;
 force ace_map_BFT_Interval = 1;
-force ace_map_BFT_ShowPlayerNames = false;
+force ace_map_BFT_ShowPlayerNames = true;
 force ace_map_DefaultChannel = -1;
 force ace_map_mapGlow = true;
 force ace_map_mapIllumination = true;
 force ace_map_mapLimitZoom = false;
-force ace_map_mapShake = true;
+force ace_map_mapShake = false;
 force ace_map_mapShowCursorCoordinates = false;
 ace_markers_moveRestriction = 0;
 ace_markers_timestampEnabled = true;
