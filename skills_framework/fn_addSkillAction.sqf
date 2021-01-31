@@ -19,7 +19,7 @@ private _fn_replaceAll = {
 
 if _onRespawn then {
   _onRespawn = [_thisConfig, "onRespawn", ""] call BIS_fnc_returnConfigEntry;
-  call compile _onRespawn;
+  isNil { call compile _onRespawn };
 };
 
 if (typeName _action != typeName []) then { _action = [_action] };

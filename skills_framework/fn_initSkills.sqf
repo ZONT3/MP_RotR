@@ -32,20 +32,22 @@ MPC_skills_actions = [];
   if (isText _conditionC)
   then {_thisCondition = getText _conditionC};
 
-  // TODO role check
-  private _actions = 0;
-  if (call compile _thisCondition) then {
-    if (isText _init)
-    then { call compile getText _init };
-    private _toAdd = [];
-    {
-      if ((configName _x) find "action" == 0 && {!(_x call _fn_isAbstract)}) then {
-        _toAdd pushBack _x;
-      }
-    } foreach ("true" configClasses _thisConfig);
+  isNil {
+    // TODO role check
+    private _actions = 0;
+    if (call compile _thisCondition) then {
+      if (isText _init)
+      then { call compile getText _init };
+      private _toAdd = [];
+      {
+        if ((configName _x) find "action" == 0 && {!(_x call _fn_isAbstract)}) then {
+          _toAdd pushBack _x;
+        }
+      } foreach ("true" configClasses _thisConfig);
 
-    [_thisConfig, player, _toAdd, true] spawn ZONT_fnc_addSkillAction;
-    MPC_skills_actions pushBack [_thisConfig, _toAdd];
-    diag_log format ["ZSkills: Registred %1 action(s)", count _toAdd];
-  };
+      [_thisConfig, player, _toAdd, true] spawn ZONT_fnc_addSkillAction;
+      MPC_skills_actions pushBack [_thisConfig, _toAdd];
+      diag_log format ["ZSkills: Registred %1 action(s)", count _toAdd];
+    }
+  }
 } foreach _cls;
