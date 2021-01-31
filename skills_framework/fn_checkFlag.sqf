@@ -1,4 +1,6 @@
-params [["_flag", []], ["_reqInd", []]];
+params [["_flagPtr", [], [[]]], ["_reqInd", []], ["_chkAssigned", true]];
+
+private _flag = +(_flagPtr);
 
 private _reqCheck = true;
 if (count _reqInd > 0) then {
@@ -24,6 +26,8 @@ _reqCheck = _reqCheck or { vest     player in _flag};
 if (not _reqCheck) then {
   {
     if (_x in items player) exitWith {_reqCheck = true};
+    if (_chkAssigned and {_x in assignedItems player})
+    exitWith {_reqCheck = true};
   } forEach _flag;
 };
 _reqCheck

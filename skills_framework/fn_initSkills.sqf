@@ -1,8 +1,10 @@
 if (!hasInterface) exitWith { };
 
-diag_log "ZSkills INIT START";
-MPC_skills_actions = [];
+private _cfg = missionConfigFile >> "CfgSkills";
+private _cls = ("true" configClasses (_cfg));
+diag_log format ["ZSkills INIT: %1 skills", str count _cls];
 waitUntil {sleep 1; vehicle player == player};
+MPC_skills_actions = [];
 {
   private _thisConfig = _x;
   private _init = (_thisConfig >> "init");
@@ -11,7 +13,7 @@ waitUntil {sleep 1; vehicle player == player};
   private _rolesC = (_thisConfig >> "roles");
   private _conditionC = (_thisConfig >> "condition");
 
-  diag_log "ZSkills init: " + str _thisConfig;
+  diag_log ("ZSkills INIT skill: " + configName _thisConfig);
 
   private _thisFlag = [];
   if (isArray _thisFlagC)
@@ -44,4 +46,4 @@ waitUntil {sleep 1; vehicle player == player};
     MPC_skills_actions pushBack _params;
   };
   diag_log format ["ZSkills: Registred %1 action(s)", _actions];
-} foreach ("true" configClasses (missionConfigFile >> "CfgSkills"));
+} foreach _cls;

@@ -38,7 +38,7 @@ switch (_mode) do {
 
       if(_cloakOn) then {
           if(_curEnergy <= 0) then
-          { [_thisConfig, 3] execVM "skills\cloak.sqf" }
+          { [_thisConfig, 3] spawn ZONT_fnc_skill_cloak }
           else { _curEnergy = _curEnergy + _rateOn };
       } else {
           _curEnergy = _curEnergy + _rateOff;
@@ -82,7 +82,7 @@ switch (_mode) do {
 		{
 			params ["_unit", "_source", "_damage", "_instigator"];
 			if (player getVariable ['s_clk_on', false]) then {
-				[MPC_cloak_currConfig, 3] execVM 'skills\cloak.sqf';
+				[MPC_cloak_currConfig, 3] spawn ZONT_fnc_skill_cloak;
 				player setVariable ['s_clk_dmg', _damage + (player getVariable['CloakBroke', 0])];
 			};
 		}];
