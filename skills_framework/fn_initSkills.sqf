@@ -44,10 +44,8 @@ MPC_skills_actions = [];
       }
     } foreach ("true" configClasses _thisConfig);
 
-    _actions = count _toAdd;
-    private _params = [_thisConfig, _thisCondition, _thisRoles, _thisFlag, _toAdd];
-    _params spawn ZONT_fnc_addSkillActions;
-    MPC_skills_actions pushBack _params;
+    [_thisConfig, player, _toAdd, true] spawn ZONT_fnc_addSkillAction;
+    MPC_skills_actions pushBack [_thisConfig, _toAdd];
+    diag_log format ["ZSkills: Registred %1 action(s)", count _toAdd];
   };
-  diag_log format ["ZSkills: Registred %1 action(s)", _actions];
 } foreach _cls;

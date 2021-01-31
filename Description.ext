@@ -38,7 +38,7 @@ class CfgFunctions {
     class SkillsFramework {
       file = "skills_framework";
       class initSkills { };
-      class addSkillActions { };
+      class addSkillAction { };
       class checkFlag { };
       class skillVar { };
       class getSkillVar { };
