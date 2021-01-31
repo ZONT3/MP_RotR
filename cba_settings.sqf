@@ -177,8 +177,8 @@ force ace_map_BFT_HideAiGroups = false;
 force ace_map_BFT_Interval = 1;
 force ace_map_BFT_ShowPlayerNames = true;
 force ace_map_DefaultChannel = -1;
-force ace_map_mapGlow = true;
-force ace_map_mapIllumination = true;
+force ace_map_mapGlow = false;
+force ace_map_mapIllumination = false;
 force ace_map_mapLimitZoom = false;
 force ace_map_mapShake = false;
 force ace_map_mapShowCursorCoordinates = false;
@@ -286,11 +286,11 @@ ace_nametags_showVehicleCrewInfo = true;
 ace_nametags_tagSize = 2;
 
 // ACE Nightvision
-force ace_nightvision_aimDownSightsBlur = 1;
+force ace_nightvision_aimDownSightsBlur = 0;
 force ace_nightvision_disableNVGsWithSights = false;
-force ace_nightvision_effectScaling = 1;
-force ace_nightvision_fogScaling = 1;
-force ace_nightvision_noiseScaling = 1;
+force ace_nightvision_effectScaling = 0;
+force ace_nightvision_fogScaling = 0;
+force ace_nightvision_noiseScaling = 0;
 ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -476,7 +476,7 @@ force acex_field_rations_timeWithoutWater = 80;
 force acex_field_rations_waterSourceActions = 2;
 
 // ACEX Fortify
-acex_fortify_settingHint = 2;
+acex_fortify_settingHint = 0;
 
 // ACEX Headless
 force acex_headless_delay = 15;
