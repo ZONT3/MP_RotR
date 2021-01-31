@@ -11,7 +11,7 @@ private _vest = vest player;
 private _uniformItems = uniformItems player;
 private _vestItems = vestItems player;
 
-private _selected = _ghillieList select _mode;
+private _selected = if (_mode >= 0 && _mode < count _ghillieList) then {_ghillieList select _mode} else {""};
 private _ghillieVest = "SWLB_CEE_ARF_Vest";
 
 
@@ -40,7 +40,7 @@ if (_mode != -1) then {
 		player enableAimPrecision false;
 		player enableFatigue false;
 		player enableStamina false;
-		player addAction ["<t color='#00FF00'>Снять маскировку</t>", "[configNull, -1, (_this # 2)] execVM 'skills\ghillie.sqf'", [], 6, false, true,"","true", 0, true];
+		player addAction ["<t color='#00FF00'>Снять маскировку</t>", "[configNull, -1, (_this # 2)] spawn ZONT_fnc_skill_ghillie", [], 6, false, true,"","true", 0, true];
 		while {uniform player in _ghillieList} do {
 			player setCustomAimCoef 0;
 			sleep 0.05;
