@@ -1,5 +1,9 @@
 if (!hasInterface) exitWith { };
 
+private _fn_isAbstract = {
+  ([_this, "abstract", "false"] call BIS_fnc_returnConfigEntry) == "true"
+};
+
 private _cfg = missionConfigFile >> "CfgSkills";
 private _cls = ("true" configClasses (_cfg));
 diag_log format ["ZSkills INIT: %1 skills", str count _cls];
@@ -35,7 +39,7 @@ MPC_skills_actions = [];
     then { call compile getText _init };
     private _toAdd = [];
     {
-      if ((configName _x) find "action" == 0) then {
+      if ((configName _x) find "action" == 0 && {!(_x call _fn_isAbstract)}) then {
         _toAdd pushBack _x;
       }
     } foreach ("true" configClasses _thisConfig);

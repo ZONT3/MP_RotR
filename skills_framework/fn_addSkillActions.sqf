@@ -17,19 +17,12 @@ private _onrs = _thisConfig >> "onRespawn";
 if (isText _onrs) then {call compile getText _onrs};
 
 {
-  private _tooltip = "";
-  private _script = "";
-  private _priority = 6;
-  private _condition = "true";
-  private _params = "[]";
-
-  if (isText (_x >> "tooltip")) then {
-    _tooltip = getText (_x >> "tooltip");
-    if (isText (_x >> "script")) then {_script = getText (_x >> "script")};
-    if (isNumber (_x >> "priority")) then {_priority = getNumber (_x >> "priority")};
-    if (isText (_x >> "condition")) then {_condition = getText (_x >> "condition")};
-    if (isText (_x >> "params")) then {_params = getText (_x >> "params")};
-
+  private _params = _x call ZONT_fnc_actionFromConfig;
+  if (!isNil '_params' && { typeName _params == typeName [] }) then {
+    _params params [
+    "_tooltip", "_script", "_params", "_priority", "_showWindow",
+    "_hideOnUse", "_shortcut", "_condition", "_radius",
+    "_unconscious", "_selection", "_memoryPoint" ];
     private _prefix = format ["%1_%2_", configName _thisConfig, configName _x];
     {
       missionNamespace setVariable [_prefix + _x, call compile _x];
@@ -42,10 +35,14 @@ if (isText _onrs) then {call compile getText _onrs};
     	_script,
     	call compile _params,
     	_priority,
-    	false,
-    	true,
-    	"",
-    	_condition
+    	_showWindow,
+    	_hideOnUse,
+    	_shortcut,
+    	_condition,
+    	_radius,
+    	_unconscious,
+    	_selection,
+    	_memoryPoint
     ];
   };
 } foreach _toAdd;
