@@ -18,6 +18,7 @@ if (isText _onrs) then {call compile getText _onrs};
 
 {
   private _params = _x call ZONT_fnc_actionFromConfig;
+  diag_log _params;
   if (!isNil '_params' && { typeName _params == typeName [] }) then {
     _params params [
     "_tooltip", "_script", "_params", "_priority", "_showWindow",
@@ -30,7 +31,7 @@ if (isText _onrs) then {call compile getText _onrs};
       _script = [_script, _x, _prefix + _x] call _fn_replaceAll;
     } forEach ["_thisConfig", "_thisCondition", "_thisRoles", "_thisFlag"];
 
-    player addAction [
+    private _p = [
     	_tooltip,
     	_script,
     	call compile _params,
@@ -44,5 +45,7 @@ if (isText _onrs) then {call compile getText _onrs};
     	_selection,
     	_memoryPoint
     ];
+    diag_log _p;
+    player addAction _p;
   };
 } foreach _toAdd;

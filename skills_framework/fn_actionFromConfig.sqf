@@ -1,4 +1,4 @@
-if (typeName _this == typeName configNull) exitWith {nil};
+if (typeName _this != typeName configNull) exitWith {nil};
 if (!isText (_this >> "tooltip")) exitWith {nil};
 
 [

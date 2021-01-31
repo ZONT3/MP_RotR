@@ -15,7 +15,7 @@ switch (_mode) do {
             _x call _fn_addAction;
             _prep pushBack _x;
           }
-      } foreach player nearObjects ["CAManBase", 50];
+      } foreach (player nearObjects ["CAManBase", 50]);
       [_cfg, missionNamespace, "preparedUnits", _prep] call ZONT_fnc_setSkillVar;
     }, 1.15, [_cfg, _fn_addAction, _arg]] call CBA_fnc_addPerFrameHandler;
     [_cfg, missionNamespace, "initHandler", _handl] call ZONT_fnc_setSkillVar;
