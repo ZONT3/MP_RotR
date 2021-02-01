@@ -8,4 +8,4 @@ switch (typeName _sign) do {
 
 {
   player setVariable [_x, nil]
-} foreach allvariables _target select _cond
+} foreach (allvariables _target select _cond)
