@@ -23,9 +23,9 @@ if (typeName _action != typeName []) then { _action = [_action] };
   if not (assert (typeName _params == typeName [])) exitWith {};
 
   _params params [
-  "_tooltip", "_script", "_params", "_priority", "_showWindow",
-  "_hideOnUse", "_shortcut", "_condition", "_radius",
-  "_unconscious", "_selection", "_memoryPoint" ];
+    "_tooltip", "_script", "_params", "_priority", "_showWindow",
+    "_hideOnUse", "_shortcut", "_condition", "_radius",
+    "_unconscious", "_selection", "_memoryPoint" ];
 
   private _arr = [_script, _condition];
   private _prefix = format ["%1_%2_", configName _thisConfig, configName _x];

@@ -243,9 +243,10 @@ class CfgSkills {
   _rolesC = (_thisConfig >> "roles");
   _conditionC = (_thisConfig >> "condition");
 
-  ACTION CONDITION FIELD:
+  ACTION CONDITION and SCRIPT FIELD:
   _thisConfig
   _thisCondition
   _thisRoles
   _thisFlag
+  _thisActionCfg
 */

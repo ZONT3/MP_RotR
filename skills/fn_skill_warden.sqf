@@ -53,6 +53,11 @@ if (_mode < 0) exitWith { // UNLINK
 };
 
 
+private _maxDist          = [_cfg, "maxDist", 50]          call BIS_fnc_returnConfigEntry;
+private _secondDistOffset = [_cfg, "secondDistOffset", 10] call BIS_fnc_returnConfigEntry;
+private _maxLinks         = [_cfg, "maxLinks", 5]          call BIS_fnc_returnConfigEntry;
+
+
 private _list = [_cfg, missionNamespace, "list", []] call ZONT_fnc_getSkillVar;
 _list = _list apply {_x select 0};
 _list = _list arrayIntersect _list;
@@ -104,11 +109,6 @@ private _fn_loop = {
 };
 
 
-private _maxDist          = [_cfg, "maxDist", 50]          call BIS_fnc_returnConfigEntry;
-private _secondDistOffset = [_cfg, "secondDistOffset", 10] call BIS_fnc_returnConfigEntry;
-private _maxLinks         = [_cfd, "maxLinks", 5]          call BIS_fnc_returnConfigEntry;
-
-
 switch (_mode) do {
   case (1): {
     hint parseText format [
@@ -116,9 +116,9 @@ switch (_mode) do {
       _maxDist, name _arg
     ];
 
-    [{
+    {
 
-    }] call _fn_loop;
+    } call _fn_loop;
   };
   case (2): {
     hint "TODO #2";

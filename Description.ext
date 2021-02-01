@@ -47,6 +47,7 @@ class CfgFunctions {
       class actionFromConfig { };
       class replacePrivates { };
       class actionCondition { };
+      class wrapSkillConfig { };
     };
     class Skills {
       file = "skills";
