@@ -197,13 +197,15 @@ class CfgSkills {
       tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#d40000'>Привязать болью</t>";
       script = "[_thisConfig, 1, _this select 0] spawn ZONT_fnc_skill_warden";
       priority = 12;
-      condition = "[_thisFlag] call ZONT_fnc_checkFlag && vehicle _target == _target && { isNull ([_thisConfig, _target, 'warden_1', objNull] call ZONT_fnc_getSkillVar) }";
+      condition = "[_thisFlag] call ZONT_fnc_checkFlag && vehicle _target == _target && { [_thisActionCfg, 'lcond'] call ZONT_fnc_actionCondition }";
+      lcond = "isNull ([_thisConfig, _target, 'warden_1', objNull] call ZONT_fnc_getSkillVar)";
       arguments = "[]";
+      showWindow = true;
     };
     class action2 : action1 {
       tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#d40000'>Связать урон</t>";
       script = "[_thisConfig, 2, _this select 0] spawn ZONT_fnc_skill_warden";
-      condition = "[_thisFlag] call ZONT_fnc_checkFlag && vehicle _target == _target && { isNull ([_thisConfig, _target, 'warden_2', objNull] call ZONT_fnc_getSkillVar) }";
+      lcond = "isNull ([_thisConfig, _target, 'warden_2', objNull] call ZONT_fnc_getSkillVar)";
       priority = 11;
     };
   };

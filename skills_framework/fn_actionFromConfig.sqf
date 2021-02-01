@@ -6,7 +6,7 @@ if (!isText (_this >> "tooltip")) exitWith {nil};
   [_this, "script", "hint 'Not Implemented'"] call BIS_fnc_returnConfigEntry,
   [_this, "arguments", "[]"] call BIS_fnc_returnConfigEntry,
   [_this, "priority", 1.5] call BIS_fnc_returnConfigEntry,
-  [_this, "showWindow", "true"] call BIS_fnc_returnConfigEntry == "true",
+  [_this, "showWindow", "false"] call BIS_fnc_returnConfigEntry == "true",
   [_this, "hideOnUse", "true"] call BIS_fnc_returnConfigEntry == "true",
   [_this, "shortcut", ""] call BIS_fnc_returnConfigEntry,
   [_this, "condition", "true"] call BIS_fnc_returnConfigEntry,

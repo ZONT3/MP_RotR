@@ -44,6 +44,8 @@ class CfgFunctions {
       class getSkillVar { };
       class setSkillVar { };
       class actionFromConfig { };
+      class replacePrivates { };
+      class actionCondition { };
     };
     class Skills {
       file = "skills";
