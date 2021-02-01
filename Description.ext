@@ -18,6 +18,7 @@ class CfgFunctions {
       class initTeleportTerminals { };
       class addTeleportTerminal { };
       class showTextLC { };
+      class showStructuredTextLC { };
       class addChatCommand { };
       class removeAllVars { };
       class getConst { };

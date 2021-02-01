@@ -1,4 +1,5 @@
 params ["_displ", "_text", "_duration"];
+disableSerialization;
 
 _ctrl1 = _displ ctrlCreate ["RscText", -1];
 _ctrl1 ctrlSetPosition [safezoneX + 0.05, safezoney + 0.05];

@@ -191,7 +191,7 @@ class CfgSkills {
     condition = "true";
     flagItems[] = {"Corp99_WardenDETerminal"};
     init = "[_thisConfig, 0, _thisFlag] spawn ZONT_fnc_skill_warden";
-    onRespawn = "";
+
     class action1 {
       abstract = true;
       tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#d40000'>Привязать болью</t>";
@@ -208,6 +208,27 @@ class CfgSkills {
       lcond = "isNull ([_thisConfig, _target, 'warden_2', objNull] call ZONT_fnc_getSkillVar)";
       priority = 11;
     };
+
+    class action3 {
+      abstract = true;
+      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#d40000'>Разорвать связь болью</t>";
+      script = "[_thisConfig, -1, _this select 0] spawn ZONT_fnc_skill_warden";
+      priority = 12;
+      condition = "vehicle _target == _target && { [_thisActionCfg, 'lcond'] call ZONT_fnc_actionCondition }";
+      lcond = "player == ([_thisConfig, _target, 'warden_1', objNull] call ZONT_fnc_getSkillVar)";
+      arguments = "[]";
+      showWindow = true;
+    };
+    class action4 : action3 {
+      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#d40000'>Разорвать связь урона</t>";
+      script = "[_thisConfig, -2, _this select 0] spawn ZONT_fnc_skill_warden";
+      lcond = "player == ([_thisConfig, _target, 'warden_2', objNull] call ZONT_fnc_getSkillVar)";
+      priority = 11;
+    };
+
+    maxDist = 50;
+    secondDistOffset = 10;
+    maxLinks = 5;
   };
 
 };
