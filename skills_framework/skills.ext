@@ -194,7 +194,7 @@ class CfgSkills {
 
     class action1 {
       abstract = true;
-      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#d40000'>Привязать болью</t>";
+      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#fa0000'>Привязать болью</t>";
       script = "[_thisConfig, 1, _this select 0] spawn ZONT_fnc_skill_warden";
       priority = 12;
       condition = "[_thisFlag] call ZONT_fnc_checkFlag && vehicle _target == _target && { [_thisActionCfg, 'lcond'] call ZONT_fnc_actionCondition }";
@@ -203,7 +203,7 @@ class CfgSkills {
       showWindow = true;
     };
     class action2 : action1 {
-      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#d40000'>Связать урон</t>";
+      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#FA0000'>Связать урон</t>";
       script = "[_thisConfig, 2, _this select 0] spawn ZONT_fnc_skill_warden";
       lcond = "isNull ([_thisConfig, _target, 'warden_2', objNull] call ZONT_fnc_getSkillVar)";
       priority = 11;
@@ -211,7 +211,7 @@ class CfgSkills {
 
     class action3 {
       abstract = true;
-      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#d40000'>Разорвать связь болью</t>";
+      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#100000'>Разорвать связь болью</t>";
       script = "[_thisConfig, -1, _this select 0] spawn ZONT_fnc_skill_warden";
       priority = 12;
       condition = "vehicle _target == _target && { [_thisActionCfg, 'lcond'] call ZONT_fnc_actionCondition }";
@@ -220,7 +220,7 @@ class CfgSkills {
       showWindow = true;
     };
     class action4 : action3 {
-      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#d40000'>Разорвать связь урона</t>";
+      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#100000'>Разорвать связь урона</t>";
       script = "[_thisConfig, -2, _this select 0] spawn ZONT_fnc_skill_warden";
       lcond = "player == ([_thisConfig, _target, 'warden_2', objNull] call ZONT_fnc_getSkillVar)";
       priority = 11;

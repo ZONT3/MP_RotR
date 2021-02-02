@@ -37,19 +37,19 @@ if (_mode < 0) exitWith { // UNLINK
   private _list = [_cfg, missionNamespace, "list", []] call ZONT_fnc_getSkillVar;
   {
     _x params ["_unit", "_xmode"];
-    if (_unit == _arg) and {_xmode == _mode} exitWith {
+    if ((_unit == _arg) and {_xmode == _mode}) exitWith {
       _list deleteAt _forEachIndex;
     };
   } foreach _list;
   [_cfg, missionNamespace, "list", _list] call ZONT_fnc_setSkillVar;
 
-  [_cfg, _arg, "warden_" + _mode, objNull] call ZONT_fnc_setSkillVar;
+  [_cfg, _arg, "warden_" + str _mode, objNull] call ZONT_fnc_setSkillVar;
 
   private _link = switch (_mode) do {
     case (1): {"болью"};
     case (2): {"уроном"};
   };
-  hint parseText format ["<t color='#f01010'>Связь <t color='#050505'>[%2]</t> c %1 разорвана</t>", name _arg, _link];
+  hint parseText format ["<t color='#f01010'>Связь <t color='#F0F0F0'>[%2]</t> c %1 разорвана</t>", name _arg, _link];
 };
 
 
@@ -67,9 +67,9 @@ if (count _list >= _maxLinks) exitWith {
 
 
 private _fn_list_loop = {
-  while { count ([_cfg, missionNamespace, "list", []] call ZONT_fnc_getSkillVar) > 0} do {
+  while { count ([_this, missionNamespace, "list", []] call ZONT_fnc_getSkillVar) > 0} do {
     private _text = "";
-    private _list = [_cfg, missionNamespace, "list", []] call ZONT_fnc_getSkillVar;
+    private _list = [_this, missionNamespace, "list", []] call ZONT_fnc_getSkillVar;
 
     {
       private _str = _x;
@@ -88,7 +88,7 @@ private _fn_list_loop = {
     [findDisplay 46, _text, 0.251] call ZONT_fnc_showStructuredTextLC;
     uisleep 0.25;
   };
-  [_cfg, missionNamespace, "list_loop", false] call ZONT_fnc_getSkillVar
+  [_this, missionNamespace, "list_loop", false] call ZONT_fnc_setSkillVar
 };
 
 
@@ -98,7 +98,7 @@ private _fn_loop = {
   private _list = [_cfg, missionNamespace, "list", []] call ZONT_fnc_getSkillVar;
   [_cfg, missionNamespace, "list", _list + [[_arg, _mode]]] call ZONT_fnc_setSkillVar;
 
-  if ([_cfg, missionNamespace, "list_loop", false] call ZONT_fnc_getSkillVar) then {
+  if not ([_cfg, missionNamespace, "list_loop", false] call ZONT_fnc_getSkillVar) then {
     [_cfg, missionNamespace, "list_loop", true] call ZONT_fnc_setSkillVar;
     _cfg spawn _fn_list_loop;
   };

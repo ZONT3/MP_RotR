@@ -1,6 +1,6 @@
-params ["_thisActionCfg", "_field", ["_wrap", false]];
+params ["_thisActionCfg", "_field", ["_wrap", true]];
 
-private _thisActionCondition = [_thisActionCfg, _field, "true"] call BIS_fnc_returnConfigEntry;
+private _thisActionCondition = [_thisActionCfg, _field, "false"] call BIS_fnc_returnConfigEntry;
 
 if _wrap exitWith {
   private _hir = configHierarchy _thisActionCfg;
@@ -8,4 +8,4 @@ if _wrap exitWith {
   [_thisConfig, compile _thisActionCondition] call ZONT_fnc_wrapSkillConfig
 };
 
-call compile _thisActionCondition
+call compile _thisActionCondition;
