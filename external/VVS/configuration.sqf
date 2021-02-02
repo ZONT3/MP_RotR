@@ -192,8 +192,6 @@ VVS_R_Car = [
 	"3as_saber_super",
 	"3as_saber_m1G",
 	"3as_UTAT",
-	"3AS_Barc",
-	"3AS_BarcSideCar",
 	"3as_Jug",
 	"3as_RTT",
 	"3as_AV7",
