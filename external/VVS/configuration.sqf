@@ -155,7 +155,10 @@ VVS_Air_Mercenary = [
 	"MEOP_f61fighter_veh_BS_F",
 	"MEOP_SX3fighter_veh_BS_F",
 	"lsd_air_v19",
-	"MEOP_veh_aerocar_Civ"
+	"MEOP_veh_aerocar_Civ",
+	"3as_Z95_green",
+	"3as_Z95_grey",
+	"3as_Z95_orange"
 	];
 
 VVS_Ship = [];
