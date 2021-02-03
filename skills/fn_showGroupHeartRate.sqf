@@ -1,9 +1,9 @@
 private _group = units group player;
 private _listStr = "";
 
-private _randRadius = [_this, "ghr_rand_radius", 5] call ZONT_fnc_getConfigField;
-private _randPeriod = [_this, "ghr_rand_period", 2] call ZONT_fnc_getConfigField;
-private _entryStr   = [_this, "ghr_entry", "%1: <t color='%3'>%2</t>"] call ZONT_fnc_getConfigField;
+private _randRadius = [_this, "ghr_rand_radius", 5] call BIS_fnc_returnConfigEntry;
+private _randPeriod = [_this, "ghr_rand_period", 2] call BIS_fnc_returnConfigEntry;
+private _entryStr   = [_this, "ghr_entry", "%1: <t color='%3'>%2</t>"] call BIS_fnc_returnConfigEntry;
 
 private _fn_getRand = {
   if (time < _this getVariable ["ghr_nextRand", 0]) exitWith { _this getVariable ["ghr_rand", 0] };

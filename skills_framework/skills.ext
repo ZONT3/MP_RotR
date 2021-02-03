@@ -20,14 +20,14 @@ class CfgSkills {
       script = "[_thisConfig, _thisFlag, 2] spawn ZONT_fnc_skill_cloak";
       priority = 7;
       condition = "!(player getVariable ['s_clk_on', false]) and {(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag}";
-      params = "[]";
+      arguments = "[]";
     };
     class action2 {
       tooltip = "<t color='#FF0000'>Выключить маскировку</t>";
       script = "[_thisConfig, _thisFlag, 3] spawn ZONT_fnc_skill_cloak";
       priority = 6;
       condition = "(player getVariable ['s_clk_on', false]) && {(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag}";
-      params = "[]";
+      arguments = "[]";
     };
     threshold = 900;
     maxEnergy = 1800;
@@ -56,14 +56,14 @@ class CfgSkills {
       script = "[_thisConfig, 1] spawn ZONT_fnc_skill_berserk";
       priority = 7;
       condition = "(vehicle player == player) && (backpack player in ['RD501_JLTS_Clone_jumppack_mc_hq_1']) && ('JLTS_drugs_bacta_red' in (items player))";
-      params = "[]";
+      arguments = "[]";
     };
     class action2 {
       tooltip = "<t color='#00FF00'>Впасть в ярость</t>";
       script = "[_thisConfig, 2] spawn ZONT_fnc_skill_berserk";
       priority = 6;
       condition = "(vehicle player == player) && [_thisFlag, [1]] call ZONT_fnc_checkFlag";
-      params = "[]";
+      arguments = "[]";
     };
     timerCD = 600;
     timerUpTime = 60;
@@ -79,7 +79,7 @@ class CfgSkills {
       script = "[_thisConfig, 3, (_this # 2)] spawn ZONT_fnc_skill_ghillie";
       priority = 7;
       condition = "(vehicle player == player) && [_thisFlag, [1]] call ZONT_fnc_checkFlag";
-      params = "[]";
+      arguments = "[]";
     };
     class action2 : action1 {
       tooltip = "<t color='#00FF00'>Накинуть масхалат: болота</t>";
@@ -106,7 +106,7 @@ class CfgSkills {
       script = "[_thisConfig] spawn ZONT_fnc_skill_armor";
       priority = 6;
       condition = "(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag";
-      params = "[]";
+      arguments = "[]";
     };
     timerCD = 180;
     timerUpTime = 60;
@@ -122,7 +122,7 @@ class CfgSkills {
       script = "[] spawn ZONT_fnc_skill_impulse";
       priority = 6;
       condition = "(vehicle player != player) && (driver (vehicle player) == player) && [_thisFlag] call ZONT_fnc_checkFlag";
-      params = "[]";
+      arguments = "[]";
     };
   };
   class bacta {
@@ -137,7 +137,7 @@ class CfgSkills {
       script = "_thisConfig spawn ZONT_fnc_skill_bacta";
       priority = 10;
       condition = "(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag";
-      params = "[]";
+      arguments = "[]";
     };
     maxUses = 3;
     cd = 30 * 60;
@@ -145,7 +145,7 @@ class CfgSkills {
   class bacta99 : bacta {
     flagItems[] = {"Corp99_BactaCell"};
     class action1 : action1 {
-      tooltip = "<t color='#f01515'>[99]</t> <t color='#2ECC71'>Использовать бакту</t>";
+      tooltip = "<t color='#db6300'>[99]</t> <t color='#2ECC71'>Использовать бакту</t>";
     };
     maxUses = 3;
     cd = 5 * 60;
@@ -163,7 +163,7 @@ class CfgSkills {
       script = "_thisConfig spawn ZONT_fnc_skill_injector";
       priority = 8;
       condition = "(vehicle player == player) && [_thisFlag] call ZONT_fnc_checkFlag";
-      params = "[]";
+      arguments = "[]";
     };
     maxUses = 1;
     cd = 10 * 60;
@@ -179,12 +179,59 @@ class CfgSkills {
     onRespawn = "";
     class action1 {
       tooltip = "<t color='#3bffd1'>Мед. терминал</t>";
-      script = "_thisConfig call ZONT_fnc_showGroupHeartRate";
+      script = "_thisConfig spawn ZONT_fnc_showGroupHeartRate";
       priority = 7;
       condition = "[_thisFlag] call ZONT_fnc_checkFlag";
-      params = "[]";
+      arguments = "[]";
     };
   };
+  class warden {
+    roleRequired = false;
+    roles[] = {};
+    condition = "true";
+    flagItems[] = {"Corp99_WardenDETerminal"};
+    init = "[_thisConfig, 0, _thisFlag] spawn ZONT_fnc_skill_warden";
+
+    class action1 {
+      abstract = true;
+      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#fa0000'>Привязать болью</t>";
+      script = "[_thisConfig, 1, _this select 0] spawn ZONT_fnc_skill_warden";
+      priority = 12;
+      condition = "[_thisFlag] call ZONT_fnc_checkFlag && vehicle _target == _target && { [_thisActionCfg, 'lcond'] call ZONT_fnc_actionCondition }";
+      lcond = "isNull ([_thisConfig, _target, 'warden_1', objNull] call ZONT_fnc_getSkillVar)";
+      arguments = "[]";
+      showWindow = true;
+    };
+    class action2 : action1 {
+      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#FA0000'>Связать урон</t>";
+      script = "[_thisConfig, 2, _this select 0] spawn ZONT_fnc_skill_warden";
+      lcond = "isNull ([_thisConfig, _target, 'warden_2', objNull] call ZONT_fnc_getSkillVar)";
+      priority = 11;
+    };
+
+    class action3 {
+      abstract = true;
+      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#100000'>Разорвать связь болью</t>";
+      script = "[_thisConfig, -1, _this select 0] spawn ZONT_fnc_skill_warden";
+      priority = 12;
+      condition = "vehicle _target == _target && { [_thisActionCfg, 'lcond'] call ZONT_fnc_actionCondition }";
+      lcond = "player == ([_thisConfig, _target, 'warden_1', objNull] call ZONT_fnc_getSkillVar)";
+      arguments = "[]";
+      showWindow = true;
+    };
+    class action4 : action3 {
+      tooltip = "<t color='#db6300'>[WRDN]</t> <t color='#100000'>Разорвать связь урона</t>";
+      script = "[_thisConfig, -2, _this select 0] spawn ZONT_fnc_skill_warden";
+      lcond = "player == ([_thisConfig, _target, 'warden_2', objNull] call ZONT_fnc_getSkillVar)";
+      priority = 11;
+    };
+
+    maxDist = 50;
+    minDist = 10;
+    secondDistOffset = 10;
+    maxLinks = 5;
+  };
+
 };
 
 // "Corp99_Visor","Corp99_MedCoreTerminal","Corp99_WardenDETerminal"
@@ -197,9 +244,10 @@ class CfgSkills {
   _rolesC = (_thisConfig >> "roles");
   _conditionC = (_thisConfig >> "condition");
 
-  ACTION CONDITION FIELD:
+  ACTION CONDITION and SCRIPT FIELD:
   _thisConfig
   _thisCondition
   _thisRoles
   _thisFlag
+  _thisActionCfg
 */

@@ -4,6 +4,8 @@ if (isNil {player}) exitWith {diag_log "ZONT_PRS: PLAYER IS NIL"; []};
 private _uid = getPlayerUID player;
 if (!("765" in _uid)) exitWith {diag_log "ZONT_PRS: UID IS INVALID"; []};
 
+waitUntil {sleep 0.1; !dialog};
+
 MPF_splash = {
   /* titleText [
     "<t valign='bottom'><t size='2.0'><t color='#ffffff'>Добро Пожаловать на сервер</t></t>" +
