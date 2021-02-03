@@ -23,6 +23,7 @@ _vehicleList = switch(_filter) do
 	case "Лодки": {VVS_pre_Ship};
 	case "Броня": {VVS_pre_Armored};
 	case "БПА": {VVS_pre_Autonomous};
+	case "КНС": {VVS_CIS};
 	
 	default {[]};
 };

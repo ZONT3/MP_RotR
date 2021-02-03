@@ -159,7 +159,20 @@ VVS_Air_Mercenary = [
 	"3as_Z95_grey",
 	"3as_Z95_orange"
 	];
-
+VVS_CIS = [
+	"RD501_vulture_MKII",
+	"RD501_hyena_Mk2",
+	"RD501_light_infantry_transport_CIS_MkII",
+	"RD501_Tarantula_CIS",
+	"SW_SPCIS",
+	"RD501_AAT_King_MkIII",
+	"RD501_aAT_Light_MkIII",
+	"ls_ground_aat_blue",
+	"ls_cis_hmp_transport",
+	"ls_cis_hmp",
+	"3as_Vulture_dynamicLoadout",
+	"3AS_AAT"
+	];
 VVS_Ship = [];
 VVS_Armored = [];
 VVS_Autonomous = [];
