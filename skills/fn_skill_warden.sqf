@@ -1,5 +1,8 @@
 params ["_cfg", "_mode", "_arg"];
 
+private _str_w1_bound = "<t color='#db6300'>Вы привязали %2</t><br/>Он не сможет отойти от вас дальше, чем на %1 метров";
+private _str_w1_unk = "<t color='#db6300'>%1 потерял сознание из-за боли</t>";
+
 if (_mode == 0) exitWith { // INIT
   [_cfg, missionNamespace, "list", []] call ZONT_fnc_setSkillVar;
   private _fn_addAction = {
@@ -54,6 +57,7 @@ if (_mode < 0) exitWith { // UNLINK
 
 
 private _maxDist          = [_cfg, "maxDist", 50]          call BIS_fnc_returnConfigEntry;
+private _minDist          = [_cfg, "minDist", 10]          call BIS_fnc_returnConfigEntry;
 private _secondDistOffset = [_cfg, "secondDistOffset", 10] call BIS_fnc_returnConfigEntry;
 private _maxLinks         = [_cfg, "maxLinks", 5]          call BIS_fnc_returnConfigEntry;
 
@@ -111,16 +115,32 @@ private _fn_loop = {
 
 switch (_mode) do {
   case (1): {
-    hint parseText format [
-      "<t color='#db6300'>Вы привязали %2</t><br/>Он не сможет отойти от вас дальше, чем на %1 метров",
-      _maxDist, name _arg
-    ];
+    hint parseText format [_str_w1_bound, _maxDist, name _arg];
 
+    private _lastUnk = false;
+    private _lastPain = 0;
     {
+      private _dist = _arg distance player;
+      private _nPain = (((_dist - _minDist) / (_maxDist - _minDist)) min 1) max 0;
+      private _cPain = _arg getVariable ["ace_medical_pain", 0];
 
+      if (_nPain > _cPain or {_lastPain == _cPain}) then {
+        _arg setVariable ["ace_medical_pain", _nPain, true];
+        _lastPain = _nPain;
+      };
+
+      if (lifeState _arg == "HEALTHY" || lifeState _arg == "INJURED") then {
+        if (_dist > _maxDist) then {
+          if (not _lastUnk) then {
+            _lastUnk = true;
+            hint parseText format [_str_w1_unk, name _arg];
+          };
+          [_arg, true, 10] call ace_medical_fnc_setUnconscious;
+        } else { _lastUnk = false };
+      };
     } call _fn_loop;
   };
   case (2): {
-    hint "TODO #2";
+    hint "Пока не реализовано";
   };
 };

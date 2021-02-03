@@ -227,6 +227,7 @@ class CfgSkills {
     };
 
     maxDist = 50;
+    minDist = 10;
     secondDistOffset = 10;
     maxLinks = 5;
   };
