@@ -1,7 +1,7 @@
 // Export of '11.egl_laghisola' by [FL] COM Gru Anez on v0.9
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-// Init
+/* Init
 params [["_layerWhiteList",[],[[]]],["_layerBlacklist",[],[[]]],["_posCenter",[0,0,0],[[]]],["_dir",0,[0]],["_idBlacklist",[],[[]]]];
 private _allWhitelisted = _layerWhiteList isEqualTo [];
 private _layerRoot = (_allWhitelisted || {true in _layerWhiteList}) && {!(true in _layerBlackList)};
@@ -1135,7 +1135,9 @@ if !(isNull _item3929) then {_item3929 setvariable ["BIS_fnc_initModules_activat
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 [[_objects,_groups,_triggers,_waypoints,_logics,_markers],[_objectIDs,_groupIDs,_triggerIDs,_waypointIDs,_logicIDs,_markerIDs]];
+*/
+
 
 deleteVehicle outpost_spawn;
-
+titletext ["В данный момент основание аванпоста не доступно","plain down"];
 deleteMarker "marker_9"
