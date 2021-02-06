@@ -18,10 +18,10 @@ class CfgFunctions {
       class initTeleportTerminals { };
       class addTeleportTerminal { };
       class showTextLC { };
+      class showStructuredTextLC { };
       class addChatCommand { };
       class removeAllVars { };
       class getConst { };
-      class getConfigField { };
     };
     class Database {
       file = "database_framework";
@@ -39,11 +39,15 @@ class CfgFunctions {
     class SkillsFramework {
       file = "skills_framework";
       class initSkills { };
-      class addSkillActions { };
+      class addSkillAction { };
       class checkFlag { };
       class skillVar { };
       class getSkillVar { };
       class setSkillVar { };
+      class actionFromConfig { };
+      class replacePrivates { };
+      class actionCondition { };
+      class wrapSkillConfig { };
     };
     class Skills {
       file = "skills";
@@ -57,8 +61,9 @@ class CfgFunctions {
       class skill_ghillie { };
       class skill_impulse { };
       class skill_injector { };
+      class skill_warden { };
     };
-    //#include "dev\include.ext"
+    #include "dev\include.ext"
   };
   #include "external\VVS\Functions.ext"
   #include "external\tts_beam\cfgFunctions.ext"

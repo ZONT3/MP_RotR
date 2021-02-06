@@ -1,5 +1,9 @@
 if (!hasInterface) exitWith { };
 
+private _fn_isAbstract = {
+  ([_this, "abstract", "false"] call BIS_fnc_returnConfigEntry) == "true"
+};
+
 private _cfg = missionConfigFile >> "CfgSkills";
 private _cls = ("true" configClasses (_cfg));
 diag_log format ["ZSkills INIT: %1 skills", str count _cls];
@@ -28,22 +32,22 @@ MPC_skills_actions = [];
   if (isText _conditionC)
   then {_thisCondition = getText _conditionC};
 
-  // TODO role check
-  private _actions = 0;
-  if (call compile _thisCondition) then {
-    if (isText _init)
-    then { call compile getText _init };
-    private _toAdd = [];
-    {
-      if ((configName _x) find "action" == 0) then {
-        _toAdd pushBack _x;
-      }
-    } foreach ("true" configClasses _thisConfig);
+  isNil {
+    // TODO role check
+    private _actions = 0;
+    if (call compile _thisCondition) then {
+      if (isText _init)
+      then { call compile getText _init };
+      private _toAdd = [];
+      {
+        if ((configName _x) find "action" == 0 && {!(_x call _fn_isAbstract)}) then {
+          _toAdd pushBack _x;
+        }
+      } foreach ("true" configClasses _thisConfig);
 
-    _actions = count _toAdd;
-    private _params = [_thisConfig, _thisCondition, _thisRoles, _thisFlag, _toAdd];
-    _params spawn ZONT_fnc_addSkillActions;
-    MPC_skills_actions pushBack _params;
-  };
-  diag_log format ["ZSkills: Registred %1 action(s)", _actions];
+      [_thisConfig, player, _toAdd, true] spawn ZONT_fnc_addSkillAction;
+      MPC_skills_actions pushBack [_thisConfig, _toAdd];
+      diag_log format ["ZSkills: Registred %1 action(s)", count _toAdd];
+    }
+  }
 } foreach _cls;

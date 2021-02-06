@@ -24,4 +24,4 @@ if not ((getPlayerUID _this) in _curators) exitWith { };
 _this call ZONT_fnc_giveZeus;
 }] remoteExec ["bis_fnc_call", 2];
 
-{ _x spawn ZONT_fnc_addSkillActions } foreach MPC_skills_actions;
+{ [_x select 0, player, _x select 1, true] spawn ZONT_fnc_addSkillAction } foreach MPC_skills_actions;

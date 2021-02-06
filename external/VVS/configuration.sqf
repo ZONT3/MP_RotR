@@ -30,7 +30,6 @@ VVS_Car = [
 	"3as_saber_super",
 	"3as_saber_m1G",
 	"3as_UTAT",
-	"3AS_Barc",
 	"3AS_BarcSideCar",
 	"3as_Jug",
 	"3as_RTT",
@@ -155,9 +154,25 @@ VVS_Air_Mercenary = [
 	"MEOP_f61fighter_veh_BS_F",
 	"MEOP_SX3fighter_veh_BS_F",
 	"lsd_air_v19",
-	"MEOP_veh_aerocar_Civ"
+	"MEOP_veh_aerocar_Civ",
+	"3as_Z95_green",
+	"3as_Z95_grey",
+	"3as_Z95_orange"
 	];
-
+VVS_CIS = [
+	"RD501_vulture_MKII",
+	"RD501_hyena_Mk2",
+	"RD501_light_infantry_transport_CIS_MkII",
+	"RD501_Tarantula_CIS",
+	"SW_SPCIS",
+	"RD501_AAT_King_MkIII",
+	"RD501_aAT_Light_MkIII",
+	"ls_ground_aat_blue",
+	"ls_cis_hmp_transport",
+	"ls_cis_hmp",
+	"3as_Vulture_dynamicLoadout",
+	"3AS_AAT"
+	];
 VVS_Ship = [];
 VVS_Armored = [];
 VVS_Autonomous = [];
@@ -189,7 +204,6 @@ VVS_R_Car = [
 	"3as_saber_super",
 	"3as_saber_m1G",
 	"3as_UTAT",
-	"3AS_Barc",
 	"3AS_BarcSideCar",
 	"3as_Jug",
 	"3as_RTT",
