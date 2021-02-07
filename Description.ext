@@ -1,6 +1,7 @@
 /**********                    Framework includes                    **********/
 #include "infiSTAR_AdminMenu.ext"
 #include "skills_framework\skills.ext"
+#include "profiles_framework\roles.ext"
 /**********                       RSC includes                       **********/
 #include "external\VVS\menu.ext"
 
@@ -35,6 +36,12 @@ class CfgFunctions {
 
       class commitInfo { };
       class retrieveCurators { };
+    };
+    class Profiles {
+      file = "profiles_framework";
+      class forceExit { };
+      class getRoles { };
+      class profilesGUI { };
     };
     class SkillsFramework {
       file = "skills_framework";
@@ -75,10 +82,15 @@ class CfgSounds {
 };
 
 class CfgDebriefing {
-  class loser1 {
-    title = "Пиздец";
-		subtitle = "Совсем ебанутые?";
-		description = "Вы долбоебы. Сожалеем.";
+  class force {
+    title = "Выкинут в лобби";
+		description = "Тебя выкинули в лобби скриптом.";
+		pictureBackground = "";
+		picture = "pic\monk.paa";
+  };
+  class profileErr {
+    title = "Ошибка инициализации профиля";
+		description = "Попробуй НЕ нажимать Escape во время загрузки. Так же, выбери роль или профиль, если тебя об этом просят. Если ты не можешь играть, свяжись с ZONT_ в дискорде";
 		pictureBackground = "";
 		picture = "pic\monk.paa";
   };

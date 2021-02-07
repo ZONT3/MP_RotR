@@ -1,0 +1,13 @@
+#define ROLE_ZUUS  1
+#define ROLE_RC    2
+#define ROLE_ARC   3
+#define ROLE_ARF   4
+#define ROLE_99    5
+#define ROLE_GHOST 6
+
+#define ROLE_JEDI   10
+#define ROLE_SHADOW 11
+
+#define ROLE_212 20
+#define ROLE_501 21
+#define ROLE_502 22
