@@ -1,13 +1,14 @@
-// Export of '11.egl_laghisola' by [FL] COM Gru Anez on v0.9
+// Export of '11.isladuala3' by [FL] COM Gru Anez on v0.9
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-/* Init
+// Init
 params [["_layerWhiteList",[],[[]]],["_layerBlacklist",[],[[]]],["_posCenter",[0,0,0],[[]]],["_dir",0,[0]],["_idBlacklist",[],[[]]]];
 private _allWhitelisted = _layerWhiteList isEqualTo [];
 private _layerRoot = (_allWhitelisted || {true in _layerWhiteList}) && {!(true in _layerBlackList)};
-private _layer3888 = (_allWhitelisted || {"virtual vehicle spawner" in _layerWhiteList}) && {!("virtual vehicle spawner" in _layerBlackList)};
-private _layer3752 = (_allWhitelisted || {"base #01" in _layerWhiteList}) && {!("base #01" in _layerBlackList)};
-private _layer3840 = (_allWhitelisted || {"base_sl" in _layerWhiteList}) && {!("base_sl" in _layerBlackList)};
+private _layer198 = (_allWhitelisted || {"virtual vehicle spawner" in _layerWhiteList}) && {!("virtual vehicle spawner" in _layerBlackList)};
+private _layer168 = (_allWhitelisted || {"base #01" in _layerWhiteList}) && {!("base #01" in _layerBlackList)};
+private _layer165 = (_allWhitelisted || {"base_sl" in _layerWhiteList}) && {!("base_sl" in _layerBlackList)};
+private _layer203 = (_allWhitelisted || {"outpost" in _layerWhiteList}) && {!("outpost" in _layerBlackList)};
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -15,14 +16,15 @@ private _layer3840 = (_allWhitelisted || {"base_sl" in _layerWhiteList}) && {!("
 private _markers = [];
 private _markerIDs = [];
 
-private _item3167 = "";
-if (_layerRoot) then {
-	_item3167 = createMarker ["marker_0",[6124.72,3567.15,0]];
-	_this = _item3167;
+private _item202 = "";
+if (_layer203) then {
+	_item202 = createMarker ["marker_0",[8256.2,341.872,0]];
+	_this = _item202;
 	_markers pushback _this;
-	_markerIDs pushback 3167;
+	_markerIDs pushback 202;
 	_this setMarkerType "mil_flag";
 	_this setMarkerText "Аванпост ВАР";
+	_this setMarkerDir 71.7624;
 	_this setMarkerShape "ICON";
 	_this setMarkerColor "ColorWEST";
 };
@@ -33,12 +35,12 @@ if (_layerRoot) then {
 private _groups = [];
 private _groupIDs = [];
 
-private _item3890 = grpNull;
-if (_layer3888) then {
-	_item3890 = createGroup west;
-	_this = _item3890;
+private _item200 = grpNull;
+if (_layer203) then {
+	_item200 = createGroup west;
+	_this = _item200;
 	_groups pushback _this;
-	_groupIDs pushback 3890;
+	_groupIDs pushback 200;
 };
 
 
@@ -47,797 +49,797 @@ if (_layer3888) then {
 private _objects = [];
 private _objectIDs = [];
 
-private _item3814 = objNull;
-if (_layerRoot) then {
-	_item3814 = createVehicle ["3AS_HeavyRepeater_Armoured",[6071.03,3541.38,5.16512],[],0,"CAN_COLLIDE"];
-	_this = _item3814;
+private _item156 = objNull;
+if (_layer203) then {
+	_item156 = createVehicle ["3AS_HeavyRepeater_Armoured",[8236.33,392.475,0],[],0,"CAN_COLLIDE"];
+	_this = _item156;
 	_objects pushback _this;
-	_objectIDs pushback 3814;
-	_this setPosWorld [6070.99,3541.32,7.0205];
-	_this setVectorDirAndUp [[-0.722962,-0.690259,0.0294562],[0.0140031,0.0279867,0.99951]];
+	_objectIDs pushback 156;
+	_this setPosWorld [8236.29,392.419,17.3483];
+	_this setVectorDirAndUp [[-0.308686,0.951164,0],[0,0,1]];
 	[_this,2] call ace_cargo_fnc_setSize;;
 };
 
-private _item3815 = objNull;
-if (_layerRoot) then {
-	_item3815 = createVehicle ["3AS_HeavyRepeater_Armoured",[6070.51,3600.22,9.02671],[],0,"CAN_COLLIDE"];
-	_this = _item3815;
+private _item157 = objNull;
+if (_layer203) then {
+	_item157 = createVehicle ["3AS_HeavyRepeater_Armoured",[8270.64,403.714,9.09612],[],0,"CAN_COLLIDE"];
+	_this = _item157;
 	_objects pushback _this;
-	_objectIDs pushback 3815;
-	_this setPosWorld [6070.47,3600.16,9.95981];
-	_this setVectorDirAndUp [[-0.717307,0.696756,-0.00148493],[-0.00399675,-0.00198345,0.99999]];
+	_objectIDs pushback 157;
+	_this setPosWorld [8270.6,403.658,26.437];
+	_this setVectorDirAndUp [[0.437263,0.899334,0],[0,0,1]];
 	[_this,2] call ace_cargo_fnc_setSize;;
 };
 
-private _item3816 = objNull;
-if (_layerRoot) then {
-	_item3816 = createVehicle ["3AS_HeavyRepeater_Unarmoured",[6129.85,3600.5,8.98064],[],0,"CAN_COLLIDE"];
-	_this = _item3816;
+private _item155 = objNull;
+if (_layer203) then {
+	_item155 = createVehicle ["3AS_HeavyRepeater_Unarmoured",[8288.85,347.041,9.09188],[],0,"CAN_COLLIDE"];
+	_this = _item155;
 	_objects pushback _this;
-	_objectIDs pushback 3816;
-	_this setPosWorld [6129.84,3600.51,11.2368];
-	_this setVectorDirAndUp [[0.64236,0.766398,0.00286443],[-0.0139947,0.00799266,0.99987]];
+	_objectIDs pushback 155;
+	_this setPosWorld [8288.85,347.041,27.4249];
+	_this setVectorDirAndUp [[0.928906,-0.370316,0],[0,0,1]];
 	[_this,2] call ace_cargo_fnc_setSize;;
 };
 
-private _item3817 = objNull;
-if (_layerRoot) then {
-	_item3817 = createVehicle ["3AS_HeavyRepeater_Armoured",[6172.07,3586.28,8.92181],[],0,"CAN_COLLIDE"];
-	_this = _item3817;
+private _item158 = objNull;
+if (_layer203) then {
+	_item158 = createVehicle ["3AS_HeavyRepeater_Armoured",[8289.18,302.895,9.02545],[],0,"CAN_COLLIDE"];
+	_this = _item158;
 	_objects pushback _this;
-	_objectIDs pushback 3817;
-	_this setPosWorld [6172.03,3586.22,11.7206];
-	_this setVectorDirAndUp [[0.779628,0.625944,0.0193475],[-0.0199947,-0.00599863,0.999782]];
+	_objectIDs pushback 158;
+	_this setPosWorld [8289.14,302.839,26.3664];
+	_this setVectorDirAndUp [[0.83864,-0.544686,0],[0,0,1]];
 	[_this,2] call ace_cargo_fnc_setSize;;
 };
 
-private _item3818 = objNull;
-if (_layerRoot) then {
-	_item3818 = createVehicle ["3AS_HeavyRepeater_Armoured",[6171.58,3556.58,8.98497],[],0,"CAN_COLLIDE"];
-	_this = _item3818;
+private _item159 = objNull;
+if (_layer203) then {
+	_item159 = createVehicle ["3AS_HeavyRepeater_Armoured",[8267.58,295.319,9.06318],[],0,"CAN_COLLIDE"];
+	_this = _item159;
 	_objects pushback _this;
-	_objectIDs pushback 3818;
-	_this setPosWorld [6171.54,3556.52,11.2863];
-	_this setVectorDirAndUp [[0.598816,-0.800666,-0.0188168],[0.00201303,-0.0219902,0.999756]];
+	_objectIDs pushback 159;
+	_this setPosWorld [8267.54,295.264,26.4767];
+	_this setVectorDirAndUp [[0.127122,-0.991803,0.0128866],[0,0.012992,0.999916]];
 	[_this,2] call ace_cargo_fnc_setSize;;
 };
 
-private _item3819 = objNull;
-if (_layerRoot) then {
-	_item3819 = createVehicle ["3AS_HeavyRepeater_Armoured",[6129.66,3541.45,8.93824],[],0,"CAN_COLLIDE"];
-	_this = _item3819;
+private _item160 = objNull;
+if (_layer203) then {
+	_item160 = createVehicle ["3AS_HeavyRepeater_Armoured",[8233.33,329.144,9.05483],[],0,"CAN_COLLIDE"];
+	_this = _item160;
 	_objects pushback _this;
-	_objectIDs pushback 3819;
-	_this setPosWorld [6129.62,3541.39,10.6632];
-	_this setVectorDirAndUp [[0.714809,-0.699286,-0.00683207],[-0.0100007,-0.0199903,0.99975]];
+	_objectIDs pushback 160;
+	_this setPosWorld [8233.29,329.088,26.3958];
+	_this setVectorDirAndUp [[-0.440439,-0.897782,0],[0,0,1]];
 	[_this,2] call ace_cargo_fnc_setSize;;
 };
 
-private _item3820 = objNull;
-if (_layerRoot) then {
-	_item3820 = createVehicle ["3as_FOB_Banner_prop",[6108.39,3575.15,-1.19209e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3820;
+private _item104 = objNull;
+if (_layer203) then {
+	_item104 = createVehicle ["3as_FOB_Banner_prop",[8258.68,359.887,0],[],0,"CAN_COLLIDE"];
+	_this = _item104;
 	_objects pushback _this;
-	_objectIDs pushback 3820;
-	_this setPosWorld [6108.39,3575.15,2.27558];
-	_this setVectorDirAndUp [[-0.188675,0.981956,-0.0128396],[-0.0159977,0.00999942,0.999822]];
+	_objectIDs pushback 104;
+	_this setPosWorld [8258.68,359.887,18.3528];
+	_this setVectorDirAndUp [[0.873649,0.486557,0],[0,0,1]];
 };
 
-private _item3821 = objNull;
-if (_layerRoot) then {
-	_item3821 = createVehicle ["3as_FOB_Banner_prop",[6111.03,3574.93,0],[],0,"CAN_COLLIDE"];
-	_this = _item3821;
+private _item105 = objNull;
+if (_layer203) then {
+	_item105 = createVehicle ["3as_FOB_Banner_prop",[8259.31,357.314,0],[],0,"CAN_COLLIDE"];
+	_this = _item105;
 	_objects pushback _this;
-	_objectIDs pushback 3821;
-	_this setPosWorld [6111.03,3574.93,2.32252];
-	_this setVectorDirAndUp [[0.0202449,0.99964,-0.0176282],[-0.0179963,0.0179933,0.999676]];
+	_objectIDs pushback 105;
+	_this setPosWorld [8259.31,357.314,18.3528];
+	_this setVectorDirAndUp [[0.955909,0.293663,0],[0,0,1]];
 };
 
-private _item3822 = objNull;
-if (_layerRoot) then {
-	_item3822 = createVehicle ["3as_FOB_Banner_prop",[6113.58,3575.1,-1.19209e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3822;
+private _item106 = objNull;
+if (_layer203) then {
+	_item106 = createVehicle ["3as_FOB_Banner_prop",[8260.26,354.942,0],[],0,"CAN_COLLIDE"];
+	_this = _item106;
 	_objects pushback _this;
-	_objectIDs pushback 3822;
-	_this setPosWorld [6113.58,3575.1,2.36592];
-	_this setVectorDirAndUp [[0.0578357,0.998242,-0.0129346],[-0.0179963,0.0139967,0.99974]];
+	_objectIDs pushback 106;
+	_this setPosWorld [8260.26,354.942,18.3528];
+	_this setVectorDirAndUp [[0.96628,0.257495,0],[0,0,1]];
 };
 
-private _item3823 = objNull;
-if (_layerRoot) then {
-	_item3823 = createVehicle ["3as_FOB_Banner_prop",[6116.39,3575.08,-1.19209e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3823;
+private _item107 = objNull;
+if (_layer203) then {
+	_item107 = createVehicle ["3as_FOB_Banner_prop",[8261.12,352.269,0],[],0,"CAN_COLLIDE"];
+	_this = _item107;
 	_objects pushback _this;
-	_objectIDs pushback 3823;
-	_this setPosWorld [6116.39,3575.08,2.41918];
-	_this setVectorDirAndUp [[-0.113329,0.993353,-0.02015],[-0.0199977,0.017996,0.999638]];
+	_objectIDs pushback 107;
+	_this setPosWorld [8261.12,352.269,18.3528];
+	_this setVectorDirAndUp [[0.908171,0.418599,0],[0,0,1]];
 };
 
-private _item3830 = objNull;
-if (_layerRoot) then {
-	_item3830 = createVehicle ["3as_Barricade_3_prop",[6057.17,3556.96,2.5034e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3830;
+private _item110 = objNull;
+if (_layer203) then {
+	_item110 = createVehicle ["3as_Barricade_3_prop",[8225.38,402.84,3.8147e-006],[],0,"CAN_COLLIDE"];
+	_this = _item110;
 	_objects pushback _this;
-	_objectIDs pushback 3830;
-	_this setPosWorld [6057.17,3556.96,2.0086];
-	_this setVectorDirAndUp [[0.994491,-0.103012,-0.0194136],[0.0219955,0.0239879,0.99947]];
+	_objectIDs pushback 110;
+	_this setPosWorld [8225.38,402.84,17.6535];
+	_this setVectorDirAndUp [[0.213942,-0.976846,0],[0,0,1]];
 };
 
-private _item3831 = objNull;
-if (_layerRoot) then {
-	_item3831 = createVehicle ["3as_Barricade_2_C_prop",[6060.98,3577.28,0],[],0,"CAN_COLLIDE"];
-	_this = _item3831;
+private _item109 = objNull;
+if (_layer203) then {
+	_item109 = createVehicle ["3as_Barricade_2_C_prop",[8245.88,405.586,0],[],0,"CAN_COLLIDE"];
+	_this = _item109;
 	_objects pushback _this;
-	_objectIDs pushback 3831;
-	_this setPosWorld [6060.98,3577.28,1.39981];
-	_this setVectorDirAndUp [[0.789571,-0.613566,-0.0107127],[0.0259917,0.015996,0.999534]];
+	_objectIDs pushback 109;
+	_this setPosWorld [8245.88,405.586,17.5819];
+	_this setVectorDirAndUp [[-0.335321,-0.942104,0],[0,0,1]];
 };
 
-private _item3832 = objNull;
-if (_layerRoot) then {
-	_item3832 = createVehicle ["3as_shield_5_prop",[6058.72,3573.56,0.123372],[],0,"CAN_COLLIDE"];
-	_this = _item3832;
+private _item163 = objNull;
+if (_layer203) then {
+	_item163 = createVehicle ["3as_shield_5_prop",[8241.64,406.569,0.00615883],[],0,"CAN_COLLIDE"];
+	_this = _item163;
 	_objects pushback _this;
-	_objectIDs pushback 3832;
-	_this setPosWorld [6058.72,3573.56,2.27693];
-	_this setVectorDirAndUp [[-0.646234,-0.763139,0],[0,0,1]];
+	_objectIDs pushback 163;
+	_this setPosWorld [8241.64,406.569,18.2072];
+	_this setVectorDirAndUp [[-0.927049,0.374941,0],[0,0,1]];
 };
 
-private _item3833 = objNull;
-if (_layerRoot) then {
-	_item3833 = createVehicle ["3as_shield_5_prop",[6058.47,3553.57,2.74181e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3833;
+private _item164 = objNull;
+if (_layer203) then {
+	_item164 = createVehicle ["3as_shield_5_prop",[8222.57,400.548,0],[],0,"CAN_COLLIDE"];
+	_this = _item164;
 	_objects pushback _this;
-	_objectIDs pushback 3833;
-	_this setPosWorld [6058.47,3553.57,2.61173];
-	_this setVectorDirAndUp [[0.797271,-0.603618,-0.00185223],[0.0219955,0.0259853,0.99942]];
+	_objectIDs pushback 164;
+	_this setPosWorld [8222.57,400.548,18.201];
+	_this setVectorDirAndUp [[-0.323485,-0.946233,0],[0,0,1]];
 };
 
-private _item3775 = objNull;
-if (_layer3840) then {
-	_item3775 = createVehicle ["3as_large_crate_stack_3_prop",[6123.78,3547.82,0],[],0,"CAN_COLLIDE"];
-	_this = _item3775;
+private _item111 = objNull;
+if (_layer203) then {
+	_item111 = createVehicle ["3as_FOB_Building_1_prop",[8232.98,353.149,0],[],0,"CAN_COLLIDE"];
+	_this = _item111;
 	_objects pushback _this;
-	_objectIDs pushback 3775;
-	_this setPosWorld [6123.78,3547.82,3.7892];
-	_this setVectorDirAndUp [[0,0.999928,0.0119949],[-0.0139947,-0.0119937,0.99983]];
+	_objectIDs pushback 111;
+	_this setPosWorld [8232.98,353.149,21.9157];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
+};
+
+private _item166 = objNull;
+if (_layer165 && _layer203) then {
+	_item166 = createVehicle ["3as_large_crate_stack_3_prop",[8237.54,336.718,0],[],0,"CAN_COLLIDE"];
+	_this = _item166;
+	_objects pushback _this;
+	_objectIDs pushback 166;
+	_this setPosWorld [8237.54,336.718,19.3625];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 	[_this,"[[[[],[]],[[],[]],[[],[]],[[],[]]],false]"] call bis_fnc_initAmmoBox;;
 	[_this,0] call JLTS_fnc_jumpAddRecharger;
 };
 
-private _item3777 = objNull;
-if (_layer3840) then {
-	_item3777 = createVehicle ["land_3as_Republic_Container_prop",[6075.03,3548.8,0],[],0,"CAN_COLLIDE"];
-	_this = _item3777;
+private _item167 = objNull;
+if (_layer165 && _layer203) then {
+	_item167 = createVehicle ["land_3as_Republic_Container_prop",[8223.22,383.33,0],[],0,"CAN_COLLIDE"];
+	_this = _item167;
 	_objects pushback _this;
-	_objectIDs pushback 3777;
-	_this setPosWorld [6075.03,3548.8,2.86149];
-	_this setVectorDirAndUp [[0,0.999608,-0.0279873],[0.0119996,0.0279853,0.999536]];
+	_objectIDs pushback 167;
+	_this setPosWorld [8223.22,383.33,18.6458];
+	_this setVectorDirAndUp [[0.949737,0.312887,-0.0101024],[0.00800059,0.00800064,0.999936]];
 	[_this,"[[[[],[]],[[],[]],[[],[]],[[],[]]],false]"] call bis_fnc_initAmmoBox;;
 	[_this,0] call JLTS_fnc_jumpAddRecharger;
 };
 
-private _item3753 = objNull;
-if (_layer3752 && _layer3840) then {
-	_item3753 = createVehicle ["3as_prop_fob_modular_wall_ramp",[6070.73,3594.97,-4.76837e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3753;
+private _item169 = objNull;
+if (_layer168 && _layer165 && _layer203) then {
+	_item169 = createVehicle ["3as_prop_fob_modular_wall_ramp",[8265.72,401.861,0],[],0,"CAN_COLLIDE"];
+	_this = _item169;
 	_objects pushback _this;
-	_objectIDs pushback 3753;
-	_this setPosWorld [6070.73,3594.97,3.14334];
-	_this setVectorDirAndUp [[-0.991683,-0.128683,-0.00222216],[-0.00198341,-0.00198346,0.999996]];
+	_objectIDs pushback 169;
+	_this setPosWorld [8265.72,401.861,19.5519];
+	_this setVectorDirAndUp [[-0.432579,0.901596,0],[0,0,1]];
 };
 
-private _item3754 = objNull;
-if (_layer3752 && _layer3840) then {
-	_item3754 = createVehicle ["3as_prop_fob_modular_wall_ramp",[6076.2,3541.22,1.35899e-005],[],0,"CAN_COLLIDE"];
-	_this = _item3754;
+private _item170 = objNull;
+if (_layer168 && _layer165 && _layer203) then {
+	_item170 = createVehicle ["3as_prop_fob_modular_wall_ramp",[8216.74,380.059,1.90735e-006],[],0,"CAN_COLLIDE"];
+	_this = _item170;
 	_objects pushback _this;
-	_objectIDs pushback 3754;
-	_this setPosWorld [6076.2,3541.22,3.99109];
-	_this setVectorDirAndUp [[-0.036359,-0.998933,0.0284798],[0.0139988,0.0279867,0.99951]];
+	_objectIDs pushback 170;
+	_this setPosWorld [8216.74,380.059,19.8652];
+	_this setVectorDirAndUp [[-0.989783,-0.116681,0.0819428],[0.0728071,0.0805211,0.99409]];
 };
 
-private _item3755 = objNull;
-if (_layer3752 && _layer3840) then {
-	_item3755 = createVehicle ["3as_prop_fob_modular_wall_ramp",[6130.98,3546.75,-1.54972e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3755;
+private _item171 = objNull;
+if (_layer168 && _layer165 && _layer203) then {
+	_item171 = createVehicle ["3as_prop_fob_modular_wall_ramp",[8238.79,329.546,0],[],0,"CAN_COLLIDE"];
+	_this = _item171;
 	_objects pushback _this;
-	_objectIDs pushback 3755;
-	_this setPosWorld [6130.98,3546.75,4.04435];
-	_this setVectorDirAndUp [[0.86439,-0.502821,-0.000127086],[-0.00799344,-0.0139941,0.99987]];
+	_objectIDs pushback 171;
+	_this setPosWorld [8238.79,329.546,19.5519];
+	_this setVectorDirAndUp [[-0.206991,-0.978343,0],[0,0,1]];
 };
 
-private _item3756 = objNull;
-if (_layer3752 && _layer3840) then {
-	_item3756 = createVehicle ["3as_prop_fob_modular_wall_ramp",[6171.87,3580.82,-1.4782e-005],[],0,"CAN_COLLIDE"];
-	_this = _item3756;
+private _item172 = objNull;
+if (_layer168 && _layer165 && _layer203) then {
+	_item172 = createVehicle ["3as_prop_fob_modular_wall_ramp",[8283.94,301.37,0],[],0,"CAN_COLLIDE"];
+	_this = _item172;
 	_objects pushback _this;
-	_objectIDs pushback 3756;
-	_this setPosWorld [6171.87,3580.82,4.95005];
-	_this setVectorDirAndUp [[-0.999872,0.000159995,-0.0159969],[-0.0159977,-0.00999908,0.999822]];
+	_objectIDs pushback 172;
+	_this setPosWorld [8283.94,301.37,19.5519];
+	_this setVectorDirAndUp [[-0.312958,0.949767,0],[0,0,1]];
 };
 
-private _item3757 = objNull;
-if (_layer3752 && _layer3840) then {
-	_item3757 = createVehicle ["3as_prop_fob_modular_wall_ramp",[6132.08,3595.9,4.52995e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3757;
+private _item173 = objNull;
+if (_layer168 && _layer165 && _layer203) then {
+	_item173 = createVehicle ["3as_prop_fob_modular_wall_ramp",[8285.81,343.88,0],[],0,"CAN_COLLIDE"];
+	_this = _item173;
 	_objects pushback _this;
-	_objectIDs pushback 3757;
-	_this setPosWorld [6132.08,3595.9,3.58515];
-	_this setVectorDirAndUp [[-0.664551,-0.747232,-0.00415896],[-0.021993,0.0139956,0.99966]];
+	_objectIDs pushback 173;
+	_this setPosWorld [8285.81,343.88,19.5519];
+	_this setVectorDirAndUp [[-0.917598,0.397509,0],[0,0,1]];
 };
 
-private _item3925 = objNull;
-if (_layer3752 && _layer3840) then {
-	_item3925 = createVehicle ["3as_prop_fob_modular_wall_ramp",[6171.11,3562.02,-5.96046e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3925;
+private _item174 = objNull;
+if (_layer168 && _layer165 && _layer203) then {
+	_item174 = createVehicle ["3as_prop_fob_modular_wall_ramp",[8271.75,298.036,2.09808e-005],[],0,"CAN_COLLIDE"];
+	_this = _item174;
 	_objects pushback _this;
-	_objectIDs pushback 3925;
-	_this setPosWorld [6171.11,3562.02,4.63233];
-	_this setVectorDirAndUp [[0.982352,0.187004,0.00374036],[0,-0.0199975,0.9998]];
+	_objectIDs pushback 174;
+	_this setPosWorld [8271.75,298.036,19.5547];
+	_this setVectorDirAndUp [[0.29498,-0.955465,0.00858448],[0.0129966,0.0129955,0.999831]];
 };
 
-private _item3776 = objNull;
-if (_layer3840) then {
-	_item3776 = createVehicle ["land_3as_Republic_Container_prop",[6081.16,3548.73,0.0590739],[],0,"CAN_COLLIDE"];
-	_this = _item3776;
+private _item175 = objNull;
+if (_layer165 && _layer203) then {
+	_item175 = createVehicle ["land_3as_Republic_Container_prop",[8225.07,377.48,0.0590706],[],0,"CAN_COLLIDE"];
+	_this = _item175;
 	_objects pushback _this;
-	_objectIDs pushback 3776;
-	_this setPosWorld [6081.16,3548.73,2.86105];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 175;
+	_this setPosWorld [8225.07,377.48,18.7167];
+	_this setVectorDirAndUp [[0.949737,0.312958,-0.0075919],[0.00799344,0,0.999968]];
 	[_this,"[[[[],[]],[[],[]],[[],[]],[[],[]]],false]"] call bis_fnc_initAmmoBox;;
 	[_this,0] call JLTS_fnc_jumpAddRecharger;
 };
 
-private _item3778 = objNull;
-if (_layer3840) then {
-	_item3778 = createVehicle ["3as_crate5_3",[6084.27,3550.96,0],[],0,"CAN_COLLIDE"];
-	_this = _item3778;
+private _item176 = objNull;
+if (_layer165 && _layer203) then {
+	_item176 = createVehicle ["3as_crate5_3",[8228.16,375.23,0],[],0,"CAN_COLLIDE"];
+	_this = _item176;
 	_objects pushback _this;
-	_objectIDs pushback 3778;
-	_this setPosWorld [6084.27,3550.96,1.85825];
-	_this setVectorDirAndUp [[0,0.999758,-0.021993],[0.00201303,0.021993,0.999756]];
+	_objectIDs pushback 176;
+	_this setPosWorld [8228.16,375.23,17.7626];
+	_this setVectorDirAndUp [[0.949737,0.312958,-0.0075919],[0.00799344,0,0.999968]];
 	[_this,"[[[[],[]],[[],[]],[[],[]],[[],[]]],false]"] call bis_fnc_initAmmoBox;;
 	[_this,0] call JLTS_fnc_jumpAddRecharger;
 };
 
-private _item3779 = objNull;
-if (_layer3840) then {
-	_item3779 = createVehicle ["3as_Big_Box_2_prop",[6078.13,3555.97,1.19209e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3779;
+private _item177 = objNull;
+if (_layer165 && _layer203) then {
+	_item177 = createVehicle ["3as_Big_Box_2_prop",[8231,382.63,0],[],0,"CAN_COLLIDE"];
+	_this = _item177;
 	_objects pushback _this;
-	_objectIDs pushback 3779;
-	_this setPosWorld [6078.13,3555.97,2.67774];
-	_this setVectorDirAndUp [[0,0.999662,-0.0259916],[0.0100004,0.0259903,0.999612]];
+	_objectIDs pushback 177;
+	_this setPosWorld [8231,382.63,18.6543];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 	[_this,"[[[[],[]],[[],[]],[[],[]],[[],[]]],false]"] call bis_fnc_initAmmoBox;;
 	[_this,0] call JLTS_fnc_jumpAddRecharger;
 };
 
-private _item3780 = objNull;
-if (_layer3840) then {
-	_item3780 = createVehicle ["3as_Landingpad_R3_prop",[6150.52,3571.98,0],[],0,"CAN_COLLIDE"];
-	_this = _item3780;
+private _item178 = objNull;
+if (_layer165 && _layer203) then {
+	_item178 = createVehicle ["3as_Landingpad_R3_prop",[8268.86,318.879,0],[],0,"CAN_COLLIDE"];
+	_this = _item178;
 	_objects pushback _this;
-	_objectIDs pushback 3780;
-	_this setPosWorld [6150.52,3571.98,3.82942];
-	_this setVectorDirAndUp [[0,0.999998,-0.00198341],[-0.0179963,0.00198309,0.999836]];
+	_objectIDs pushback 178;
+	_this setPosWorld [8268.86,318.879,18.8439];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3781 = objNull;
-if (_layer3840) then {
-	_item3781 = createVehicle ["land_3as_Republic_Forward_Command_prop",[6126.79,3576.41,3.57628e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3781;
+private _item179 = objNull;
+if (_layer165 && _layer203) then {
+	_item179 = createVehicle ["land_3as_Republic_Forward_Command_prop",[8265.64,342.811,0],[],0,"CAN_COLLIDE"];
+	_this = _item179;
 	_objects pushback _this;
-	_objectIDs pushback 3781;
-	_this setPosWorld [6126.79,3576.41,4.89298];
-	_this setVectorDirAndUp [[-0.560164,0.827688,-0.0338998],[-0.0279916,0.0219871,0.999366]];
+	_objectIDs pushback 179;
+	_this setPosWorld [8265.64,342.811,20.6139];
+	_this setVectorDirAndUp [[0.611252,0.791436,0],[0,0,1]];
 };
 
-private _item3785 = objNull;
-if (_layer3840) then {
-	_item3785 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[6071.17,3541.66,0.0070318],[],0,"CAN_COLLIDE"];
-	_this = _item3785;
+private _item180 = objNull;
+if (_layer165 && _layer203) then {
+	_item180 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[8215.67,384.993,0],[],0,"CAN_COLLIDE"];
+	_this = _item180;
 	_objects pushback _this;
-	_objectIDs pushback 3785;
-	_this setPosWorld [6071.17,3541.66,7.59623];
-	_this setVectorDirAndUp [[0.707048,0.706418,-0.0325106],[0.0159975,0.0299834,0.999422]];
+	_objectIDs pushback 180;
+	_this setPosWorld [8215.67,384.993,23.1278];
+	_this setVectorDirAndUp [[0.885073,-0.465437,0.00372056],[0,0.00799344,0.999968]];
 };
 
-private _item3789 = objNull;
-if (_layer3840) then {
-	_item3789 = createVehicle ["3as_FOB_Building_2_prop",[6113.42,3582.91,2.38419e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3789;
+private _item181 = objNull;
+if (_layer165 && _layer203) then {
+	_item181 = createVehicle ["3as_FOB_Building_2_prop",[8267.63,357.543,0],[],0,"CAN_COLLIDE"];
+	_this = _item181;
 	_objects pushback _this;
-	_objectIDs pushback 3789;
-	_this setPosWorld [6113.42,3582.91,4.09208];
-	_this setVectorDirAndUp [[0,0.99995,-0.00999474],[-0.011995,0.00999402,0.999878]];
+	_objectIDs pushback 181;
+	_this setPosWorld [8267.63,357.543,20.1901];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3790 = objNull;
-if (_layer3840) then {
-	_item3790 = createVehicle ["3as_FOB_Hangar_Prop",[6088.29,3580.71,0.436937],[],0,"CAN_COLLIDE"];
-	_this = _item3790;
+private _item182 = objNull;
+if (_layer165 && _layer203) then {
+	_item182 = createVehicle ["3as_FOB_Hangar_Prop",[8257.67,380.719,2.24092],[],0,"CAN_COLLIDE"];
+	_this = _item182;
 	_objects pushback _this;
-	_objectIDs pushback 3790;
-	_this setPosWorld [6088.29,3580.71,5.05809];
-	_this setVectorDirAndUp [[0,1,-0.00077204],[0,0.00077204,1]];
+	_objectIDs pushback 182;
+	_this setPosWorld [8257.67,380.719,23.1943];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3791 = objNull;
-if (_layer3840) then {
-	_item3791 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[6070.65,3599.98,3.57628e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3791;
+private _item183 = objNull;
+if (_layer165 && _layer203) then {
+	_item183 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[8270.46,403.502,0],[],0,"CAN_COLLIDE"];
+	_this = _item183;
 	_objects pushback _this;
-	_objectIDs pushback 3791;
-	_this setPosWorld [6070.65,3599.98,6.68036];
-	_this setVectorDirAndUp [[0.695934,-0.718104,0.00135716],[-0.00399675,-0.00198345,0.99999]];
+	_objectIDs pushback 183;
+	_this setPosWorld [8270.46,403.502,23.0878];
+	_this setVectorDirAndUp [[-0.464228,-0.885716,0],[0,0,1]];
 };
 
-private _item3792 = objNull;
-if (_layer3840) then {
-	_item3792 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[6129.5,3541.7,3.57628e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3792;
+private _item184 = objNull;
+if (_layer165 && _layer203) then {
+	_item184 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[8233.53,329.376,0],[],0,"CAN_COLLIDE"];
+	_this = _item184;
 	_objects pushback _this;
-	_objectIDs pushback 3792;
-	_this setPosWorld [6129.5,3541.7,7.47684];
-	_this setVectorDirAndUp [[-0.703224,0.710932,0.00718319],[-0.0100007,-0.0199937,0.99975]];
+	_objectIDs pushback 184;
+	_this setPosWorld [8233.53,329.376,23.0878];
+	_this setVectorDirAndUp [[0.45513,0.890425,0],[0,0,1]];
 };
 
-private _item3793 = objNull;
-if (_layer3840) then {
-	_item3793 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[6129.68,3600.3,4.76837e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3793;
+private _item185 = objNull;
+if (_layer165 && _layer203) then {
+	_item185 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[8289.23,347.539,0],[],0,"CAN_COLLIDE"];
+	_this = _item185;
 	_objects pushback _this;
-	_objectIDs pushback 3793;
-	_this setPosWorld [6129.68,3600.3,7.01091];
-	_this setVectorDirAndUp [[-0.708744,-0.705453,-0.00428076],[-0.0139947,0.00799266,0.99987]];
+	_objectIDs pushback 185;
+	_this setPosWorld [8289.23,347.539,23.0878];
+	_this setVectorDirAndUp [[-0.891791,0.452448,0],[0,0,1]];
 };
 
-private _item3794 = objNull;
-if (_layer3840) then {
-	_item3794 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[6171.84,3585.94,4.76837e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3794;
+private _item186 = objNull;
+if (_layer165 && _layer203) then {
+	_item186 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[8288.79,303.002,0],[],0,"CAN_COLLIDE"];
+	_this = _item186;
 	_objects pushback _this;
-	_objectIDs pushback 3794;
-	_this setPosWorld [6171.84,3585.94,8.54026];
-	_this setVectorDirAndUp [[-0.731004,-0.682117,-0.018712],[-0.0199947,-0.00599863,0.999782]];
+	_objectIDs pushback 186;
+	_this setPosWorld [8288.79,303.002,23.0878];
+	_this setVectorDirAndUp [[-0.876767,0.480916,0],[0,0,1]];
 };
 
-private _item3795 = objNull;
-if (_layer3840) then {
-	_item3795 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[6171.45,3556.81,-4.29153e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3795;
+private _item187 = objNull;
+if (_layer165 && _layer203) then {
+	_item187 = createVehicle ["3as_prop_fob_modular_wall_watchtower",[8267.59,295.081,1.90735e-006],[],0,"CAN_COLLIDE"];
+	_this = _item187;
 	_objects pushback _this;
-	_objectIDs pushback 3795;
-	_this setPosWorld [6171.45,3556.81,8.05481];
-	_this setVectorDirAndUp [[-0.698881,0.715032,0.0171365],[0.00201303,-0.0219926,0.999756]];
+	_objectIDs pushback 187;
+	_this setPosWorld [8267.59,295.081,23.1517];
+	_this setVectorDirAndUp [[-0.256383,0.966494,-0.0125622],[0,0.0129966,0.999916]];
 };
 
-private _item3801 = objNull;
-if (_layer3840) then {
-	_item3801 = createVehicle ["3as_MB_Platform_Support_Prop",[6087.65,3586.33,34.4611],[],0,"CAN_COLLIDE"];
-	_this = _item3801;
+private _item188 = objNull;
+if (_layer165 && _layer203) then {
+	_item188 = createVehicle ["3as_MB_Platform_Support_Prop",[8262.82,383.086,37.196],[],0,"CAN_COLLIDE"];
+	_this = _item188;
 	_objects pushback _this;
-	_objectIDs pushback 3801;
-	_this setPosWorld [6087.65,3586.33,29.2355];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 188;
+	_this setPosWorld [8262.82,383.086,48.2965];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3802 = objNull;
-if (_layer3840) then {
-	_item3802 = createVehicle ["3as_FOB_Light_Tall_Prop",[6129.17,3600.35,11.4424],[],0,"CAN_COLLIDE"];
-	_this = _item3802;
+private _item189 = objNull;
+if (_layer165 && _layer203) then {
+	_item189 = createVehicle ["3as_FOB_Light_Tall_Prop",[8289.12,348.042,11.5072],[],0,"CAN_COLLIDE"];
+	_this = _item189;
 	_objects pushback _this;
-	_objectIDs pushback 3802;
-	_this setPosWorld [6129.17,3600.35,18.7185];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 189;
+	_this setPosWorld [8289.12,348.042,34.8677];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3803 = objNull;
-if (_layer3840) then {
-	_item3803 = createVehicle ["3as_FOB_Light_Tall_Prop",[6070.91,3600.01,11.4956],[],0,"CAN_COLLIDE"];
-	_this = _item3803;
+private _item190 = objNull;
+if (_layer165 && _layer203) then {
+	_item190 = createVehicle ["3as_FOB_Light_Tall_Prop",[8270.57,403.261,11.4876],[],0,"CAN_COLLIDE"];
+	_this = _item190;
 	_objects pushback _this;
-	_objectIDs pushback 3803;
-	_this setPosWorld [6070.91,3600.01,18.4498];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 190;
+	_this setPosWorld [8270.57,403.261,34.8482];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3804 = objNull;
-if (_layer3840) then {
-	_item3804 = createVehicle ["3as_FOB_Light_Tall_Prop",[6071.37,3542.08,11.4935],[],0,"CAN_COLLIDE"];
-	_this = _item3804;
+private _item191 = objNull;
+if (_layer165 && _layer203) then {
+	_item191 = createVehicle ["3as_FOB_Light_Tall_Prop",[8216.13,384.929,11.453],[],0,"CAN_COLLIDE"];
+	_this = _item191;
 	_objects pushback _this;
-	_objectIDs pushback 3804;
-	_this setPosWorld [6071.37,3542.08,19.3397];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 191;
+	_this setPosWorld [8216.13,384.929,34.854];
+	_this setVectorDirAndUp [[0.954952,0.29676,0],[0,0,1]];
 };
 
-private _item3805 = objNull;
-if (_layer3840) then {
-	_item3805 = createVehicle ["3as_FOB_Light_Tall_Prop",[6129.19,3541.98,11.449],[],0,"CAN_COLLIDE"];
-	_this = _item3805;
+private _item192 = objNull;
+if (_layer165 && _layer203) then {
+	_item192 = createVehicle ["3as_FOB_Light_Tall_Prop",[8233.69,329.756,11.4482],[],0,"CAN_COLLIDE"];
+	_this = _item192;
 	_objects pushback _this;
-	_objectIDs pushback 3805;
-	_this setPosWorld [6129.19,3541.98,19.201];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 192;
+	_this setPosWorld [8233.69,329.756,34.8087];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3806 = objNull;
-if (_layer3840) then {
-	_item3806 = createVehicle ["3as_FOB_Light_Tall_Prop",[6171.58,3557.06,11.4216],[],0,"CAN_COLLIDE"];
-	_this = _item3806;
+private _item193 = objNull;
+if (_layer165 && _layer203) then {
+	_item193 = createVehicle ["3as_FOB_Light_Tall_Prop",[8267.83,295.229,11.541],[],0,"CAN_COLLIDE"];
+	_this = _item193;
 	_objects pushback _this;
-	_objectIDs pushback 3806;
-	_this setPosWorld [6171.58,3557.06,19.7543];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 193;
+	_this setPosWorld [8267.83,295.229,34.9635];
+	_this setVectorDirAndUp [[0.492148,0.870512,0],[0,0,1]];
 };
 
-private _item3807 = objNull;
-if (_layer3840) then {
-	_item3807 = createVehicle ["3as_FOB_Light_Tall_Prop",[6171.49,3585.7,11.4962],[],0,"CAN_COLLIDE"];
-	_this = _item3807;
+private _item194 = objNull;
+if (_layer165 && _layer203) then {
+	_item194 = createVehicle ["3as_FOB_Light_Tall_Prop",[8288.46,303.259,11.4919],[],0,"CAN_COLLIDE"];
+	_this = _item194;
 	_objects pushback _this;
-	_objectIDs pushback 3807;
-	_this setPosWorld [6171.49,3585.7,20.3008];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 194;
+	_this setPosWorld [8288.46,303.259,34.8524];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3808 = objNull;
-if (_layer3840) then {
-	_item3808 = createVehicle ["Land_OPTRE_Holotable",[6112.35,3582.12,0.44663],[],0,"CAN_COLLIDE"];
-	_this = _item3808;
+private _item195 = objNull;
+if (_layer165 && _layer203) then {
+	_item195 = createVehicle ["Land_OPTRE_Holotable",[8266.54,358.313,0.380722],[],0,"CAN_COLLIDE"];
+	_this = _item195;
 	_objects pushback _this;
-	_objectIDs pushback 3808;
-	_this setPosWorld [6112.35,3582.12,2.26789];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 195;
+	_this setPosWorld [8266.54,358.313,18.3061];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3809 = objNull;
-if (_layer3840) then {
-	_item3809 = createVehicle ["land_Pantalla",[6108.22,3587.73,0.429445],[],0,"CAN_COLLIDE"];
-	_this = _item3809;
+private _item196 = objNull;
+if (_layer165 && _layer203) then {
+	_item196 = createVehicle ["land_Pantalla",[8270.58,363.989,0.281845],[],0,"CAN_COLLIDE"];
+	_this = _item196;
 	_objects pushback _this;
-	_objectIDs pushback 3809;
-	_this setPosWorld [6108.22,3587.73,3.07689];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 196;
+	_this setPosWorld [8270.58,363.989,19.1218];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3810 = objNull;
-if (_layer3840) then {
-	_item3810 = createVehicle ["land_Pantalla",[6111.99,3587.72,0.44014],[],0,"CAN_COLLIDE"];
-	_this = _item3810;
+private _item197 = objNull;
+if (_layer165 && _layer203) then {
+	_item197 = createVehicle ["land_Pantalla",[8271.75,360.402,0.283203],[],0,"CAN_COLLIDE"];
+	_this = _item197;
 	_objects pushback _this;
-	_objectIDs pushback 3810;
-	_this setPosWorld [6111.99,3587.72,3.1223];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 197;
+	_this setPosWorld [8271.75,360.402,19.1232];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3836 = objNull;
-if (_layerRoot) then {
-	_item3836 = createVehicle ["3as_FOB_Building_1_prop",[6106.75,3548.63,-0.00118732],[],0,"CAN_COLLIDE"];
-	_this = _item3836;
+private _item112 = objNull;
+if (_layer203) then {
+	_item112 = createVehicle ["Land_FOB_build_New_Wall",[8237.64,327.82,0],[],0,"CAN_COLLIDE"];
+	_this = _item112;
 	_objects pushback _this;
-	_objectIDs pushback 3836;
-	_this setPosWorld [6106.75,3548.63,6.15468];
-	_this setVectorDirAndUp [[0,0.999998,-0.00198341],[-0.0100007,0.00198331,0.999948]];
+	_objectIDs pushback 112;
+	_this setPosWorld [8237.64,327.82,19.1677];
+	_this setVectorDirAndUp [[-0.245509,0.969394,0],[0,0,1]];
 };
 
-private _item3847 = objNull;
-if (_layerRoot) then {
-	_item3847 = createVehicle ["Land_FOB_build_New_Wall",[6132.26,3545.13,-4.88758e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3847;
+private _item113 = objNull;
+if (_layer203) then {
+	_item113 = createVehicle ["Land_FOB_build_New_Wall",[8241.88,325.619,0],[],0,"CAN_COLLIDE"];
+	_this = _item113;
 	_objects pushback _this;
-	_objectIDs pushback 3847;
-	_this setPosWorld [6132.26,3545.13,3.64759];
-	_this setVectorDirAndUp [[-0.997533,0.0702042,0],[0,0,1]];
+	_objectIDs pushback 113;
+	_this setPosWorld [8241.88,325.619,19.1677];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3848 = objNull;
-if (_layerRoot) then {
-	_item3848 = createVehicle ["Land_FOB_build_New_Wall",[6135.68,3548.46,0],[],0,"CAN_COLLIDE"];
-	_this = _item3848;
+private _item114 = objNull;
+if (_layer203) then {
+	_item114 = createVehicle ["Land_FOB_build_New_Wall",[8243.88,319.552,0],[],0,"CAN_COLLIDE"];
+	_this = _item114;
 	_objects pushback _this;
-	_objectIDs pushback 3848;
-	_this setPosWorld [6135.68,3548.46,3.74231];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 114;
+	_this setPosWorld [8243.88,319.552,19.1677];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3849 = objNull;
-if (_layerRoot) then {
-	_item3849 = createVehicle ["Land_FOB_build_New_Wall",[6142.07,3548.46,-9.29832e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3849;
+private _item115 = objNull;
+if (_layer203) then {
+	_item115 = createVehicle ["Land_FOB_build_New_Wall",[8245.81,313.452,7.62939e-006],[],0,"CAN_COLLIDE"];
+	_this = _item115;
 	_objects pushback _this;
-	_objectIDs pushback 3849;
-	_this setPosWorld [6142.07,3548.46,3.80149];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 115;
+	_this setPosWorld [8245.81,313.452,19.1677];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3850 = objNull;
-if (_layerRoot) then {
-	_item3850 = createVehicle ["Land_FOB_build_New_Wall",[6148.47,3548.39,1.00136e-005],[],0,"CAN_COLLIDE"];
-	_this = _item3850;
+private _item116 = objNull;
+if (_layer203) then {
+	_item116 = createVehicle ["Land_FOB_build_New_Wall",[8247.77,307.364,0],[],0,"CAN_COLLIDE"];
+	_this = _item116;
 	_objects pushback _this;
-	_objectIDs pushback 3850;
-	_this setPosWorld [6148.47,3548.39,3.85355];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 116;
+	_this setPosWorld [8247.77,307.364,19.1677];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3851 = objNull;
-if (_layerRoot) then {
-	_item3851 = createVehicle ["Land_FOB_build_New_Wall",[6154.86,3548.35,2.6226e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3851;
+private _item117 = objNull;
+if (_layer203) then {
+	_item117 = createVehicle ["Land_FOB_build_New_Wall",[8249.78,301.339,0],[],0,"CAN_COLLIDE"];
+	_this = _item117;
 	_objects pushback _this;
-	_objectIDs pushback 3851;
-	_this setPosWorld [6154.86,3548.35,3.89391];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 117;
+	_this setPosWorld [8249.78,301.339,19.1677];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3852 = objNull;
-if (_layerRoot) then {
-	_item3852 = createVehicle ["Land_FOB_build_New_Wall",[6161.21,3548.37,0],[],0,"CAN_COLLIDE"];
-	_this = _item3852;
+private _item118 = objNull;
+if (_layer203) then {
+	_item118 = createVehicle ["Land_FOB_build_New_Wall",[8251.73,295.247,0],[],0,"CAN_COLLIDE"];
+	_this = _item118;
 	_objects pushback _this;
-	_objectIDs pushback 3852;
-	_this setPosWorld [6161.21,3548.37,3.91763];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 118;
+	_this setPosWorld [8251.73,295.247,20.0697];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3853 = objNull;
-if (_layerRoot) then {
-	_item3853 = createVehicle ["Land_FOB_build_New_Wall",[6167.61,3548.31,-8.58307e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3853;
+private _item119 = objNull;
+if (_layer203) then {
+	_item119 = createVehicle ["Land_FOB_build_New_Wall",[8256.01,293.094,7.43866e-005],[],0,"CAN_COLLIDE"];
+	_this = _item119;
 	_objects pushback _this;
-	_objectIDs pushback 3853;
-	_this setPosWorld [6167.61,3548.31,3.92718];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 119;
+	_this setPosWorld [8256.01,293.094,20.1496];
+	_this setVectorDirAndUp [[-0.300377,0.95382,0],[0,0,1]];
 };
 
-private _item3854 = objNull;
-if (_layerRoot) then {
-	_item3854 = createVehicle ["Land_FOB_build_New_Wall",[6171.04,3551.19,9.53674e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3854;
+private _item108 = objNull;
+if (_layer203) then {
+	_item108 = createVehicle ["3as_FOB_Banner_prop",[8259.57,342.51,0],[],0,"CAN_COLLIDE"];
+	_this = _item108;
 	_objects pushback _this;
-	_objectIDs pushback 3854;
-	_this setPosWorld [6171.04,3551.19,3.99867];
-	_this setVectorDirAndUp [[-0.999913,0.0132176,0],[0,0,1]];
+	_objectIDs pushback 108;
+	_this setPosWorld [8259.57,342.51,18.3528];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3857 = objNull;
-if (_layerRoot) then {
-	_item3857 = createVehicle ["3as_FOB_Banner_prop",[6125.17,3570.55,-1.00136e-005],[],0,"CAN_COLLIDE"];
-	_this = _item3857;
+private _item162 = objNull;
+if (_layer203) then {
+	_item162 = createVehicle ["ls_commandPost_republic_blue",[8267.05,341.743,0.781567],[],0,"CAN_COLLIDE"];
+	_this = _item162;
 	_objects pushback _this;
-	_objectIDs pushback 3857;
-	_this setPosWorld [6125.17,3570.55,2.70662];
-	_this setVectorDirAndUp [[0,0.9998,-0.0199947],[-0.0279894,0.0199869,0.999408]];
+	_objectIDs pushback 162;
+	_this setPosWorld [8267.05,341.743,19.2313];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 };
 
-private _item3861 = objNull;
-if (_layerRoot) then {
-	_item3861 = createVehicle ["ls_commandPost_republic_blue",[6128.24,3577.41,0.770765],[],0,"CAN_COLLIDE"];
-	_this = _item3861;
+private _item120 = objNull;
+if (_layer203) then {
+	_item120 = createVehicle ["Land_FOB_build_New_Wall",[8262.61,293.959,0],[],0,"CAN_COLLIDE"];
+	_this = _item120;
 	_objects pushback _this;
-	_objectIDs pushback 3861;
-	_this setPosWorld [6128.24,3577.41,3.51691];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
+	_objectIDs pushback 120;
+	_this setPosWorld [8262.61,293.959,19.6473];
+	_this setVectorDirAndUp [[-0.00893134,0.99996,0],[0,0,1]];
 };
 
-private _item3862 = objNull;
-if (_layerRoot) then {
-	_item3862 = createVehicle ["Land_FOB_build_New_Wall",[6172.33,3561.94,0],[],0,"CAN_COLLIDE"];
-	_this = _item3862;
+private _item121 = objNull;
+if (_layer203) then {
+	_item121 = createVehicle ["Land_FOB_build_New_Wall",[8272.41,296.797,0],[],0,"CAN_COLLIDE"];
+	_this = _item121;
 	_objects pushback _this;
-	_objectIDs pushback 3862;
-	_this setPosWorld [6172.33,3561.94,4.24656];
-	_this setVectorDirAndUp [[-0.999911,0.0133244,0],[0,0,1]];
+	_objectIDs pushback 121;
+	_this setPosWorld [8272.41,296.797,19.178];
+	_this setVectorDirAndUp [[-0.300276,0.953852,0],[0,0,1]];
 };
 
-private _item3863 = objNull;
-if (_layerRoot) then {
-	_item3863 = createVehicle ["Land_FOB_build_New_Wall",[6172.61,3568.43,-7.62939e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3863;
+private _item122 = objNull;
+if (_layer203) then {
+	_item122 = createVehicle ["Land_FOB_build_New_Wall",[8278.5,298.624,0],[],0,"CAN_COLLIDE"];
+	_this = _item122;
 	_objects pushback _this;
-	_objectIDs pushback 3863;
-	_this setPosWorld [6172.61,3568.43,4.38199];
-	_this setVectorDirAndUp [[-0.999911,0.0133244,0],[0,0,1]];
+	_objectIDs pushback 122;
+	_this setPosWorld [8278.5,298.624,19.1677];
+	_this setVectorDirAndUp [[-0.300276,0.953852,0],[0,0,1]];
 };
 
-private _item3864 = objNull;
-if (_layerRoot) then {
-	_item3864 = createVehicle ["Land_FOB_build_New_Wall",[6172.78,3574.79,0],[],0,"CAN_COLLIDE"];
-	_this = _item3864;
+private _item123 = objNull;
+if (_layer203) then {
+	_item123 = createVehicle ["Land_FOB_build_New_Wall",[8284.59,300.482,0],[],0,"CAN_COLLIDE"];
+	_this = _item123;
 	_objects pushback _this;
-	_objectIDs pushback 3864;
-	_this setPosWorld [6172.78,3574.79,4.50132];
-	_this setVectorDirAndUp [[-0.999911,0.0133244,0],[0,0,1]];
+	_objectIDs pushback 123;
+	_this setPosWorld [8284.59,300.482,19.1677];
+	_this setVectorDirAndUp [[-0.300276,0.953852,0],[0,0,1]];
 };
 
-private _item3865 = objNull;
-if (_layerRoot) then {
-	_item3865 = createVehicle ["Land_FOB_build_New_Wall",[6172.92,3581.16,-2.38419e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3865;
+private _item124 = objNull;
+if (_layer203) then {
+	_item124 = createVehicle ["Land_FOB_build_New_Wall",[8289.64,307.931,0],[],0,"CAN_COLLIDE"];
+	_this = _item124;
 	_objects pushback _this;
-	_objectIDs pushback 3865;
-	_this setPosWorld [6172.92,3581.16,4.58595];
-	_this setVectorDirAndUp [[-0.999911,0.0133244,0],[0,0,1]];
+	_objectIDs pushback 124;
+	_this setPosWorld [8289.64,307.931,19.1677];
+	_this setVectorDirAndUp [[-0.999243,-0.0388906,0],[0,0,1]];
 };
 
-private _item3867 = objNull;
-if (_layerRoot) then {
-	_item3867 = createVehicle ["Land_FOB_build_New_Wall",[6167.43,3588.29,0],[],0,"CAN_COLLIDE"];
-	_this = _item3867;
+private _item125 = objNull;
+if (_layer203) then {
+	_item125 = createVehicle ["Land_FOB_build_New_Wall",[8289.46,314.335,0],[],0,"CAN_COLLIDE"];
+	_this = _item125;
 	_objects pushback _this;
-	_objectIDs pushback 3867;
-	_this setPosWorld [6167.43,3588.29,4.52024];
-	_this setVectorDirAndUp [[-0.275785,-0.961219,0],[0,0,1]];
+	_objectIDs pushback 125;
+	_this setPosWorld [8289.46,314.335,19.1677];
+	_this setVectorDirAndUp [[-0.999243,-0.0388906,0],[0,0,1]];
 };
 
-private _item3868 = objNull;
-if (_layerRoot) then {
-	_item3868 = createVehicle ["Land_FOB_build_New_Wall",[6161.29,3590.12,0],[],0,"CAN_COLLIDE"];
-	_this = _item3868;
+private _item126 = objNull;
+if (_layer203) then {
+	_item126 = createVehicle ["Land_FOB_build_New_Wall",[8289.25,320.757,0],[],0,"CAN_COLLIDE"];
+	_this = _item126;
 	_objects pushback _this;
-	_objectIDs pushback 3868;
-	_this setPosWorld [6161.29,3590.12,4.33814];
-	_this setVectorDirAndUp [[-0.275785,-0.961219,0],[0,0,1]];
+	_objectIDs pushback 126;
+	_this setPosWorld [8289.25,320.757,19.1677];
+	_this setVectorDirAndUp [[-0.999243,-0.0388906,0],[0,0,1]];
 };
 
-private _item3869 = objNull;
-if (_layerRoot) then {
-	_item3869 = createVehicle ["Land_FOB_build_New_Wall",[6155.12,3591.94,0],[],0,"CAN_COLLIDE"];
-	_this = _item3869;
+private _item127 = objNull;
+if (_layer203) then {
+	_item127 = createVehicle ["Land_FOB_build_New_Wall",[8288.98,327.15,0],[],0,"CAN_COLLIDE"];
+	_this = _item127;
 	_objects pushback _this;
-	_objectIDs pushback 3869;
-	_this setPosWorld [6155.12,3591.94,4.10476];
-	_this setVectorDirAndUp [[-0.275785,-0.961219,0],[0,0,1]];
+	_objectIDs pushback 127;
+	_this setPosWorld [8288.98,327.15,19.1677];
+	_this setVectorDirAndUp [[-0.999243,-0.0388906,0],[0,0,1]];
 };
 
-private _item3870 = objNull;
-if (_layerRoot) then {
-	_item3870 = createVehicle ["Land_FOB_build_New_Wall",[6148.97,3593.68,0],[],0,"CAN_COLLIDE"];
-	_this = _item3870;
+private _item128 = objNull;
+if (_layer203) then {
+	_item128 = createVehicle ["Land_FOB_build_New_Wall",[8288.78,333.514,0],[],0,"CAN_COLLIDE"];
+	_this = _item128;
 	_objects pushback _this;
-	_objectIDs pushback 3870;
-	_this setPosWorld [6148.97,3593.68,3.81599];
-	_this setVectorDirAndUp [[-0.275785,-0.961219,0],[0,0,1]];
+	_objectIDs pushback 128;
+	_this setPosWorld [8288.78,333.514,19.1677];
+	_this setVectorDirAndUp [[-0.999243,-0.0388906,0],[0,0,1]];
 };
 
-private _item3871 = objNull;
-if (_layerRoot) then {
-	_item3871 = createVehicle ["Land_FOB_build_New_Wall",[6142.86,3595.48,0],[],0,"CAN_COLLIDE"];
-	_this = _item3871;
+private _item129 = objNull;
+if (_layer203) then {
+	_item129 = createVehicle ["Land_FOB_build_New_Wall",[8288.54,339.821,0],[],0,"CAN_COLLIDE"];
+	_this = _item129;
 	_objects pushback _this;
-	_objectIDs pushback 3871;
-	_this setPosWorld [6142.86,3595.48,3.52536];
-	_this setVectorDirAndUp [[-0.275785,-0.961219,0],[0,0,1]];
+	_objectIDs pushback 129;
+	_this setPosWorld [8288.54,339.821,19.1677];
+	_this setVectorDirAndUp [[-0.999243,-0.0388906,0],[0,0,1]];
 };
 
-private _item3872 = objNull;
-if (_layerRoot) then {
-	_item3872 = createVehicle ["Land_FOB_build_New_Wall",[6136.79,3597.23,-1.19209e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3872;
+private _item130 = objNull;
+if (_layer203) then {
+	_item130 = createVehicle ["Land_FOB_build_New_Wall",[8289.3,346.001,0],[],0,"CAN_COLLIDE"];
+	_this = _item130;
 	_objects pushback _this;
-	_objectIDs pushback 3872;
-	_this setPosWorld [6136.79,3597.23,3.29675];
-	_this setVectorDirAndUp [[-0.275785,-0.961219,0],[0,0,1]];
+	_objectIDs pushback 130;
+	_this setPosWorld [8289.3,346.001,19.1677];
+	_this setVectorDirAndUp [[-0.967243,0.253854,0],[0,0,1]];
 };
 
-private _item3874 = objNull;
-if (_layerRoot) then {
-	_item3874 = createVehicle ["Land_FOB_build_New_Wall",[6131.16,3599.88,1.66893e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3874;
+private _item131 = objNull;
+if (_layer203) then {
+	_item131 = createVehicle ["Land_FOB_build_New_Wall",[8288.61,352.713,0],[],0,"CAN_COLLIDE"];
+	_this = _item131;
 	_objects pushback _this;
-	_objectIDs pushback 3874;
-	_this setPosWorld [6131.16,3599.88,3.12487];
-	_this setVectorDirAndUp [[-0.543809,-0.839209,0],[0,0,1]];
+	_objectIDs pushback 131;
+	_this setPosWorld [8288.61,352.713,19.1677];
+	_this setVectorDirAndUp [[-0.947541,-0.319636,0],[0,0,1]];
 };
 
-private _item3875 = objNull;
-if (_layerRoot) then {
-	_item3875 = createVehicle ["Land_FOB_build_New_Wall",[6124.57,3601.33,-2.5034e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3875;
+private _item132 = objNull;
+if (_layer203) then {
+	_item132 = createVehicle ["Land_FOB_build_New_Wall",[8286.66,358.773,0],[],0,"CAN_COLLIDE"];
+	_this = _item132;
 	_objects pushback _this;
-	_objectIDs pushback 3875;
-	_this setPosWorld [6124.57,3601.33,3.01449];
-	_this setVectorDirAndUp [[0.00703869,-0.999975,0],[0,0,1]];
+	_objectIDs pushback 132;
+	_this setPosWorld [8286.66,358.773,19.1677];
+	_this setVectorDirAndUp [[-0.947541,-0.319636,0],[0,0,1]];
 };
 
-private _item3876 = objNull;
-if (_layerRoot) then {
-	_item3876 = createVehicle ["Land_FOB_build_New_Wall",[6118.2,3601.37,8.34465e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3876;
+private _item133 = objNull;
+if (_layer203) then {
+	_item133 = createVehicle ["Land_FOB_build_New_Wall",[8284.57,364.833,0],[],0,"CAN_COLLIDE"];
+	_this = _item133;
 	_objects pushback _this;
-	_objectIDs pushback 3876;
-	_this setPosWorld [6118.2,3601.37,2.96417];
-	_this setVectorDirAndUp [[0.00703869,-0.999975,0],[0,0,1]];
+	_objectIDs pushback 133;
+	_this setPosWorld [8284.57,364.833,19.1677];
+	_this setVectorDirAndUp [[-0.947541,-0.319636,0],[0,0,1]];
 };
 
-private _item3877 = objNull;
-if (_layerRoot) then {
-	_item3877 = createVehicle ["Land_FOB_build_New_Wall",[6111.8,3601.28,0],[],0,"CAN_COLLIDE"];
-	_this = _item3877;
+private _item134 = objNull;
+if (_layer203) then {
+	_item134 = createVehicle ["Land_FOB_build_New_Wall",[8282.65,370.878,0],[],0,"CAN_COLLIDE"];
+	_this = _item134;
 	_objects pushback _this;
-	_objectIDs pushback 3877;
-	_this setPosWorld [6111.8,3601.28,2.9387];
-	_this setVectorDirAndUp [[0.00703869,-0.999975,0],[0,0,1]];
+	_objectIDs pushback 134;
+	_this setPosWorld [8282.65,370.878,19.1677];
+	_this setVectorDirAndUp [[-0.947541,-0.319636,0],[0,0,1]];
 };
 
-private _item3878 = objNull;
-if (_layerRoot) then {
-	_item3878 = createVehicle ["Land_FOB_build_New_Wall",[6105.46,3601.35,-2.02656e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3878;
+private _item135 = objNull;
+if (_layer203) then {
+	_item135 = createVehicle ["Land_FOB_build_New_Wall",[8280.72,376.931,0],[],0,"CAN_COLLIDE"];
+	_this = _item135;
 	_objects pushback _this;
-	_objectIDs pushback 3878;
-	_this setPosWorld [6105.46,3601.35,2.91949];
-	_this setVectorDirAndUp [[0.00703869,-0.999975,0],[0,0,1]];
+	_objectIDs pushback 135;
+	_this setPosWorld [8280.72,376.931,19.1677];
+	_this setVectorDirAndUp [[-0.947541,-0.319636,0],[0,0,1]];
 };
 
-private _item3879 = objNull;
-if (_layerRoot) then {
-	_item3879 = createVehicle ["Land_FOB_build_New_Wall",[6099.1,3601.41,-3.57628e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3879;
+private _item136 = objNull;
+if (_layer203) then {
+	_item136 = createVehicle ["Land_FOB_build_New_Wall",[8278.63,383.006,3.2388],[],0,"CAN_COLLIDE"];
+	_this = _item136;
 	_objects pushback _this;
-	_objectIDs pushback 3879;
-	_this setPosWorld [6099.1,3601.41,2.91587];
-	_this setVectorDirAndUp [[0.00703869,-0.999975,0],[0,0,1]];
+	_objectIDs pushback 136;
+	_this setPosWorld [8278.63,383.006,22.4065];
+	_this setVectorDirAndUp [[-0.947541,-0.319636,0],[0,0,1]];
 };
 
-private _item3880 = objNull;
-if (_layerRoot) then {
-	_item3880 = createVehicle ["Land_FOB_build_New_Wall",[6092.68,3601.33,-3.57628e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3880;
+private _item137 = objNull;
+if (_layer203) then {
+	_item137 = createVehicle ["Land_FOB_build_New_Wall",[8276.72,389.017,0],[],0,"CAN_COLLIDE"];
+	_this = _item137;
 	_objects pushback _this;
-	_objectIDs pushback 3880;
-	_this setPosWorld [6092.68,3601.33,2.89104];
-	_this setVectorDirAndUp [[0.00703869,-0.999975,0],[0,0,1]];
+	_objectIDs pushback 137;
+	_this setPosWorld [8276.72,389.017,19.1677];
+	_this setVectorDirAndUp [[-0.947541,-0.319636,0],[0,0,1]];
 };
 
-private _item3881 = objNull;
-if (_layerRoot) then {
-	_item3881 = createVehicle ["Land_FOB_build_New_Wall",[6086.37,3601.4,-1.43051e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3881;
+private _item138 = objNull;
+if (_layer203) then {
+	_item138 = createVehicle ["Land_FOB_build_New_Wall",[8274.69,395.083,0],[],0,"CAN_COLLIDE"];
+	_this = _item138;
 	_objects pushback _this;
-	_objectIDs pushback 3881;
-	_this setPosWorld [6086.37,3601.4,2.86315];
-	_this setVectorDirAndUp [[0.00703869,-0.999975,0],[0,0,1]];
+	_objectIDs pushback 138;
+	_this setPosWorld [8274.69,395.083,19.1677];
+	_this setVectorDirAndUp [[-0.947541,-0.319636,0],[0,0,1]];
 };
 
-private _item3882 = objNull;
-if (_layerRoot) then {
-	_item3882 = createVehicle ["Land_FOB_build_New_Wall",[6079.97,3601.37,1.43051e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3882;
+private _item139 = objNull;
+if (_layer203) then {
+	_item139 = createVehicle ["Land_FOB_build_New_Wall",[8272.67,401.127,0],[],0,"CAN_COLLIDE"];
+	_this = _item139;
 	_objects pushback _this;
-	_objectIDs pushback 3882;
-	_this setPosWorld [6079.97,3601.37,2.82019];
-	_this setVectorDirAndUp [[0.00703869,-0.999975,0],[0,0,1]];
+	_objectIDs pushback 139;
+	_this setPosWorld [8272.67,401.127,19.1677];
+	_this setVectorDirAndUp [[-0.947541,-0.319636,0],[0,0,1]];
 };
 
-private _item3883 = objNull;
-if (_layerRoot) then {
-	_item3883 = createVehicle ["Land_FOB_build_New_Wall",[6073.6,3601.33,1.78814e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3883;
+private _item201 = objNull;
+if (_layer203) then {
+	_item201 = _item200 createUnit ["3as_clone_Engineer",[8235.48,365.431,0],[],0,"CAN_COLLIDE"];
+	_item200 selectLeader _item201;
+	_this = _item201;
 	_objects pushback _this;
-	_objectIDs pushback 3883;
-	_this setPosWorld [6073.6,3601.33,2.77474];
-	_this setVectorDirAndUp [[0.00703869,-0.999975,0],[0,0,1]];
-};
-
-private _item3891 = objNull;
-if (_layer3888) then {
-	_item3891 = _item3890 createUnit ["3as_clone_Engineer",[6095.87,3554.85,0],[],0,"CAN_COLLIDE"];
-	_item3890 selectLeader _item3891;
-	_this = _item3891;
-	_objects pushback _this;
-	_objectIDs pushback 3891;
-	_this setPosWorld [6095.87,3554.9,1.40225];
-	_this setVectorDirAndUp [[-0.998217,0.0596898,0],[0,0,1]];
+	_objectIDs pushback 201;
+	_this setPosWorld [8235.48,365.481,17.3414];
+	_this setVectorDirAndUp [[-0.255708,0.966754,0],[0,0,1]];
 	_this setUnitLoadout [[],[],[],["JLTS_CloneArmor",[["FirstAidKit",1],["SmokeShell",1,1],["SmokeShellGreen",1,1],["Chemlight_green",2,1],["HandGrenade",2,1]]],[],[],"3as_Engineer_Helmet","",[],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 	_this enableSimulation false;
 	_this allowdamage false;;
 	_this enablestamina false;;
-	_this setname "CT - 7279";;
-	_this setface "WhiteHead_07";;
+	_this setname "CT - 0704";;
+	_this setface "Barklem";;
 	_this setspeaker "Male01ENG";;
 	_this setpitch 0.97;;
 	if !(0 == ([0,1] select (_this getUnitTrait 'engineer'))|| {0 == -1}) then {_this setVariable ['s', 0, true]};
@@ -847,176 +849,196 @@ if (_layer3888) then {
 	if (0 != -1 && {0 != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable ["ace_medical_medicClass", 0, true]};
 };
 
-private _item3892 = objNull;
-if (_layerRoot) then {
-	_item3892 = createVehicle ["VR_Area_01_square_4x4_yellow_F",[6090.84,3564.18,0.16571],[],0,"CAN_COLLIDE"];
-	_this = _item3892;
+private _item103 = objNull;
+if (_layer203) then {
+	_item103 = createVehicle ["VR_Area_01_square_4x4_yellow_F",[8242.78,373.123,0.118414],[],0,"CAN_COLLIDE"];
+	_this = _item103;
 	_objects pushback _this;
-	_objectIDs pushback 3892;
-	_this setPosWorld [6090.84,3564.18,1.35778];
-	_this setVectorDirAndUp [[-0.999866,0.0163434,0],[0,0,1]];
+	_objectIDs pushback 103;
+	_this setPosWorld [8242.78,373.123,17.459];
+	_this setVectorDirAndUp [[-0.297394,0.954755,0],[0,0,1]];
 	_this setObjectTextureGlobal [0,"#(argb,8,8,3)color(0.581,0.441,0.293,1,co)"];
 };
 
-private _item3893 = objNull;
-if (_layerRoot) then {
-	_item3893 = createVehicle ["Land_FOB_build_New_Wall",[6069.49,3595.06,5.96046e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3893;
+private _item140 = objNull;
+if (_layer203) then {
+	_item140 = createVehicle ["Land_FOB_build_New_Wall",[8265.43,403.068,0],[],0,"CAN_COLLIDE"];
+	_this = _item140;
 	_objects pushback _this;
-	_objectIDs pushback 3893;
-	_this setPosWorld [6069.49,3595.06,2.75984];
-	_this setVectorDirAndUp [[0.999848,0.0174271,0],[0,0,1]];
+	_objectIDs pushback 140;
+	_this setPosWorld [8265.43,403.068,19.1677];
+	_this setVectorDirAndUp [[0.329462,-0.944169,0],[0,0,1]];
 };
 
-private _item3894 = objNull;
-if (_layerRoot) then {
-	_item3894 = createVehicle ["Land_FOB_build_New_Wall",[6069.52,3588.65,-8.34465e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3894;
+private _item141 = objNull;
+if (_layer203) then {
+	_item141 = createVehicle ["Land_FOB_build_New_Wall",[8259.35,401.029,0],[],0,"CAN_COLLIDE"];
+	_this = _item141;
 	_objects pushback _this;
-	_objectIDs pushback 3894;
-	_this setPosWorld [6069.52,3588.65,2.74688];
-	_this setVectorDirAndUp [[0.999848,0.0174271,0],[0,0,1]];
+	_objectIDs pushback 141;
+	_this setPosWorld [8259.35,401.029,19.1677];
+	_this setVectorDirAndUp [[0.329462,-0.944169,0],[0,0,1]];
 };
 
-private _item3895 = objNull;
-if (_layerRoot) then {
-	_item3895 = createVehicle ["Land_FOB_build_New_Wall",[6069.57,3582.33,-4.64916e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3895;
+private _item142 = objNull;
+if (_layer203) then {
+	_item142 = createVehicle ["Land_FOB_build_New_Wall",[8253.36,399.006,0],[],0,"CAN_COLLIDE"];
+	_this = _item142;
 	_objects pushback _this;
-	_objectIDs pushback 3895;
-	_this setPosWorld [6069.57,3582.33,2.75881];
-	_this setVectorDirAndUp [[0.999848,0.0174271,0],[0,0,1]];
+	_objectIDs pushback 142;
+	_this setPosWorld [8253.36,399.006,19.1677];
+	_this setVectorDirAndUp [[0.329462,-0.944169,0],[0,0,1]];
 };
 
-private _item3896 = objNull;
-if (_layerRoot) then {
-	_item3896 = createVehicle ["Land_FOB_build_New_Wall",[6069.6,3575.91,-1.43051e-005],[],0,"CAN_COLLIDE"];
-	_this = _item3896;
+private _item143 = objNull;
+if (_layer203) then {
+	_item143 = createVehicle ["Land_FOB_build_New_Wall",[8247.27,396.971,0],[],0,"CAN_COLLIDE"];
+	_this = _item143;
 	_objects pushback _this;
-	_objectIDs pushback 3896;
-	_this setPosWorld [6069.6,3575.91,2.83948];
-	_this setVectorDirAndUp [[0.999848,0.0174271,0],[0,0,1]];
+	_objectIDs pushback 143;
+	_this setPosWorld [8247.27,396.971,19.1677];
+	_this setVectorDirAndUp [[0.329462,-0.944169,0],[0,0,1]];
 };
 
-private _item3912 = objNull;
-if (_layerRoot) then {
-	_item3912 = createVehicle ["Land_FOB_build_New_Wall",[6069.03,3551.92,-1.19209e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3912;
+private _item144 = objNull;
+if (_layer203) then {
+	_item144 = createVehicle ["Land_FOB_build_New_Wall",[8220.3,387.415,1.71661e-005],[],0,"CAN_COLLIDE"];
+	_this = _item144;
 	_objects pushback _this;
-	_objectIDs pushback 3912;
-	_this setPosWorld [6069.03,3551.92,3.41318];
-	_this setVectorDirAndUp [[0.999848,0.0174271,0],[0,0,1]];
+	_objectIDs pushback 144;
+	_this setPosWorld [8220.3,387.415,19.186];
+	_this setVectorDirAndUp [[0.329462,-0.944169,0],[0,0,1]];
 };
 
-private _item3913 = objNull;
-if (_layerRoot) then {
-	_item3913 = createVehicle ["Land_FOB_build_New_Wall",[6069.06,3545.47,2.5034e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3913;
+private _item145 = objNull;
+if (_layer203) then {
+	_item145 = createVehicle ["Land_FOB_build_New_Wall",[8226.27,389.51,0],[],0,"CAN_COLLIDE"];
+	_this = _item145;
 	_objects pushback _this;
-	_objectIDs pushback 3913;
-	_this setPosWorld [6069.06,3545.47,3.59135];
-	_this setVectorDirAndUp [[0.999848,0.0174271,0],[0,0,1]];
+	_objectIDs pushback 145;
+	_this setPosWorld [8226.27,389.51,19.1677];
+	_this setVectorDirAndUp [[0.329462,-0.944169,0],[0,0,1]];
 };
 
-private _item3914 = objNull;
-if (_layerRoot) then {
-	_item3914 = createVehicle ["Land_FOB_build_New_Wall",[6074.79,3539.34,2.86102e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3914;
+private _item146 = objNull;
+if (_layer203) then {
+	_item146 = createVehicle ["Land_FOB_build_New_Wall",[8214.16,380.592,0],[],0,"CAN_COLLIDE"];
+	_this = _item146;
 	_objects pushback _this;
-	_objectIDs pushback 3914;
-	_this setPosWorld [6074.79,3539.34,3.67946];
-	_this setVectorDirAndUp [[-0.0046752,0.999989,0],[0,0,1]];
+	_objectIDs pushback 146;
+	_this setPosWorld [8214.16,380.592,19.626];
+	_this setVectorDirAndUp [[0.948293,0.317395,0],[0,0,1]];
 };
 
-private _item3916 = objNull;
-if (_layerRoot) then {
-	_item3916 = createVehicle ["Land_FOB_build_New_Wall",[6081.26,3539.36,2.86102e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3916;
+private _item147 = objNull;
+if (_layer203) then {
+	_item147 = createVehicle ["Land_FOB_build_New_Wall",[8216.21,374.456,0],[],0,"CAN_COLLIDE"];
+	_this = _item147;
 	_objects pushback _this;
-	_objectIDs pushback 3916;
-	_this setPosWorld [6081.26,3539.36,3.58658];
-	_this setVectorDirAndUp [[-0.0046752,0.999989,0],[0,0,1]];
+	_objectIDs pushback 147;
+	_this setPosWorld [8216.21,374.456,19.9294];
+	_this setVectorDirAndUp [[0.948293,0.317395,0],[0,0,1]];
 };
 
-private _item3917 = objNull;
-if (_layerRoot) then {
-	_item3917 = createVehicle ["Land_FOB_build_New_Wall",[6087.58,3539.39,1.07288e-005],[],0,"CAN_COLLIDE"];
-	_this = _item3917;
+private _item148 = objNull;
+if (_layer203) then {
+	_item148 = createVehicle ["Land_FOB_build_New_Wall",[8218.21,368.461,3.8147e-006],[],0,"CAN_COLLIDE"];
+	_this = _item148;
 	_objects pushback _this;
-	_objectIDs pushback 3917;
-	_this setPosWorld [6087.58,3539.39,3.51804];
-	_this setVectorDirAndUp [[-0.0046752,0.999989,0],[0,0,1]];
+	_objectIDs pushback 148;
+	_this setPosWorld [8218.21,368.461,20.0077];
+	_this setVectorDirAndUp [[0.948293,0.317395,0],[0,0,1]];
 };
 
-private _item3918 = objNull;
-if (_layerRoot) then {
-	_item3918 = createVehicle ["Land_FOB_build_New_Wall",[6093.89,3539.39,2.74181e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3918;
+private _item149 = objNull;
+if (_layer203) then {
+	_item149 = createVehicle ["Land_FOB_build_New_Wall",[8220.18,362.474,0],[],0,"CAN_COLLIDE"];
+	_this = _item149;
 	_objects pushback _this;
-	_objectIDs pushback 3918;
-	_this setPosWorld [6093.89,3539.39,3.47167];
-	_this setVectorDirAndUp [[-0.0046752,0.999989,0],[0,0,1]];
+	_objectIDs pushback 149;
+	_this setPosWorld [8220.18,362.474,20.0289];
+	_this setVectorDirAndUp [[0.948293,0.317395,0],[0,0,1]];
 };
 
-private _item3919 = objNull;
-if (_layerRoot) then {
-	_item3919 = createVehicle ["Land_FOB_build_New_Wall",[6100.25,3539.52,2.98023e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3919;
+private _item150 = objNull;
+if (_layer203) then {
+	_item150 = createVehicle ["Land_FOB_build_New_Wall",[8222.3,356.475,0],[],0,"CAN_COLLIDE"];
+	_this = _item150;
 	_objects pushback _this;
-	_objectIDs pushback 3919;
-	_this setPosWorld [6100.25,3539.52,3.44002];
-	_this setVectorDirAndUp [[-0.0046752,0.999989,0],[0,0,1]];
+	_objectIDs pushback 150;
+	_this setPosWorld [8222.3,356.475,19.8497];
+	_this setVectorDirAndUp [[0.948293,0.317395,0],[0,0,1]];
 };
 
-private _item3920 = objNull;
-if (_layerRoot) then {
-	_item3920 = createVehicle ["Land_FOB_build_New_Wall",[6106.57,3539.42,2.86102e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3920;
+private _item151 = objNull;
+if (_layer203) then {
+	_item151 = createVehicle ["Land_FOB_build_New_Wall",[8224.18,350.437,3.8147e-006],[],0,"CAN_COLLIDE"];
+	_this = _item151;
 	_objects pushback _this;
-	_objectIDs pushback 3920;
-	_this setPosWorld [6106.57,3539.42,3.43847];
-	_this setVectorDirAndUp [[-0.0046752,0.999989,0],[0,0,1]];
+	_objectIDs pushback 151;
+	_this setPosWorld [8224.18,350.437,19.6433];
+	_this setVectorDirAndUp [[0.948293,0.317395,0],[0,0,1]];
 };
 
-private _item3921 = objNull;
-if (_layerRoot) then {
-	_item3921 = createVehicle ["Land_FOB_build_New_Wall",[6112.94,3539.42,4.17233e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3921;
+private _item152 = objNull;
+if (_layer203) then {
+	_item152 = createVehicle ["Land_FOB_build_New_Wall",[8226.17,344.381,0],[],0,"CAN_COLLIDE"];
+	_this = _item152;
 	_objects pushback _this;
-	_objectIDs pushback 3921;
-	_this setPosWorld [6112.94,3539.42,3.4489];
-	_this setVectorDirAndUp [[-0.0046752,0.999989,0],[0,0,1]];
+	_objectIDs pushback 152;
+	_this setPosWorld [8226.17,344.381,19.4776];
+	_this setVectorDirAndUp [[0.948293,0.317395,0],[0,0,1]];
 };
 
-private _item3922 = objNull;
-if (_layerRoot) then {
-	_item3922 = createVehicle ["Land_FOB_build_New_Wall",[6119.29,3539.49,4.76837e-007],[],0,"CAN_COLLIDE"];
-	_this = _item3922;
+private _item153 = objNull;
+if (_layer203) then {
+	_item153 = createVehicle ["Land_FOB_build_New_Wall",[8228.23,338.379,0],[],0,"CAN_COLLIDE"];
+	_this = _item153;
 	_objects pushback _this;
-	_objectIDs pushback 3922;
-	_this setPosWorld [6119.29,3539.49,3.46773];
-	_this setVectorDirAndUp [[-0.0046752,0.999989,0],[0,0,1]];
+	_objectIDs pushback 153;
+	_this setPosWorld [8228.23,338.379,19.1818];
+	_this setVectorDirAndUp [[0.948293,0.317395,0],[0,0,1]];
 };
 
-private _item3923 = objNull;
-if (_layerRoot) then {
-	_item3923 = createVehicle ["Land_FOB_build_New_Wall",[6125.73,3539.51,2.74181e-006],[],0,"CAN_COLLIDE"];
-	_this = _item3923;
+private _item154 = objNull;
+if (_layer203) then {
+	_item154 = createVehicle ["Land_FOB_build_New_Wall",[8230.26,332.262,0],[],0,"CAN_COLLIDE"];
+	_this = _item154;
 	_objects pushback _this;
-	_objectIDs pushback 3923;
-	_this setPosWorld [6125.73,3539.51,3.4912];
-	_this setVectorDirAndUp [[-0.0046752,0.999989,0],[0,0,1]];
+	_objectIDs pushback 154;
+	_this setPosWorld [8230.26,332.262,19.1677];
+	_this setVectorDirAndUp [[0.948293,0.317395,0],[0,0,1]];
 };
 
-private _item3924 = objNull;
-if (_layerRoot) then {
-	_item3924 = createVehicle ["3AS_HeavyRepeater_Armoured",[6071.25,3541.46,8.99693],[],0,"CAN_COLLIDE"];
-	_this = _item3924;
+private _item161 = objNull;
+if (_layer203) then {
+	_item161 = createVehicle ["3AS_HeavyRepeater_Armoured",[8215.07,384.624,9.36865],[],0,"CAN_COLLIDE"];
+	_this = _item161;
 	_objects pushback _this;
-	_objectIDs pushback 3924;
-	_this setPosWorld [6071.21,3541.41,10.8463];
-	_this setVectorDirAndUp [[-0.692132,-0.72103,0.0327154],[0.0160051,0.0299834,0.999422]];
+	_objectIDs pushback 161;
+	_this setPosWorld [8215.03,384.568,26.7826];
+	_this setVectorDirAndUp [[-0.90207,0.43159,0],[0,0,1]];
 	[_this,2] call ace_cargo_fnc_setSize;;
+};
+
+private _item205 = objNull;
+if (_layerRoot) then {
+	_item205 = createVehicle ["3as_Landingpad_prop",[8166.52,295.15,0],[],0,"CAN_COLLIDE"];
+	_this = _item205;
+	_objects pushback _this;
+	_objectIDs pushback 205;
+	_this setPosWorld [8166.52,295.15,18.8439];
+	_this setVectorDirAndUp [[0.193615,-0.981078,0],[0,0,1]];
+};
+
+private _item207 = objNull;
+if (_layerRoot) then {
+	_item207 = createVehicle ["3as_Landingpad_2_prop",[8213.19,311.66,0],[],0,"CAN_COLLIDE"];
+	_this = _item207;
+	_objects pushback _this;
+	_objectIDs pushback 207;
+	_this setPosWorld [8213.19,311.66,18.8439];
+	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
 };
 
 
@@ -1028,10 +1050,10 @@ private _triggerIDs = [];
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Group attributes (applied only once group units exist)
-_this = _item3890;
+_this = _item200;
 if !(units _this isEqualTo []) then {
 	[_this,0] setWaypointPosition [position leader _this,0];
-	[_this, "Выдача техники"] call CBA_fnc_setCallsign;
+	[_this, "Альфа 1-1"] call CBA_fnc_setCallsign;
 };
 
 
@@ -1046,40 +1068,26 @@ private _waypointIDs = [];
 private _logics = [];
 private _logicIDs = [];
 
-private _item3889 = objNull;
-if (_layer3888) then {
-	_item3889 = (group (missionNamespace getvariable ["BIS_functions_mainscope",objnull])) createUnit ["Logic",[6090.89,3564.16,0.166],[],0,"CAN_COLLIDE"];
-	_this = _item3889;
+private _item199 = objNull;
+if (_layer198 && _layer203) then {
+	_item199 = (group (missionNamespace getvariable ["BIS_functions_mainscope",objnull])) createUnit ["Logic",[8242.77,373.072,0.165703],[],0,"CAN_COLLIDE"];
+	_this = _item199;
 	_logics pushback _this;
-	_logicIDs pushback 3889;
-	_this setPosWorld [6090.89,3564.16,1.35832];
-	_this setVectorDirAndUp [[-0.999944,0.00330422,-0.0100548],[-0.0100007,0.0159969,0.999822]];
-	VVS_SpawnGARLandA = _this;
-	_this setVehicleVarName "VVS_SpawnGARLandA";
+	_logicIDs pushback 199;
+	_this setPosWorld [8242.77,373.072,17.5057];
+	_this setVectorDirAndUp [[-0.268573,0.963259,0],[0,0,1]];
+	VVS_SpawnGARLand = _this;
+	_this setVehicleVarName "VVS_SpawnGARLand";
 };
 
-private _item0 = objNull;
-if (_layerRoot) then {
-	_item0 = (group (missionNamespace getvariable ["BIS_functions_mainscope",objnull])) createUnit ["ModuleHideTerrainObjects_F",[6121.86,3570.15,0],[],0,"CAN_COLLIDE"];
-	_this = _item0;
+private _item102 = objNull;
+if (_layer203) then {
+	_item102 = (group (missionNamespace getvariable ["BIS_functions_mainscope",objnull])) createUnit ["ModuleRespawnPosition_F",[8232.78,353.064,0.196995],[],0,"CAN_COLLIDE"];
+	_this = _item102;
 	_logics pushback _this;
-	_logicIDs pushback 0;
-	_this setPosWorld [6121.86,3570.15,1.62159];
-	_this setVectorDirAndUp [[0,1,0],[0,0,1]];
-	_this setVariable ["objectArea",[100,100,0,false,-1]];
-	_this setVariable ["#filter",15];
-	_this setVariable ["#hideLocally",false];
-	_this setvariable ["BIS_fnc_initModules_disableAutoActivation",true];
-};
-
-private _item3929 = objNull;
-if (_layerRoot) then {
-	_item3929 = (group (missionNamespace getvariable ["BIS_functions_mainscope",objnull])) createUnit ["ModuleRespawnPosition_F",[6106.73,3548.74,0.196992],[],0,"CAN_COLLIDE"];
-	_this = _item3929;
-	_logics pushback _this;
-	_logicIDs pushback 3929;
-	_this setPosWorld [6106.73,3548.74,1.7768];
-	_this setVectorDirAndUp [[0,0.999998,-0.00198341],[-0.0100007,0.00198331,0.999948]];
+	_logicIDs pushback 102;
+	_this setPosWorld [8232.78,353.064,17.537];
+	_this setVectorDirAndUp [[0.949767,0.312958,0],[0,0,1]];
 	_this setVariable ['Name',"Аванпост",true];;
 	_this setVariable ['Type',"0",true];;
 	_this setVariable ['Side',"1",true];;
@@ -1091,9 +1099,10 @@ if (_layerRoot) then {
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Layers
-if (_layer3888) then {missionNamespace setVariable ["11_Virtual Vehicle Spawner",[[_item3889,_item3891],[]]];};
-if (_layer3752) then {missionNamespace setVariable ["11_Base #01",[[_item3753,_item3754,_item3755,_item3756,_item3757,_item3925],[]]];};
-if (_layer3840) then {missionNamespace setVariable ["11_BASE_SL",[[_item3775,_item3777,_item3753,_item3754,_item3755,_item3756,_item3757,_item3925,_item3776,_item3778,_item3779,_item3780,_item3781,_item3785,_item3789,_item3790,_item3791,_item3792,_item3793,_item3794,_item3795,_item3801,_item3802,_item3803,_item3804,_item3805,_item3806,_item3807,_item3808,_item3809,_item3810],[]]];};
+if (_layer198) then {missionNamespace setVariable ["11_Virtual Vehicle Spawner",[[_item199],[]]];};
+if (_layer168) then {missionNamespace setVariable ["11_Base #01",[[_item169,_item170,_item171,_item172,_item173,_item174],[]]];};
+if (_layer165) then {missionNamespace setVariable ["11_BASE_SL",[[_item166,_item167,_item169,_item170,_item171,_item172,_item173,_item174,_item175,_item176,_item177,_item178,_item179,_item180,_item181,_item182,_item183,_item184,_item185,_item186,_item187,_item188,_item189,_item190,_item191,_item192,_item193,_item194,_item195,_item196,_item197],[]]];};
+if (_layer203) then {missionNamespace setVariable ["11_OutPost",[[_item156,_item157,_item155,_item158,_item159,_item160,_item104,_item105,_item106,_item107,_item110,_item109,_item163,_item164,_item111,_item166,_item167,_item169,_item170,_item171,_item172,_item173,_item174,_item175,_item176,_item177,_item178,_item179,_item180,_item181,_item182,_item183,_item184,_item185,_item186,_item187,_item188,_item189,_item190,_item191,_item192,_item193,_item194,_item195,_item196,_item197,_item112,_item113,_item114,_item115,_item116,_item117,_item118,_item119,_item108,_item162,_item120,_item121,_item122,_item123,_item124,_item125,_item126,_item127,_item128,_item129,_item130,_item131,_item132,_item133,_item134,_item135,_item136,_item137,_item138,_item139,_item199,_item201,_item103,_item140,_item141,_item142,_item143,_item144,_item145,_item146,_item147,_item148,_item149,_item150,_item151,_item152,_item153,_item154,_item161,_item102],[_item202]]];};
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -1111,13 +1120,13 @@ if (_layer3840) then {missionNamespace setVariable ["11_BASE_SL",[[_item3775,_it
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Inits (executed only once all entities exist; isNil used to ensure non-scheduled environment)
 isNil {
-	if !(isnull _item3891) then {
-		this = _item3891;
+	if !(isnull _item201) then {
+		this = _item201;
 		call{this disableAI move; this disableAI radioprotocol; this disableAI autocombat; this disableAI weaponaim;
 this addAction [
  "Запрос наземной техники",
  VVS_fnc_openVVS,
- [VVS_SpawnGARLandA,"Наземная_техника_ВАР"],6, 
+ [VVS_SpawnGARLand,"Наземная_техника_ВАР"],6, 
  true, 
  true, 
  "", 
@@ -1129,15 +1138,12 @@ this addAction [
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Module activations (only once everything is spawned and connected)
-if !(isNull _item0) then {_item0 setvariable ["BIS_fnc_initModules_activate",true];};
-if !(isNull _item3929) then {_item3929 setvariable ["BIS_fnc_initModules_activate",true];};
+if !(isNull _item102) then {_item102 setvariable ["BIS_fnc_initModules_activate",true];};
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 [[_objects,_groups,_triggers,_waypoints,_logics,_markers],[_objectIDs,_groupIDs,_triggerIDs,_waypointIDs,_logicIDs,_markerIDs]];
-*/
-
 
 deleteVehicle outpost_spawn;
-titletext ["В данный момент основание аванпоста не доступно","plain down"];
+
 deleteMarker "marker_9"
