@@ -68,6 +68,14 @@ _tv ctrlSetPosition [_startX, _startY+_headerH+_spaceH, _width, _height-_headerH
 _tv ctrlSetBackgroundColor [0,0,0,0.6];
 _tv ctrlCommit 0;
 
+uiNamespace setVariable ["zpr_list", _profiles];
+{
+  _x params ["_id", "_name", "_side", "_role", "_equip", "_pos"];
+  private _c = _tv tvAdd [[], format ["%2 || %1", _name, _side]];
+  _tv tvSetData [[_c], "set"];
+  _tv tvSetValue [[_c], _forEachIndex];
+} forEach _profiles;
+
 {
   _x params ["_id", "_name", "_tags"];
   private _c = _tv tvAdd [[], format [_str_role, _name]];
@@ -86,8 +94,11 @@ if (isNil "_handlerSelect") then {
     _display closeDisplay 1;
 
     switch (_tv tvData _path) do {
-      case ("new"): {  };
-      case ("set"): { hint ("Rename profile with id " + str (_tv tvValue _path)) };
+      case ("new"): { (_tv tvValue _path) spawn ZONT_fnc_newProfile };
+      case ("set"): {
+        (uiNamespace getVariable ["zpr_list", []]) select (_tv tvValue _path)
+          spawn ZONT_fnc_updProfile
+      };
       default { "profileErr" call ZONT_fnc_forceExit };
     };
   }];
@@ -96,7 +107,6 @@ if (isNil "_handlerSelect") then {
 };
 
 if (isNil "_handlerEscape") then {
-  uiNamespace setVariable ["zpr_newUser", _newUser];
   _display displayAddEventHandler ["unload", {
     params ["_d", "_ex"];
     if (_ex == 1) exitWith {};
@@ -105,7 +115,7 @@ if (isNil "_handlerEscape") then {
     if (_count > 5) exitWith {"profileErr" call ZONT_fnc_forceExit};
 
     hint "Выберите профиль!";
-    [uiNamespace getVariable ["zpr_newUser", nil]] spawn ZONT_fnc_profilesGUI;
+    [uiNamespace getVariable ["zpr_list", []]] spawn ZONT_fnc_profilesGUI;
     uiNamespace setVariable ["zpr_esc", _count];
   }];
 } else {

@@ -42,6 +42,9 @@ class CfgFunctions {
       class forceExit { };
       class getRoles { };
       class profilesGUI { };
+      class loadDone { };
+      class newProfile { };
+      class updProfile { };
     };
     class SkillsFramework {
       file = "skills_framework";
