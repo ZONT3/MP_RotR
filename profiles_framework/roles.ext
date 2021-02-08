@@ -7,6 +7,8 @@ class CfgRoles {
   class ARF   { id=ROLE_ARF; name="Advanced Recon Force"; };
   class c99   { id=ROLE_99; name="99 Corp ""Bad Batch"""; };
   class Ghost { id=ROLE_GHOST; name="""Ghost Division"""; };
+  class CG    { id=ROLE_CG; name="Корусантская гвардия"; };
+  class McGAR { id=ROLE_MCGAR; name="Агент (намемник) ВАР"; };
 
   class Jedi    { id=ROLE_JEDI; name="Jedi"; };
   class Shadow  { id=ROLE_SHADOW; name="Shadow"; };

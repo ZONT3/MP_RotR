@@ -1,8 +1,8 @@
 if not (missionNamespace getVariable ["MPC_canSave", false]) exitWith { false };
 
-if not (assert !isNil "MPC_chrID") exitWith {};
+if not (assert !isNil "ZPR_ID") exitWith {};
 
-[[_this, MPC_chrID], {
+[[_this, ZPR_ID], {
   params ["_player", "_id"];
   private _load = getUnitLoadout _player;
   private _pos = getPosATL _player;

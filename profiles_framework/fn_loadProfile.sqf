@@ -10,17 +10,18 @@ waitUntil {sleep 0.1; !dialog};
   params ["_uid"];
   [MPS_BDL_pres, "getChars", [_uid]] call ZONT_fnc_bd_customRequest;
 },{
-  MPC_chrID = nil;
+  ZPR_ID = nil;
 
   {
     _x params ["_id", "_name", "_side", "_roles", "_equip", "_pos"];
     if (_name == name player and _side == str side player) exitWith {
-      MPC_chrID = _id;
+      ZPR_ID = _id;
+      ZPR_roles = parseSimpleArray _roles;
       [_equip, _pos] spawn ZONT_fnc_loadDone;
     };
   } foreach _this;
 
-  if (not isNil "MPC_chrID") exitWith { };
+  if (not isNil "ZPR_ID") exitWith { };
 
   [_this] call ZONT_fnc_profilesGUI;
 

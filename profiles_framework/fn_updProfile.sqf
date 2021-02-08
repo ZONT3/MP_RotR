@@ -5,6 +5,7 @@
   _t
 },{
   params ["_id", "_name", "_side", "_roles", "_equip", "_pos"];
-  MPC_chrID = _id;
+  ZPR_ID = _id;
+  ZPR_roles = parseSimpleArray _roles;
   [_equip, _pos] call ZONT_fnc_loadDone;
 }, [name player, side player, _this]] call ZONT_fnc_remoteExecCallback;
