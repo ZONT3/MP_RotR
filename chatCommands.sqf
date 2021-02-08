@@ -72,4 +72,28 @@ call {
     }]
   ] call ZONT_fnc_addChatCommand;
 
+  [ "role",
+  [ [], // args
+    {   // condition
+      false
+    },{  // code
+    },{  // pre-call
+      params ["_caller", "_inpt", "_args"];
+      private _ia = _input splitString " ";
+      if (count _ia == 0) exitWith { systemChat "Доступные варианты: #role add, #role rm" };
+      switch (_ia select 0) do {
+        case ("set");
+        case ("add"): {
+          
+        };
+        case ("rm");
+        case ("del"): {
+
+        };
+      };
+    }]
+  ] call ZONT_fnc_addChatCommand;
+
+
+
 };

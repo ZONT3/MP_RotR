@@ -13,7 +13,7 @@ waitUntil {sleep 0.1; !dialog};
   MPC_chrID = nil;
 
   {
-    _x params ["_id", "_name", "_side", "_role", "_equip", "_pos"];
+    _x params ["_id", "_name", "_side", "_roles", "_equip", "_pos"];
     if (_name == name player and _side == str side player) exitWith {
       MPC_chrID = _id;
       [_equip, _pos] spawn ZONT_fnc_loadDone;

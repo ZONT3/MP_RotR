@@ -8,7 +8,7 @@ MPC_ausvHandler_esc = [{
       { MPC_AUTOSAVE_TIMER = call MPF_AS_launchTimer } };
   if (MPC_AUTOSAVE_PREV) exitWith { };
 
-  if (player call ZONT_fnc_prs_saveProfile) then { 49 call MPF_AS_notice };
+  if (player call ZONT_fnc_saveProfile) then { 49 call MPF_AS_notice };
   MPC_AUTOSAVE_PREV = true;
 }] call CBA_fnc_addPerFrameHandler;
 
@@ -16,7 +16,7 @@ MPC_ausvHandler_period = [{
   if (!isNull findDisplay 49) exitWith {};
   if (MPC_AUTOSAVE_PREV) exitWith {};
 
-  if (player call ZONT_fnc_prs_saveProfile) then { 49 call MPF_AS_notice };
+  if (player call ZONT_fnc_saveProfile) then { 49 call MPF_AS_notice };
   MPC_AUTOSAVE_PREV = true;
   MPC_AUTOSAVE_TIMER = call MPF_AS_launchTimer;
 }, 90] call CBA_fnc_addPerFrameHandler;

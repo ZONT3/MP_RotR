@@ -23,6 +23,7 @@ class CfgFunctions {
       class addChatCommand { };
       class removeAllVars { };
       class getConst { };
+      class forceExit { };
     };
     class Database {
       file = "database_framework";
@@ -30,21 +31,20 @@ class CfgFunctions {
       class bd_initCustom { };
       class bd_customRequest { };
 
-      class prs_saveProfile { };
-      class prs_loadProfile { };
-      class prs_autoSaveInit { };
-
       class commitInfo { };
       class retrieveCurators { };
     };
     class Profiles {
       file = "profiles_framework";
-      class forceExit { };
       class getRoles { };
       class profilesGUI { };
       class loadDone { };
       class newProfile { };
       class updProfile { };
+
+      class saveProfile { };
+      class loadProfile { };
+      class autoSaveInit { };
     };
     class SkillsFramework {
       file = "skills_framework";

@@ -1,7 +1,7 @@
 waitUntil {vehicle player == player};
 
-[] spawn ZONT_fnc_prs_loadProfile;
-[] spawn ZONT_fnc_prs_autoSaveInit;
+[] spawn ZONT_fnc_loadProfile;
+[] spawn ZONT_fnc_autoSaveInit;
 
 [] spawn ZONT_fnc_initSkills;
 

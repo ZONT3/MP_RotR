@@ -13,4 +13,4 @@
 },{
   MPC_chrID = _this;
   MPC_canSave = true;
-}, [_this, name player, side player, getPlayerUID player]] call ZONT_fnc_remoteExecCallback;
+}, [[_this], name player, side player, getPlayerUID player]] call ZONT_fnc_remoteExecCallback;
