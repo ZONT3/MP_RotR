@@ -16,6 +16,7 @@
       "profileErr" call ZONT_fnc_forceExit
     } else {
       systemChat "Looks like this is a local test";
+      ZPR_roles = [0,228];
     }
   };
   ZPR_ID = _id;

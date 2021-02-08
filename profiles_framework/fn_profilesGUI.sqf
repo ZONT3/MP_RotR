@@ -6,7 +6,7 @@ params [
   ["_str_role", "НОВЫЙ ПРОФИЛЬ [ %1 ]"]
 ];
 
-private _roles = (call ZONT_fnc_getRoles + [[0, "ДРУГОЙ", []]]);
+private _roles = (call ZONT_fnc_getRoles + [[0, "ДРУГОЙ"]]);
 private _newUser = count _profiles == 0;
 
 if (isNil "_headerOverride") then {
@@ -19,14 +19,14 @@ if (isNil "_headerOverride") then {
     "<a size='1.8' href='https://docs.google.com/document/d/16r7T-iu-q0XcEom3wJscB209_QQhxK3hwyK5Tzgbero/edit'>" +
     "<img image='pic\doc.paa'/><t colorLink='#0788ff' color='#0788ff'> Устав</t></a><br/>" +
     "После этого выбери роль из списка ниже. Если подходящей нет - выбери ""Другой""",
-    0.48, 0.042 * count _roles]
+    0.49, 0.5 ]
   } else {
     [
-    "Ты зашел с новым ником. Если ты просто его поменял, выбери профиль,<br/>" +
-    "для которого применить новый ник.<br/>" +
+    "Ты зашел с новым ником, либо за другую сторону. Если ты просто его поменял, "+
+    "то выбери профиль, для которого применить новый ник/сторону.<br/>" +
     "Иначе, выбери роль, для которой создать новый профиль.<br/>" +
-    "Если роли нет в списке, выбери ""Другой""",
-    0.22, 0.7]
+    "Если нужной роли нет в списке, выбери ""Другой""",
+    0.28, 0.7 ]
   }
 } else {
    _headerOverride
@@ -58,7 +58,8 @@ _background ctrlCommit 0;
 private _title = _display ctrlCreate ["RscStructuredText", -1];
 _title ctrlSetPosition [_startX,_startY,_width,_headerH];
 _title ctrlSetBackgroundColor [151/255,42/255,245/255,1];
-_title ctrlSetStructuredText parseText ("<t align='center'><t shadow='1' size='2.3' color='#ffffff'>Revenge of the Republic</t><br/>" + _synopsis + "</t>");
+_title ctrlSetStructuredText parseText ("<t align='center'><t shadow='1' size='2.3' color='#ffffff'>Revenge of the Republic</t><br/>" +
+    _synopsis + "<br/><t size='0.6'>Двойной клик по пункту в списке, что бы выбрать его</t></t>");
 _title ctrlCommit 0;
 
 private _tv = _display ctrlCreate ["RscTreeSearch", -1];
@@ -77,7 +78,7 @@ uiNamespace setVariable ["zpr_list", _profiles];
 } forEach _profiles;
 
 {
-  _x params ["_id", "_name", "_tags"];
+  _x params ["_id", "_name"];
   private _c = _tv tvAdd [[], format [_str_role, _name]];
   _tv tvSetData [[_c], "new"];
   _tv tvSetValue [[_c], _id];
@@ -120,4 +121,4 @@ if (isNil "_handlerEscape") then {
   }];
 } else {
   _display displayAddEventHandler ["unload", _handlerEscape];
-};;
+};

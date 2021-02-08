@@ -6,6 +6,7 @@ private _res = [];
     _res pushBack [
       _id,
       [_x, "name", configName _x] call BIS_fnc_returnConfigEntry,
+      configName _x,
       [_x, "tags", []] call BIS_fnc_returnConfigEntry
     ];
   };
