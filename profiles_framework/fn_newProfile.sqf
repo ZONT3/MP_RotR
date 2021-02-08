@@ -19,6 +19,6 @@
     }
   };
   ZPR_ID = _id;
-  ZPR_roles = parseSimpleArray _roles;
+  ZPR_roles = _roles;
   MPC_canSave = true;
 }, [[_this], name player, side player, getPlayerUID player]] call ZONT_fnc_remoteExecCallback;

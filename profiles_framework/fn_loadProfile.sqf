@@ -16,7 +16,7 @@ waitUntil {sleep 0.1; !dialog};
     _x params ["_id", "_name", "_side", "_roles", "_equip", "_pos"];
     if (_name == name player and _side == str side player) exitWith {
       ZPR_ID = _id;
-      ZPR_roles = parseSimpleArray _roles;
+      ZPR_roles = _roles;
       [_equip, _pos] spawn ZONT_fnc_loadDone;
     };
   } foreach _this;
