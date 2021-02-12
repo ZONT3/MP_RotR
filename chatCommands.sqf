@@ -84,14 +84,6 @@ private _fn_getRange = {
       systemChat "Похоже, что у вас сломались скрипты. Есле перезаход не поможет, обратитесь к техадмину";
     };
 
-    private _fn_save = {
-      if (player call ZONT_fnc_saveProfile) then {
-        hint "Сохранено!";
-      } else {
-        hint parseText "<t color='#ff3030'>Не удалось сохранить!</t>";
-      };
-    };
-
     switch (_ia select 0) do {
       case ("set");
       case ("add"): {
@@ -99,13 +91,18 @@ private _fn_getRange = {
           [],{
             params ["_tv", "_path"];
             private _pid = _tv tvValue _path;
+
             ZPR_roles pushBack _pid;
             ZPR_roles = ZPR_roles arrayIntersect ZPR_roles;
-            call _fn_save;
+            if (player call ZONT_fnc_saveProfile) then {
+              hint "Сохранено!";
+            } else {
+              hint parseText "<t color='#ff3030'>Не удалось сохранить!</t>";
+            };
           },{},["Выбери роль, которую добавить",0.17,0.25],
           "Роль [ %1 ]",
           call ZONT_fnc_getRoles
-        ] call ZONT_fnc_profilesGUI;
+        ] spawn ZONT_fnc_profilesGUI;
       };
       case ("rm");
       case ("del"): {
@@ -118,15 +115,18 @@ private _fn_getRange = {
           [],{
             params ["_tv", "_path"];
             private _pid = _tv tvValue _path;
-            private _display = ctrlParent _tv;
-            _display closeDisplay 1;
+            _tv tvDelete _path;
 
             ZPR_roles deleteAt (ZPR_roles find _pid);
-            call _fn_save;
+            if (player call ZONT_fnc_saveProfile) then {
+              hint "Сохранено!";
+            } else {
+              hint parseText "<t color='#ff3030'>Не удалось сохранить!</t>";
+            };
           },{},["Выбери роль, которую удалить",0.17,0.25],
           "Удалить роль [ %1 ]",
           _roles
-        ] call ZONT_fnc_profilesGUI;
+        ] spawn ZONT_fnc_profilesGUI;
       };
     };
   },
