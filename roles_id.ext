@@ -9,8 +9,9 @@
 #define ROLE_MCCIS 9
 
 #define ROLE_JEDI   10
-#define ROLE_SHADOW 11
 
 #define ROLE_212 20
 #define ROLE_501 21
 #define ROLE_502 22
+
+#define ROLE_SHADOW 30
