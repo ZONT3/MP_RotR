@@ -1,12 +1,12 @@
 params [
-  ["_profiles", []],
+  ["_profiles", [], [[]]],
   ["_handlerSelect", nil],
   ["_handlerEscape", nil],
   ["_headerOverride", nil],
-  ["_str_role", "НОВЫЙ ПРОФИЛЬ [ %1 ]"]
+  ["_str_role", "НОВЫЙ ПРОФИЛЬ [ %1 ]", [""]],
+  ["_roles", (call ZONT_fnc_getRoles + [[0, "ДРУГОЙ"]]), [[]]]
 ];
 
-private _roles = (call ZONT_fnc_getRoles + [[0, "ДРУГОЙ"]]);
 private _newUser = count _profiles == 0;
 
 if (isNil "_headerOverride") then {
@@ -19,7 +19,7 @@ if (isNil "_headerOverride") then {
     "<a size='1.8' href='https://docs.google.com/document/d/16r7T-iu-q0XcEom3wJscB209_QQhxK3hwyK5Tzgbero/edit'>" +
     "<img image='pic\doc.paa'/><t colorLink='#0788ff' color='#0788ff'> Устав</t></a><br/>" +
     "После этого выбери роль из списка ниже. Если подходящей нет - выбери ""Другой""",
-    0.49, 0.5 ]
+    0.49, 0.52 ]
   } else {
     [
     "Ты зашел с новым ником, либо за другую сторону. Если ты просто его поменял, "+

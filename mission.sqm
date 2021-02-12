@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=12945;
+		nextID=12995;
 	};
 	class Camera
 	{
-		pos[]={1330.5826,94.031166,9094.4092};
-		dir[]={0.15239209,-0.49358132,-0.85626209};
-		up[]={0.086489819,0.86968964,-0.48596284};
-		aside[]={-0.98454535,1.1645607e-006,-0.17522672};
+		pos[]={11483.702,272.49332,8803.6953};
+		dir[]={0.37057236,-0.56869751,0.7343815};
+		up[]={0.25620505,0.82253897,0.50773221};
+		aside[]={0.89280289,-2.9068906e-007,-0.45051047};
 	};
 };
 binarizationWanted=0;
@@ -111,7 +111,7 @@ addons[]=
 	"MEOP_st_ships",
 	"ls_holotables",
 	"OPTRE_Land_ARMOURY_F",
-	"SLSW_Jedi",
+	"ls_flags",
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Structures_F_Mil_Shelters",
 	"A3_Structures_F_EPA_Civ_Constructions",
@@ -419,7 +419,7 @@ class AddonsMetaData
 		{
 			className="RD501_patch_weapons";
 			name="RD501_patch_nvg";
-			author="RD501";
+			author="Namenai, Rexi, Zatama";
 		};
 		class Item34
 		{
@@ -513,7 +513,7 @@ class AddonsMetaData
 		{
 			className="RD501_patch_helmets";
 			name="RD501_patch_helmets";
-			author="RD501";
+			author="Namenai, Rexi, Zatama";
 		};
 		class Item49
 		{
@@ -654,8 +654,9 @@ class AddonsMetaData
 		};
 		class Item72
 		{
-			className="SLSW_Jedi";
-			name="SLSW_Jedi";
+			className="ls_flags";
+			name="ls_flags";
+			author="Legion Studios";
 		};
 		class Item73
 		{
@@ -943,7 +944,7 @@ class AddonsMetaData
 		{
 			className="RD501_patch_vehicles";
 			name="RD501_patch_light_infantry_transport";
-			author="RD501";
+			author="Namenai, Rexi, Zatama";
 		};
 		class Item120
 		{
@@ -44700,7 +44701,7 @@ class Mission
 				angles[]={0,5.6964293,0};
 			};
 			side="Empty";
-			flags=5;
+			flags=1;
 			class Attributes
 			{
 			};
@@ -101976,12 +101977,11 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{[this, ""Переместиться на базу Наемников"", [], ""#33c208"", ""side player == resistance""] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, ""Переместиться на базу Наемников"", [], ""#33c208"", ""side player == resistance || [['McCIS', 'McGAR']] call ZONT_fnc_checkRole""] call ZONT_fnc_addTeleportTerminal}";
 						name="ztt_merc";
 					};
 					id=4875;
 					type="Land_OPTRE_vidphone_terminal";
-					atlOffset=-1.1920929e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -102251,7 +102251,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
-						init="call{[this, " \n """Переместиться на Аккламатор"", " \n "ASLToATL (this modelToWorldWorld [2,0,0.3]), " \n """#ff0000"", " \n """side player == west"", " \n "5] call ZONT_fnc_addTeleportTerminal}";
+						init="call{[this, " \n """Переместиться на Аккламатор"", " \n "ASLToATL (this modelToWorldWorld [2,0,0.3]), " \n """#ff0000"", " \n """[['CG']] call ZONT_fnc_checkRole"", " \n "5] call ZONT_fnc_addTeleportTerminal}";
 						name="ztt_akk";
 					};
 					id=10088;
@@ -102419,7 +102419,7 @@ class Mission
 					class Attributes
 					{
 						init="call{[this, ""Переместиться к шахте капсул"", " \n "ASLToATL (this modelToWorldWorld [2,0,0.3]), " \n """#6f9fde"", " \n """side player == west"", " \n "2] call ZONT_fnc_addTeleportTerminal}";
-						name="ztt_gar_1";
+						name="ztt_capsules";
 					};
 					id=30105;
 					type="Land_OPTRE_vidphone_terminal";

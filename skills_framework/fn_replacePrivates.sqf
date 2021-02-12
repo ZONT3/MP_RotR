@@ -13,7 +13,6 @@ private _fn_replaceAll = {
   _return + _str;
 };
 
-
 {
   private _script = _x;
   private _ind = _forEachIndex;

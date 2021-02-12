@@ -6,6 +6,7 @@
 #define ROLE_GHOST 6
 #define ROLE_CG    7
 #define ROLE_MCGAR 8
+#define ROLE_MCCIS 9
 
 #define ROLE_JEDI   10
 #define ROLE_SHADOW 11
