@@ -1,3 +1,5 @@
+#include "..\roles_id.ext"
+
 #define FLAG_RC  "SWLB_clone_commando_uniform_k1","RCClone","SWLB_CEE_Gregor_Uniform","SWLA_416th_Bridger_Uniform","SWLA_416th_Commando_Uniform","SWLB_AiwhaSarge_Uniform","SWLB_AiwhaDikut_Uniform","SWLB_AiwhaTyto_Uniform","SWLB_AiwhaZag_Uniform","SWLB_Bravo2_Uniform","SWLB_Bravo3_Uniform","SWLB_Bravo4_Uniform","SWLB_BravoRam_Uniform","SWLB_DeltaFixer_Uniform","SWLB_DeltaBoss_Uniform","SWLB_DeltaScorch_Uniform","SWLB_DeltaSev_Uniform","SWLA_Dev_Corvus_Uniform","SWLA_Dev_Dutch_Uniform","SWLA_Dev_Nerf_Uniform","SWLB_MPGunner_Uniform","SWLB_CEE_Hodasal_Squad_Jungle_Commando_Uniform","SWLB_MPMarksman_Uniform","SWLB_Omega_Uniform",\
 "SWLB_MPRecon_Uniform","SWLB_MPStealth_Uniform","SWLB_YayaxCov_Uniform","SWLB_YayaxDev_Uniform","SWLB_YayaxJind_Uniform","SWLB_YayaxYover_Uniform","SLDT_RCBase","SLDT_RC_Delta_Boss","SLDT_RC_Delta_Fixer","SLDT_RC_Delta_Scorch","SLDT_RC_Delta_Sev","SLDT_RC_SpectrS","SLDT_RC_SpectrL","SLDT_RC_SpectrM","SLDT_RC_SpectrG","SLDT_RC_CG","SLDT_RCBase_gud","SLDT_RCBase_AiawaRed","SLDT_RCBase_AiawaBlack","SLDT_RCBase_AiawaBlue","SLDT_RCBase_AiawaGreen"
 

@@ -1,0 +1,20 @@
+#include "..\roles_id.ext"
+
+class CfgRoles {
+  class Zeus  { id=ROLE_ZUUS; hide=true; };
+  class RC    { id=ROLE_RC; name="Republic Commando"; };
+  class ARC   { id=ROLE_ARC; name="Advanced Recon Commando"; };
+  class ARF   { id=ROLE_ARF; name="Advanced Recon Force"; };
+  class c99   { id=ROLE_99; name="99 Corp ""Bad Batch"""; };
+  class Ghost { id=ROLE_GHOST; name="""Ghost Division"""; };
+  class CG    { id=ROLE_CG; name="Корусантская гвардия"; };
+  class McGAR { id=ROLE_MCGAR; name="Агент (намемник) ВАР"; };
+  class McCIS { id=ROLE_MCCIS; name="Агент (намемник) КНС"; };
+
+  class Jedi    { id=ROLE_JEDI; name="Jedi"; };
+  class Shadow  { id=ROLE_SHADOW; name="Shadow"; };
+
+  class c212  { id=ROLE_212; name="212-й Десантно-штурмовой"; };
+  class c501  { id=ROLE_501; name="501-й Элитный легион"; };
+  class c502  { id=ROLE_502; name="502-й Десантно-штурмовой легион"; };
+};

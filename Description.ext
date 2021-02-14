@@ -1,6 +1,7 @@
 /**********                    Framework includes                    **********/
 #include "infiSTAR_AdminMenu.ext"
 #include "skills_framework\skills.ext"
+#include "profiles_framework\roles.ext"
 /**********                       RSC includes                       **********/
 #include "external\VVS\menu.ext"
 
@@ -22,6 +23,7 @@ class CfgFunctions {
       class addChatCommand { };
       class removeAllVars { };
       class getConst { };
+      class forceExit { };
     };
     class Database {
       file = "database_framework";
@@ -29,12 +31,21 @@ class CfgFunctions {
       class bd_initCustom { };
       class bd_customRequest { };
 
-      class prs_saveProfile { };
-      class prs_loadProfile { };
-      class prs_autoSaveInit { };
-
       class commitInfo { };
       class retrieveCurators { };
+    };
+    class Profiles {
+      file = "profiles_framework";
+      class getRoles { };
+      class profilesGUI { };
+      class loadDone { };
+      class newProfile { };
+      class checkRole { };
+      class updProfile { };
+
+      class saveProfile { };
+      class loadProfile { };
+      class autoSaveInit { };
     };
     class SkillsFramework {
       file = "skills_framework";
@@ -75,10 +86,15 @@ class CfgSounds {
 };
 
 class CfgDebriefing {
-  class loser1 {
-    title = "Пиздец";
-		subtitle = "Совсем ебанутые?";
-		description = "Вы долбоебы. Сожалеем.";
+  class force {
+    title = "Выкинут в лобби";
+		description = "Тебя выкинули в лобби скриптом.";
+		pictureBackground = "";
+		picture = "pic\monk.paa";
+  };
+  class profileErr {
+    title = "Ошибка инициализации профиля";
+		description = "Попробуй НЕ нажимать Escape во время загрузки. Так же, выбери роль или профиль, если тебя об этом просят. Так же, попробуй пошаманить над своим ником в игре. Учти, что знаки [] точно НЕ влияют, можешь их НЕ убирать. Если ты не можешь играть, свяжись с ZONT_ в дискорде";
 		pictureBackground = "";
 		picture = "pic\monk.paa";
   };
