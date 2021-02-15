@@ -8,7 +8,7 @@ class EditorData
 	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=2924;
+		nextID=2940;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=458;
+		nextID=477;
 	};
 	class Camera
 	{
-		pos[]={4306.9946,49.686512,7302.7148};
-		dir[]={0.66136217,-0.52912104,0.53166431};
-		up[]={0.4123978,0.84854031,0.33152393};
-		aside[]={0.6265524,-1.6775448e-007,-0.77939779};
+		pos[]={3877.1821,461.19476,7308.6396};
+		dir[]={0.048008002,-0.93420017,0.35360771};
+		up[]={0.1256786,0.35675699,0.92570657};
+		aside[]={0.99093705,-2.6484486e-007,-0.13453503};
 	};
 };
 binarizationWanted=0;
@@ -160,13 +160,19 @@ addons[]=
 	"SWOP_Characters_JEDI",
 	"SWOP_Jedi",
 	"A3_Characters_F_Exp",
-	"A3_Characters_F_Kart"
+	"A3_Characters_F_Kart",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Modules_F_Intel",
+	"acex_fortify",
+	"OPTRE_Modules",
+	"ryanzombiesfunctions",
+	"task_force_radio_items"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=116;
+		items=121;
 		class Item0
 		{
 			className="impammo";
@@ -873,6 +879,39 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item116
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item117
+		{
+			className="acex_fortify";
+			name="acex_fortify";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item118
+		{
+			className="OPTRE_Modules";
+			name="OPTRE_Modules";
+			author="Article 2 Studios";
+		};
+		class Item119
+		{
+			className="ryanzombiesfunctions";
+			name="ryanzombiesfunctions";
+			author="Ryan";
+		};
+		class Item120
+		{
+			className="task_force_radio_items";
+			name="task_force_radio_items";
+			author="[TF]Nkey";
+			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
+		};
 	};
 };
 randomSeed=8162483;
@@ -1228,7 +1267,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=251;
+		items=252;
 		class Item0
 		{
 			dataType="Object";
@@ -5156,8 +5195,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -5166,10 +5205,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Clone_face_boomer";
+									value=0;
 								};
 							};
 						};
@@ -5232,8 +5271,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -5242,10 +5281,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Clone_face_boomer";
 								};
 							};
 						};
@@ -21233,8 +21272,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -21243,10 +21282,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="SWLB_JH_Head_Whiplash";
+									value=0;
 								};
 							};
 						};
@@ -21309,8 +21348,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -21319,10 +21358,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="SWLB_JH_Head_Whiplash";
 								};
 							};
 						};
@@ -117269,6 +117308,1530 @@ class Mission
 				};
 				nAttributes=5;
 			};
+		};
+		class Item251
+		{
+			dataType="Layer";
+			name="Settings";
+			class Entities
+			{
+				items=14;
+				class Item0
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3781.3247,-3.6099999,7518.7925};
+					};
+					name="MP_zuus";
+					id=2926;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="#adminLogged";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Zeus";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item1
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3843.4766,-2.681253,7500.958};
+					};
+					id=2927;
+					type="ModuleCreateDiaryRecord_F";
+					atlOffset=0.92353702;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCreateDiaryRecord_F_PresetTitle";
+							expression="_this setVariable ['PresetTitle',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Situation";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCreateDiaryRecord_F_Title";
+							expression="_this setVariable ['Title',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Общее";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCreateDiaryRecord_F_Description";
+							expression="_this setVariable ['Description',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Здравия желаю боец, ты был рожден для битвы за республику. По прибытию на плацдарм, пройди в арсенал, возьми снаряжение и готовься к битве. Ты нужен республике!";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCreateDiaryRecord_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=3;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ModuleCreateDiaryRecord_F_Subject";
+							expression="_this setVariable ['Subject',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item2
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3773.4927,-1.9032396,7392.7285};
+						angles[]={0.06988623,0.57950163,6.248199};
+					};
+					id=2928;
+					type="acex_fortify_setupModule";
+					atlOffset=1.1920929e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_fortify_setupModule_AddToolItem";
+							expression="_this setVariable ['AddToolItem',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="acex_fortify_setupModule_Budget";
+							expression="_this setVariable ['Budget',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1000;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="acex_fortify_setupModule_Side";
+							expression="_this setVariable ['Side',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="acex_fortify_setupModule_Preset";
+							expression="_this setVariable ['Preset',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="medium";
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item3
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3803.7427,-2.9317384,7393.2295};
+						angles[]={0.02999169,0.57950163,6.2631865};
+					};
+					id=2929;
+					type="acex_fortify_setupModule";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_fortify_setupModule_AddToolItem";
+							expression="_this setVariable ['AddToolItem',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="acex_fortify_setupModule_Budget";
+							expression="_this setVariable ['Budget',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=500;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="acex_fortify_setupModule_Side";
+							expression="_this setVariable ['Side',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=4;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="acex_fortify_setupModule_Preset";
+							expression="_this setVariable ['Preset',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="small";
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item4
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3789.9927,-3.3969142,7417.4795};
+						angles[]={0.024993783,1.9333011,6.2731848};
+					};
+					id=2930;
+					type="acex_fortify_setupModule";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_fortify_setupModule_AddToolItem";
+							expression="_this setVariable ['AddToolItem',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="acex_fortify_setupModule_Budget";
+							expression="_this setVariable ['Budget',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=500;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="acex_fortify_setupModule_Side";
+							expression="_this setVariable ['Side',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=3;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="acex_fortify_setupModule_Preset";
+							expression="_this setVariable ['Preset',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="small";
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item5
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3769.9692,-2.0500536,7590.479};
+						angles[]={6.1983895,0.57950163,0.024993783};
+					};
+					id=2931;
+					type="Module_OPTRE_ActivateZeusModules";
+				};
+				class Item6
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3749.9224,-3.5999999,7451.8877};
+					};
+					id=2932;
+					type="RyanZM_ModuleCustomDifficulty";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="RyanZM_ModuleCustomDifficulty_KnockbackTank";
+							expression="_this setVariable ['KnockbackTank',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.40000001;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="RyanZM_ModuleCustomDifficulty_DamageCar";
+							expression="_this setVariable ['DamageCar',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="RyanZM_ModuleCustomDifficulty_Knockback";
+							expression="_this setVariable ['Knockback',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.5;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="RyanZM_ModuleCustomDifficulty_KnockbackCar";
+							expression="_this setVariable ['KnockbackCar',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.5;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="RyanZM_ModuleCustomDifficulty_AttackSpeed";
+							expression="_this setVariable ['AttackSpeed',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.8;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="RyanZM_ModuleCustomDifficulty_DamageAir";
+							expression="_this setVariable ['DamageAir',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="RyanZM_ModuleCustomDifficulty_AttackDistance";
+							expression="_this setVariable ['AttackDistance',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2.3499999;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="RyanZM_ModuleCustomDifficulty_DamageTank";
+							expression="_this setVariable ['DamageTank',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.050000001;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="RyanZM_ModuleCustomDifficulty_KnockbackAir";
+							expression="_this setVariable ['KnockbackAir',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="RyanZM_ModuleCustomDifficulty_Damage";
+							expression="_this setVariable ['Damage',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.5;
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item7
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={4076.1313,8.2827272,7689.5171};
+						angles[]={6.1785688,0,6.2332273};
+					};
+					name="HC1";
+					isPlayable=1;
+					id=2933;
+					type="HeadlessClient_F";
+				};
+				class Item8
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={4071.7817,11.911262,7730.4438};
+						angles[]={5.964438,0,6.0571175};
+					};
+					name="HC2";
+					isPlayable=1;
+					id=2934;
+					type="HeadlessClient_F";
+					atlOffset=-4.5454073;
+				};
+				class Item9
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={4067.0923,11.112256,7707.4468};
+						angles[]={6.1245303,0,6.1835165};
+					};
+					name="HC3";
+					isPlayable=1;
+					id=2935;
+					type="HeadlessClient_F";
+				};
+				class Item10
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3757.9126,-3.6028907,7452.5781};
+						angles[]={0.0049914722,0,0};
+					};
+					id=2936;
+					type="RyanZM_ModuleInfected";
+					atlOffset=-2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="RyanZM_ModuleInfected_Antivirus";
+							expression="_this setVariable ['Antivirus',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=300;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="RyanZM_ModuleInfected_InfectedDeath";
+							expression="_this setVariable ['InfectedDeath',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="RyanZM_ModuleInfected_Immunity";
+							expression="_this setVariable ['Immunity',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="[]";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="RyanZM_ModuleInfected_InfectedChance";
+							expression="_this setVariable ['InfectedChance',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=80;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="RyanZM_ModuleInfected_InfectedRate";
+							expression="_this setVariable ['InfectedRate',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.30000001;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="RyanZM_ModuleInfected_InfectedSymptoms";
+							expression="_this setVariable ['InfectedSymptoms',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=6;
+					};
+				};
+				class Item11
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3840.9771,-3.5357277,7551.6182};
+						angles[]={6.2681909,2.1874211,0};
+					};
+					id=2937;
+					type="tfar_ModuleTaskForceRadioEnforceUsage";
+					atlOffset=-2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_password";
+							expression="_this setVariable ['radio_channel_password',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="64372834";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="tfar_ModuleTaskForceRadioEnforceUsage_RiflemanRadio";
+							expression="_this setVariable ['RiflemanRadio',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_name";
+							expression="_this setVariable ['radio_channel_name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="STAR WARS";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="tfar_ModuleTaskForceRadioEnforceUsage_same_sw_frequencies_for_side";
+							expression="_this setVariable ['same_sw_frequencies_for_side',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="tfar_ModuleTaskForceRadioEnforceUsage_TeamLeaderRadio";
+							expression="_this setVariable ['TeamLeaderRadio',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="tfar_ModuleTaskForceRadioEnforceUsage_same_lr_frequencies_for_side";
+							expression="_this setVariable ['same_lr_frequencies_for_side',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="tfar_ModuleTaskForceRadioEnforceUsage_terrain_interception_coefficient";
+							expression="_this setVariable ['terrain_interception_coefficient',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=7;
+					};
+				};
+				class Item12
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3769.2661,-3.606765,7452.0869};
+						angles[]={0.0049914722,0,6.278194};
+					};
+					id=2938;
+					type="RyanZM_ModuleAbilities";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="RyanZM_ModuleAbilities_Throwing";
+							expression="_this setVariable ['Throwing',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="RyanZM_ModuleAbilities_ThrowingTankDistance";
+							expression="_this setVariable ['ThrowingTankDistance',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=50;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="RyanZM_ModuleAbilities_ThrowingTankDistanceDemons";
+							expression="_this setVariable ['ThrowingTankDistanceDemons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=100;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="RyanZM_ModuleAbilities_Roaming";
+							expression="_this setVariable ['Roaming',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="RyanZM_ModuleAbilities_Jumping";
+							expression="_this setVariable ['Jumping',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="RyanZM_ModuleAbilities_Feeding";
+							expression="_this setVariable ['Feeding',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="RyanZM_ModuleAbilities_ThrowingCarAlarms";
+							expression="_this setVariable ['ThrowingCarAlarms',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="RyanZM_ModuleAbilities_JumpingDemons";
+							expression="_this setVariable ['JumpingDemons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="RyanZM_ModuleAbilities_ThrowingTank";
+							expression="_this setVariable ['ThrowingTank',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="RyanZM_ModuleAbilities_ThrowingDistance";
+							expression="_this setVariable ['ThrowingDistance',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=500;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="RyanZM_ModuleAbilities_ThrowingDemons";
+							expression="_this setVariable ['ThrowingDemons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="RyanZM_ModuleAbilities_ThrowingDistanceDemons";
+							expression="_this setVariable ['ThrowingDistanceDemons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1000;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="RyanZM_ModuleAbilities_ThrowingTankDemons";
+							expression="_this setVariable ['ThrowingTankDemons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+				class Item13
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={3780.8716,-3.5999999,7448.7148};
+					};
+					id=2939;
+					type="RyanZM_ModuleSettings";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="RyanZM_ModuleSettings_GlowingEyes";
+							expression="_this setVariable ['GlowingEyes',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="RyanZM_ModuleSettings_Headshots";
+							expression="_this setVariable ['Headshots',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="RyanZM_ModuleSettings_ExplodingHeads";
+							expression="_this setVariable ['ExplodingHeads',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="RyanZM_ModuleSettings_Invincibility";
+							expression="_this setVariable ['Invincibility',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="RyanZM_ModuleSettings_DetectionDistance";
+							expression="_this setVariable ['DetectionDistance',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5000;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="RyanZM_ModuleSettings_ZombieScript";
+							expression="_this setVariable ['ZombieScript',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="RyanZM_ModuleSettings_DeleteBodies";
+							expression="_this setVariable ['DeleteBodies',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="RyanZM_ModuleSettings_JumpingSounds";
+							expression="_this setVariable ['JumpingSounds',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="RyanZM_ModuleSettings_Sounds";
+							expression="_this setVariable ['Sounds',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="RyanZM_ModuleSettings_Bleeding";
+							expression="_this setVariable ['Bleeding',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="RyanZM_ModuleSettings_StartingAnim";
+							expression="_this setVariable ['StartingAnim',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="RyanZM_ModuleSettings_CivilianAttacks";
+							expression="_this setVariable ['CivilianAttacks',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						nAttributes=12;
+					};
+				};
+			};
+			id=2925;
+			atlOffset=0.81519437;
 		};
 	};
 };
