@@ -5,17 +5,15 @@
   private _res = [MPS_BDL_pres, "getChars", [_uid]] call ZONT_fnc_bd_customRequest;
   private _id = -1;
   private _lastId = -1;
-  private _verboseStr = "";
   {
     _x params ["_xid", "_xname", "_xside", "_xroles", "_xequip", "_xpos"];
     if (_name == _xname and _xside == str _side) exitWith { _id = _xid };
-    _verboseStr += ("\n" + (str _x) + (str [_name, _side]));
     if (_lastId < _xid) then { _lastId = _xid };
   } foreach _res;
 
   private _corrupt = false;
   if (_id < 0) then {
-    diag_log ("ZPR: ERROR cannot locate a new profile in here:" + _verboseStr + "\n");
+    diag_log ("ZPR: ERROR cannot locate a new profile in here:\n" + str _res);
     _id = _lastId;
     _corrupt = true;
   };
