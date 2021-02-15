@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1153;
+	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=2944;
+		nextID=2948;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3826.0105,34.236683,5372.3115};
-		dir[]={0.13928615,-0.43663824,-0.88879561};
-		up[]={0.067602664,0.89963591,-0.43137813};
-		aside[]={-0.98794913,1.4784746e-008,-0.15482487};
+		pos[]={4624.0942,16.054796,4999.6924};
+		dir[]={0.8449086,-0.52974647,-0.074394248};
+		up[]={0.52778423,0.8481077,-0.046471279};
+		aside[]={-0.087711476,-3.3689867e-007,-0.99616086};
 	};
 };
 binarizationWanted=0;
@@ -1268,7 +1268,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=253;
+		items=254;
 		class Item0
 		{
 			dataType="Object";
@@ -85563,7 +85563,7 @@ class Mission
 			dataType="Marker";
 			position[]={3725.4561,88.830002,756.29401};
 			name="marker_20";
-			text="NON-rp Zone";
+			text="non-RP Zone";
 			type="mil_circle";
 			id=1567;
 			atlOffset=0.00037384033;
@@ -97072,8 +97072,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={4671.7329,4.2071834,5059.333};
-										angles[]={0,1.5082437,0};
+										position[]={4639.4272,4.3360567,4996.835};
+										angles[]={0,4.7052822,0};
 									};
 									side="Independent";
 									flags=7;
@@ -97131,7 +97131,6 @@ class Mission
 									};
 									id=2677;
 									type="I_Soldier_AR_F";
-									atlOffset=9.9658966e-005;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -97218,19 +97217,18 @@ class Mission
 							{
 							};
 							id=2676;
-							atlOffset=9.9658966e-005;
 						};
 						class Item1
 						{
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={4653.8169,7.3251524,5055.123};
+								position[]={4656.5015,5.58674,4994.0117};
 							};
 							name="VVS_MERC_Land";
 							id=2675;
 							type="Logic";
-							atlOffset=1.2471571;
+							atlOffset=1.4300952;
 						};
 						class Item2
 						{
@@ -97406,7 +97404,7 @@ class Mission
 						};
 					};
 					id=2911;
-					atlOffset=8.839735;
+					atlOffset=10.341029;
 				};
 				class Item1
 				{
@@ -97995,7 +97993,7 @@ class Mission
 				};
 			};
 			id=2910;
-			atlOffset=30.142084;
+			atlOffset=30.080826;
 		};
 		class Item246
 		{
@@ -114405,6 +114403,17 @@ class Mission
 			type="mil_circle";
 			colorName="ColorCIV";
 			id=2943;
+		};
+		class Item253
+		{
+			dataType="Marker";
+			position[]={3881.9299,29.033001,5249.7842};
+			name="marker_25";
+			text="Запрос техники";
+			type="mil_circle";
+			colorName="ColorCIV";
+			id=2944;
+			atlOffset=-0.00055885315;
 		};
 	};
 };
