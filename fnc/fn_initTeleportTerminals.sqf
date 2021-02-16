@@ -13,6 +13,7 @@ private _teleportTerms = [];
 {
   private _thisTermX = _x select 0;
   removeAllActions _thisTermX;
+  _thisTermX addAction ["==========================", {},[],150,false,false,"","true",3];
   {
     _x params ["_thisTerm", "_tooltip", "_color", "_posATL", "_cond", "_priority"];
     if (_thisTermX != _thisTerm) then {
@@ -30,7 +31,8 @@ private _teleportTerms = [];
           titleText ["Перемещение...","BLACK IN",3];
         }
       },
-      [_posATL, _thisTerm], _priority,false,true,"",_cond,3];
+      [_posATL, _thisTerm], _priority + 100, true,true,"",_cond,3];
     }
   } forEach _teleportTerms;
+  _thisTermX addAction ["==========================", {},[],100,false,false,"","true",3];
 } forEach _teleportTerms;
