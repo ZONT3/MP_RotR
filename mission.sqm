@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=520;
+		nextID=538;
 	};
 	class Camera
 	{
-		pos[]={1678.1602,80.758766,7265.75};
-		dir[]={0.75641096,-0.38537309,0.5285542};
-		up[]={0.31591773,0.9227531,0.2207523};
-		aside[]={0.57279497,4.8254151e-008,-0.81972283};
+		pos[]={1702.7034,80.758766,7279.8213};
+		dir[]={0.52656186,-0.55677849,0.64247477};
+		up[]={0.35294962,0.83065009,0.43064511};
+		aside[]={0.77344245,-2.5314512e-007,-0.63389975};
 	};
 };
 binarizationWanted=0;
@@ -9584,8 +9584,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -9594,10 +9594,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Clone_face_boomer";
 								};
 							};
 						};
@@ -9660,8 +9660,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -9670,10 +9670,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Clone_face_boomer";
+									value=0;
 								};
 							};
 						};
@@ -25661,8 +25661,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -25671,10 +25671,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="SWLB_JH_Head_Whiplash";
 								};
 							};
 						};
@@ -25737,8 +25737,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -25747,10 +25747,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="SWLB_JH_Head_Whiplash";
+									value=0;
 								};
 							};
 						};
@@ -118762,7 +118762,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={4353.9517,20.47418,7386.2241};
-								angles[]={0,3.4286306,-0};
+								angles[]={0,3.4286306,0};
 							};
 							side="Empty";
 							flags=1;
