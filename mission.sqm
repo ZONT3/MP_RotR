@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=3897;
+		nextID=3896;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=770;
+		nextID=748;
 	};
 	class Camera
 	{
 		pos[]={1525.5637,390.38251,6719.2588};
-		dir[]={0.80009192,-0.55869305,-0.21870807};
-		up[]={0.53898644,0.82932752,-0.14733283};
-		aside[]={-0.26369599,-4.6816422e-007,-0.9646759};
+		dir[]={-0.11578052,-0.47049868,0.87483537};
+		up[]={-0.061741207,0.88235974,0.46650615};
+		aside[]={0.99141961,-3.5043922e-007,0.13121107};
 	};
 };
 binarizationWanted=0;
@@ -1155,7 +1155,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=273;
+		items=272;
 		class Item0
 		{
 			dataType="Object";
@@ -9675,8 +9675,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -9685,10 +9685,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Clone_face_boomer";
+									value=0;
 								};
 							};
 						};
@@ -9751,8 +9751,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -9761,10 +9761,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Clone_face_boomer";
 								};
 							};
 						};
@@ -25752,8 +25752,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -25762,10 +25762,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="SWLB_JH_Head_Whiplash";
+									value=0;
 								};
 							};
 						};
@@ -25828,8 +25828,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -25838,10 +25838,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="SWLB_JH_Head_Whiplash";
 								};
 							};
 						};
@@ -129448,572 +129448,6 @@ class Mission
 			};
 			id=3895;
 			atlOffset=8.667614;
-		};
-		class Item272
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={3725.7461,-0.028155327,6511.417};
-			};
-			id=3896;
-			type="ModuleWLInit_F";
-			atlOffset=6.6659999;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleWLInit_F_Voice";
-					expression="_this setVariable ['Voice',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleWLInit_F_FactionBLUFOR";
-					expression="_this setVariable ['FactionBLUFOR',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="BLU_F";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleWLInit_F_VotingResetEnabled";
-					expression="_this setVariable ['VotingResetEnabled',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleWLInit_F_FactionOPFOR";
-					expression="_this setVariable ['FactionOPFOR',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="OPF_F";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ModuleWLInit_F_ScanCooldown";
-					expression="_this setVariable ['ScanCooldown',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ModuleWLInit_F_MaxCP";
-					expression="_this setVariable ['MaxCP',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=-1;
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="ModuleWLInit_F_VehicleSpan";
-					expression="_this setVariable ['VehicleSpan',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1800;
-						};
-					};
-				};
-				class Attribute7
-				{
-					property="ModuleWLInit_F_AssetList";
-					expression="_this setVariable ['AssetList',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="['MyWLAssetList']";
-						};
-					};
-				};
-				class Attribute8
-				{
-					property="ModuleWLInit_F_AIVoting";
-					expression="_this setVariable ['AIVoting',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute9
-				{
-					property="ModuleWLInit_F_PlayersTransparency";
-					expression="_this setVariable ['PlayersTransparency',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
-						};
-					};
-				};
-				class Attribute10
-				{
-					property="ModuleWLInit_F_FTEnabled";
-					expression="_this setVariable ['FTEnabled',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=4;
-						};
-					};
-				};
-				class Attribute11
-				{
-					property="ModuleWLInit_F_DebriefingFailBLUFOR";
-					expression="_this setVariable ['DebriefingFailBLUFOR',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="BIS_WLDefeatWEST";
-						};
-					};
-				};
-				class Attribute12
-				{
-					property="ModuleWLInit_F_MissionEnd";
-					expression="_this setVariable ['MissionEnd',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute13
-				{
-					property="ModuleWLInit_F_DebriefingWinOPFOR";
-					expression="_this setVariable ['DebriefingWinOPFOR',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="BIS_WLVictoryEAST";
-						};
-					};
-				};
-				class Attribute14
-				{
-					property="ModuleWLInit_F_DebriefingFailOPFOR";
-					expression="_this setVariable ['DebriefingFailOPFOR',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="BIS_WLDefeatEAST";
-						};
-					};
-				};
-				class Attribute15
-				{
-					property="ModuleWLInit_F_ArsenalEnabled";
-					expression="_this setVariable ['ArsenalEnabled',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute16
-				{
-					property="ModuleWLInit_F_Music";
-					expression="_this setVariable ['Music',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute17
-				{
-					property="ModuleWLInit_F_MarkersTransparency";
-					expression="_this setVariable ['MarkersTransparency',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
-						};
-					};
-				};
-				class Attribute18
-				{
-					property="ModuleWLInit_F_StartCP";
-					expression="_this setVariable ['StartCP',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=500;
-						};
-					};
-				};
-				class Attribute19
-				{
-					property="ModuleWLInit_F_CPMultiplier";
-					expression="_this setVariable ['CPMultiplier',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute20
-				{
-					property="ModuleWLInit_F_ScanEnabled";
-					expression="_this setVariable ['ScanEnabled',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute21
-				{
-					property="ModuleWLInit_F_FactionIndep";
-					expression="_this setVariable ['FactionIndep',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="IND_F";
-						};
-					};
-				};
-				class Attribute22
-				{
-					property="ModuleWLInit_F_MaxSubordinates";
-					expression="_this setVariable ['MaxSubordinates',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute23
-				{
-					property="ModuleWLInit_F_DebriefingWinBLUFOR";
-					expression="_this setVariable ['DebriefingWinBLUFOR',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="BIS_WLVictoryWEST";
-						};
-					};
-				};
-				class Attribute24
-				{
-					property="ModuleWLInit_F_FatigueEnabled";
-					expression="_this setVariable ['FatigueEnabled',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute25
-				{
-					property="ModuleWLInit_F_VotingTimeout";
-					expression="_this setVariable ['VotingTimeout',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=15;
-						};
-					};
-				};
-				class Attribute26
-				{
-					property="ModuleWLInit_F_TimeAcceleration";
-					expression="_this setVariable ['TimeAcceleration',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute27
-				{
-					property="ModuleWLInit_F_Progress";
-					expression="_this setVariable ['Progress',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute28
-				{
-					property="ModuleWLInit_F_TeamBalanceEnabled";
-					expression="_this setVariable ['TeamBalanceEnabled',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=29;
-			};
 		};
 	};
 	class Connections
