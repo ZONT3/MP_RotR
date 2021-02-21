@@ -135,6 +135,64 @@ class CfgConsts {
   ghr_entry = "%1: <t color='%3'>%2</t>"; // %1 - unit, %2 - heartrate, %3 - color (#abc123)
 };
 
+// Настройки WarLords (WIP)
+class CfgWLRequisitionPresets
+{
+    class MyWLAssetList // --- имя класса прописанного в модуле "Инициализация WARLORDS".
+    {
+        class WEST // --- Доступное для BLUFOR
+        {
+            class Infantry
+            {
+                class JLTS_Clone_P2_RTO // --- должно быть класснеймом юнита
+                {
+                    cost = 100; // --- стоимость в КО (очки)
+                    requirements[]={}; // --- описание ("A" = взлётно-посадочная полоса, "H" = вертолётная площадка, "W" = вода (гавань))
+                };
+            };
+            class Vehicles // Машины
+            {
+                class rd501_sw_barc
+                {
+                    cost = 50;
+                    requirements[]={};
+                };
+            };
+            class Aircraft // Авиация
+            {
+                class ls_laat_ab
+                {
+                    cost = 1000;
+                    requirements[]={"H"};
+                };
+            };
+            class Naval // Флот
+            {
+            };
+            class Gear // Снаряжение (ящики)
+            {
+                class Box_212_Ammo
+                {
+                    cost = 10;
+                    requirements[]={};
+                };
+            };
+            class Defences // Защитные. Например: Станочные орудия
+            {
+                class 3AS_HeavyRepeater_Armoured
+                {
+                    cost = 250;
+                    requirements[]={};
+                };
+            };
+        };
+        class EAST // --- доступное для OPFOR
+        {
+            // --- место для ввода своих вариантов
+        };
+    };
+};
+
 //Discord info
 class CfgDiscordRichPresence {
     applicationID="797527397447761940";				            // Provided by discord
