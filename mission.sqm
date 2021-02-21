@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=3766;
+		nextID=3885;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=619;
+		nextID=642;
 	};
 	class Camera
 	{
-		pos[]={2879.2905,102.56749,6010.3335};
-		dir[]={0.27026096,-0.7225073,-0.63653386};
-		up[]={0.2823737,0.69130886,-0.665066};
-		aside[]={-0.92056292,-1.7404091e-008,-0.39084905};
+		pos[]={3603.5554,514.65234,5662.0879};
+		dir[]={-0.66905493,-0.70609748,0.23242968};
+		up[]={-0.66707855,0.70802492,0.23173961};
+		aside[]={0.32819992,5.3827534e-007,0.94472301};
 	};
 };
 binarizationWanted=0;
@@ -177,13 +177,14 @@ addons[]=
 	"3AS_Prop_Trenches",
 	"442_misc_terminal",
 	"ls_small_computer",
-	"A3_Missions_F_Curator"
+	"A3_Missions_F_Curator",
+	"ls_units_redfor"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=131;
+		items=132;
 		class Item0
 		{
 			className="impammo";
@@ -988,6 +989,12 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item131
+		{
+			className="ls_units_redfor";
+			name="ls_units_redfor";
+			author="Legion Studios";
+		};
 	};
 };
 randomSeed=8162483;
@@ -1140,7 +1147,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=268;
+		items=272;
 		class Item0
 		{
 			dataType="Object";
@@ -9660,8 +9667,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -9670,10 +9677,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Clone_face_boomer";
 								};
 							};
 						};
@@ -9736,8 +9743,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -9746,10 +9753,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Clone_face_boomer";
+									value=0;
 								};
 							};
 						};
@@ -25737,8 +25744,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -25747,10 +25754,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="SWLB_JH_Head_Whiplash";
 								};
 							};
 						};
@@ -25813,8 +25820,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -25823,10 +25830,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="SWLB_JH_Head_Whiplash";
+									value=0;
 								};
 							};
 						};
@@ -128210,6 +128217,138 @@ class Mission
 			};
 			id=3765;
 			type="EmptyDetector";
+		};
+		class Item268
+		{
+			dataType="Trigger";
+			position[]={2989.0254,8.2835293,5835.6616};
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{0 spawn { " \n "private _truck = ""3as_SAC_Trade"" createVehicle ([3319.19,5720.79,0]); " \n "private _blockgroup = [""ls_cis_b1SquadLead_standard"", ""ls_cis_b1_standard"", ""ls_cis_b1Heavy_standard"", ""ls_cis_b1Marksman_standard"", ""ls_cis_b1_standard"", ""ls_cis_b1At_standard"", ""ls_cis_b1_standard"", ""ls_cis_b1Heavy_standard""]; " \n "private _suppGroup = [[3319.19,5720.79,0], east, (_blockgroup)] call BIS_fnc_spawnGroup; " \n "private _leader = leader _suppGroup; " \n "private _unitsCargo = units _suppGroup - [_leader]; " \n "_leader moveInDriver _truck; " \n "{_x moveInCargo _truck} forEach _unitsCargo; " \n "_suppGroup move [3108.68,5948.05,0]; " \n " " \n "killed = { " \n "     sleep 10; " \n "     deletevehicle (_this select 0); " \n "}; " \n " " \n "{_x addEventHandler [""killed"", ""_this spawn killed""]} foreach units _suppGroup; " \n " " \n "waitUntil { " \n "sleep 1; " \n "(_truck distance [3108.68,5948.05,0]) < 34 " \n "}; " \n "{ " \n "[_x] allowGetIn false; " \n "_x spawn { " \n "_this allowDamage false; " \n "waitUntil {isNull objectParent _this}; " \n "_this allowDamage true; " \n "}; " \n "_x action [""Eject"", vehicle _x]; " \n "} forEach units _suppGroup; " \n "private _wp =_suppGroup addWaypoint [[2914.36,5930.05,0], 0]; " \n "_wp setWaypointType ""SAD""; " \n "_wp setWaypointSpeed ""FULL""; " \n "_wp setWaypointCombatMode ""RED""; " \n " " \n "sleep 10; " \n "deleteVehicle _truck; " \n "};}";
+				sizeA=450;
+				sizeB=250;
+				timeout[]={20,40,80};
+				repeatable=1;
+				activationType="NOT PRESENT";
+				activationBy="EAST";
+				isServerOnly=1;
+			};
+			id=3769;
+			type="EmptyDetectorAreaR250";
+			atlOffset=-7.6293945e-006;
+		};
+		class Item269
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2921.377,5.5804467,5933.1074};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=3771;
+					type="ls_cis_b1_standard";
+					atlOffset=4.2915344e-006;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=3770;
+			atlOffset=4.2915344e-006;
+		};
+		class Item270
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={715.17725,10.695769,3310.3899};
+				angles[]={0.00119604,4.6186647,0.00069053395};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this addAction [""Получение мед. помощи"",""call ace_medical_treatment_fnc_fullHeal;"","""",1,true,true,"""",""_this distance _target < 3""];}";
+			};
+			id=3883;
+			type="medicdroid";
+			atlOffset=0.034231186;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_featureTypeNew";
+					expression="_this setFeatureType _value";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item271
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3728.658,91.101494,754.25568};
+				angles[]={0,4.6186647,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this addAction [""Получение мед. помощи"",""call ace_medical_treatment_fnc_fullHeal;"","""",1,true,true,"""",""_this distance _target < 3""];}";
+			};
+			id=3884;
+			type="medicdroid";
+			atlOffset=0.04359436;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_featureTypeNew";
+					expression="_this setFeatureType _value";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
