@@ -135,7 +135,6 @@ class CfgConsts {
   ghr_entry = "%1: <t color='%3'>%2</t>"; // %1 - unit, %2 - heartrate, %3 - color (#abc123)
 };
 
-// Настройки WarLords (WIP)
 class CfgWLRequisitionPresets
 {
     class MyWLAssetList // --- имя класса прописанного в модуле "Инициализация WARLORDS".
@@ -179,11 +178,6 @@ class CfgWLRequisitionPresets
             };
             class Defences // Защитные. Например: Станочные орудия
             {
-                class 3AS_HeavyRepeater_Armoured
-                {
-                    cost = 250;
-                    requirements[]={};
-                };
             };
         };
         class EAST // --- доступное для OPFOR
