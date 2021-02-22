@@ -504,7 +504,7 @@ if (_layerRoot) then {
 	_objects pushback _this;
 	_objectIDs pushback 228;
 	_this setPosWorld [3463.58,5441.7,17.9628];
-	_this setVectorDirAndUp [[-0.996819,0.0797019,0],[0,0,1]];
+	_this setVectorDirAndUp [[-0.996819,0.0797022,0],[0,0,1]];
 	_this setname "Battle Droid";;
 	_this setface "PersianHead_A3_03";;
 	_this setspeaker "male02per";;
@@ -936,20 +936,20 @@ if !(units _this isEqualTo []) then {
 _this = _item209;
 if !(units _this isEqualTo []) then {
 	[_this,0] setWaypointPosition [position leader _this,0];
-	[_this, "Альфа 1-6"] call CBA_fnc_setCallsign;
-				if (!is3DEN && {!(["","ColorEAST","Альфа 1-6",true] isEqualTo ['','','',true])}) then			{				[_this,["","ColorEAST","Альфа 1-6",true]] spawn				{					params ['_group','["","ColorEAST","Альфа 1-6",true]'];					["","ColorEAST","Альфа 1-6",true] params ['_type','_color','_text','_showGroupSize'];					private _leader = leader _group;					private _marker = createMarker					[						format ['ENH_GroupMarker_["","ColorEAST","Альфа 1-6",true]',str floor random 10e5],						_leader					];					_marker setMarkerType _type;					_marker setMarkerColor _color;					_marker setMarkerText _text;					while {true} do					{						sleep 1;						if (units _group isEqualTo []) exitWith {deleteMarker _marker};						if (_group getVariable ['ENH_GroupMarker_Update',true]) then						{							_marker setMarkerPos _leader;							if (_showGroupSize) then							{								_marker setMarkerText format ['["","ColorEAST","Альфа 1-6",true] ()',groupId _group, count units _group];							};						};					};				};			};;
+	[_this, "Альфа 1-5"] call CBA_fnc_setCallsign;
+				if (!is3DEN && {!(["","ColorEAST","Альфа 1-5",true] isEqualTo ['','','',true])}) then			{				[_this,["","ColorEAST","Альфа 1-5",true]] spawn				{					params ['_group','["","ColorEAST","Альфа 1-5",true]'];					["","ColorEAST","Альфа 1-5",true] params ['_type','_color','_text','_showGroupSize'];					private _leader = leader _group;					private _marker = createMarker					[						format ['ENH_GroupMarker_["","ColorEAST","Альфа 1-5",true]',str floor random 10e5],						_leader					];					_marker setMarkerType _type;					_marker setMarkerColor _color;					_marker setMarkerText _text;					while {true} do					{						sleep 1;						if (units _group isEqualTo []) exitWith {deleteMarker _marker};						if (_group getVariable ['ENH_GroupMarker_Update',true]) then						{							_marker setMarkerPos _leader;							if (_showGroupSize) then							{								_marker setMarkerText format ['["","ColorEAST","Альфа 1-5",true] ()',groupId _group, count units _group];							};						};					};				};			};;
 };
 _this = _item212;
 if !(units _this isEqualTo []) then {
 	[_this,0] setWaypointPosition [position leader _this,0];
-	[_this, "Альфа 2-1"] call CBA_fnc_setCallsign;
-				if (!is3DEN && {!(["","ColorEAST","Альфа 2-1",true] isEqualTo ['','','',true])}) then			{				[_this,["","ColorEAST","Альфа 2-1",true]] spawn				{					params ['_group','["","ColorEAST","Альфа 2-1",true]'];					["","ColorEAST","Альфа 2-1",true] params ['_type','_color','_text','_showGroupSize'];					private _leader = leader _group;					private _marker = createMarker					[						format ['ENH_GroupMarker_["","ColorEAST","Альфа 2-1",true]',str floor random 10e5],						_leader					];					_marker setMarkerType _type;					_marker setMarkerColor _color;					_marker setMarkerText _text;					while {true} do					{						sleep 1;						if (units _group isEqualTo []) exitWith {deleteMarker _marker};						if (_group getVariable ['ENH_GroupMarker_Update',true]) then						{							_marker setMarkerPos _leader;							if (_showGroupSize) then							{								_marker setMarkerText format ['["","ColorEAST","Альфа 2-1",true] ()',groupId _group, count units _group];							};						};					};				};			};;
+	[_this, "Альфа 1-6"] call CBA_fnc_setCallsign;
+				if (!is3DEN && {!(["","ColorEAST","Альфа 1-6",true] isEqualTo ['','','',true])}) then			{				[_this,["","ColorEAST","Альфа 1-6",true]] spawn				{					params ['_group','["","ColorEAST","Альфа 1-6",true]'];					["","ColorEAST","Альфа 1-6",true] params ['_type','_color','_text','_showGroupSize'];					private _leader = leader _group;					private _marker = createMarker					[						format ['ENH_GroupMarker_["","ColorEAST","Альфа 1-6",true]',str floor random 10e5],						_leader					];					_marker setMarkerType _type;					_marker setMarkerColor _color;					_marker setMarkerText _text;					while {true} do					{						sleep 1;						if (units _group isEqualTo []) exitWith {deleteMarker _marker};						if (_group getVariable ['ENH_GroupMarker_Update',true]) then						{							_marker setMarkerPos _leader;							if (_showGroupSize) then							{								_marker setMarkerText format ['["","ColorEAST","Альфа 1-6",true] ()',groupId _group, count units _group];							};						};					};				};			};;
 };
 _this = _item217;
 if !(units _this isEqualTo []) then {
 	[_this,0] setWaypointPosition [position leader _this,0];
-	[_this, "Альфа 2-2"] call CBA_fnc_setCallsign;
-				if (!is3DEN && {!(["","ColorEAST","Альфа 2-2",true] isEqualTo ['','','',true])}) then			{				[_this,["","ColorEAST","Альфа 2-2",true]] spawn				{					params ['_group','["","ColorEAST","Альфа 2-2",true]'];					["","ColorEAST","Альфа 2-2",true] params ['_type','_color','_text','_showGroupSize'];					private _leader = leader _group;					private _marker = createMarker					[						format ['ENH_GroupMarker_["","ColorEAST","Альфа 2-2",true]',str floor random 10e5],						_leader					];					_marker setMarkerType _type;					_marker setMarkerColor _color;					_marker setMarkerText _text;					while {true} do					{						sleep 1;						if (units _group isEqualTo []) exitWith {deleteMarker _marker};						if (_group getVariable ['ENH_GroupMarker_Update',true]) then						{							_marker setMarkerPos _leader;							if (_showGroupSize) then							{								_marker setMarkerText format ['["","ColorEAST","Альфа 2-2",true] ()',groupId _group, count units _group];							};						};					};				};			};;
+	[_this, "Альфа 2-1"] call CBA_fnc_setCallsign;
+				if (!is3DEN && {!(["","ColorEAST","Альфа 2-1",true] isEqualTo ['','','',true])}) then			{				[_this,["","ColorEAST","Альфа 2-1",true]] spawn				{					params ['_group','["","ColorEAST","Альфа 2-1",true]'];					["","ColorEAST","Альфа 2-1",true] params ['_type','_color','_text','_showGroupSize'];					private _leader = leader _group;					private _marker = createMarker					[						format ['ENH_GroupMarker_["","ColorEAST","Альфа 2-1",true]',str floor random 10e5],						_leader					];					_marker setMarkerType _type;					_marker setMarkerColor _color;					_marker setMarkerText _text;					while {true} do					{						sleep 1;						if (units _group isEqualTo []) exitWith {deleteMarker _marker};						if (_group getVariable ['ENH_GroupMarker_Update',true]) then						{							_marker setMarkerPos _leader;							if (_showGroupSize) then							{								_marker setMarkerText format ['["","ColorEAST","Альфа 2-1",true] ()',groupId _group, count units _group];							};						};					};				};			};;
 };
 
 
@@ -957,6 +957,15 @@ if !(units _this isEqualTo []) then {
 // Waypoints
 private _waypoints = [];
 private _waypointIDs = [];
+
+private _item239 = [];
+if (_layerRoot) then {
+	_item239 = _item175 addWaypoint [[3358.07,5562.97,-4.76837e-007],0];
+	_this = _item239;
+	_waypoints pushback _this;
+	_waypointIDs pushback 239;
+	_this setWaypointType "MOVE";
+};
 
 private _item201 = [];
 if (_layerRoot) then {
@@ -987,7 +996,7 @@ if (_layerRoot) then {
 
 private _item204 = [];
 if (_layerRoot) then {
-	_item204 = _item180 addWaypoint [[3442.23,5450.95,1.04904e-005],0];
+	_item204 = _item180 addWaypoint [[3421.64,5453.94,1.71661e-005],0];
 	_this = _item204;
 	_waypoints pushback _this;
 	_waypointIDs pushback 204;
@@ -1001,6 +1010,42 @@ if (_layerRoot) then {
 	_waypoints pushback _this;
 	_waypointIDs pushback 205;
 	_this setWaypointType "CYCLE";
+};
+
+private _item236 = [];
+if (_layerRoot) then {
+	_item236 = _item185 addWaypoint [[3237.13,5213.34,1.90735e-005],0];
+	_this = _item236;
+	_waypoints pushback _this;
+	_waypointIDs pushback 236;
+	_this setWaypointType "MOVE";
+};
+
+private _item237 = [];
+if (_layerRoot) then {
+	_item237 = _item185 addWaypoint [[3210.55,5382.21,2.95639e-005],0];
+	_this = _item237;
+	_waypoints pushback _this;
+	_waypointIDs pushback 237;
+	_this setWaypointType "MOVE";
+};
+
+private _item238 = [];
+if (_layerRoot) then {
+	_item238 = _item185 addWaypoint [[3227.74,5225.56,0],0];
+	_this = _item238;
+	_waypoints pushback _this;
+	_waypointIDs pushback 238;
+	_this setWaypointType "CYCLE";
+};
+
+private _item240 = [];
+if (_layerRoot) then {
+	_item240 = _item190 addWaypoint [[3433.22,5452.97,-2.09808e-005],0];
+	_this = _item240;
+	_waypoints pushback _this;
+	_waypointIDs pushback 240;
+	_this setWaypointType "MOVE";
 };
 
 private _item230 = [];
