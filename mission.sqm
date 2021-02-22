@@ -8,7 +8,7 @@ class EditorData
 	toggles=1033;
 	class ItemIDProvider
 	{
-		nextID=5981;
+		nextID=5982;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=939;
+		nextID=970;
 	};
 	class Camera
 	{
-		pos[]={3513.1279,167.37856,5277.6113};
-		dir[]={-0.67011398,-0.54237813,0.50693929};
-		up[]={-0.43263695,0.8400411,0.32729053};
-		aside[]={0.60337788,-7.3335832e-007,0.79759216};
+		pos[]={3621.6108,397.72012,5491.0049};
+		dir[]={-0.72014159,-0.56456882,-0.40360919};
+		up[]={-0.49261791,0.82525069,-0.27609012};
+		aside[]={-0.48896083,-1.5731785e-006,0.87243652};
 	};
 };
 binarizationWanted=0;
@@ -1189,7 +1189,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=302;
+		items=297;
 		class Item0
 		{
 			dataType="Object";
@@ -9709,8 +9709,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -9719,10 +9719,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Clone_face_boomer";
 								};
 							};
 						};
@@ -9785,8 +9785,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -9795,10 +9795,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Clone_face_boomer";
+									value=0;
 								};
 							};
 						};
@@ -25786,8 +25786,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -25796,10 +25796,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="SWLB_JH_Head_Whiplash";
 								};
 							};
 						};
@@ -25862,8 +25862,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -25872,10 +25872,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="SWLB_JH_Head_Whiplash";
+									value=0;
 								};
 							};
 						};
@@ -126995,14 +126995,14 @@ class Mission
 		class Item263
 		{
 			dataType="Trigger";
-			position[]={3267.499,12.456472,5363.9512};
+			position[]={3268.1201,12.456472,5365.3999};
 			class Attributes
 			{
 				name="trigger_support";
 				condition="call{this}";
 				onActivation="call{0 spawn { " \n "private _truck = ""3as_SAC_Trade"" createVehicle ([3754.02,5465.09,0]); " \n "private _blockgroup = [""ls_cis_b1SquadLead_standard"", ""ls_cis_b1_standard"", ""ls_cis_b1Heavy_standard"", ""ls_cis_b1Marksman_standard"", ""ls_cis_b1_standard"", ""ls_cis_b1At_standard"", ""ls_cis_b1_standard"", ""ls_cis_b1Heavy_standard""]; " \n "private _suppGroup = [[3754.02,5465.09,0], east, (_blockgroup)] call BIS_fnc_spawnGroup; " \n "private _leader = leader _suppGroup; " \n "private _unitsCargo = units _suppGroup - [_leader]; " \n "_leader moveInDriver _truck; " \n "{_x moveInCargo _truck} forEach _unitsCargo; " \n "_suppGroup move [3524.16,5436.42,0]; " \n " " \n "killed = { " \n "     sleep 10; " \n "     deletevehicle (_this select 0); " \n "}; " \n " " \n "{_x addEventHandler [""killed"", ""_this spawn killed""]} foreach units _suppGroup; " \n "{_x addEventHandler [""killed"", ""_this spawn killed""]} foreach units _truck; " \n " " \n "waitUntil { " \n "sleep 1; " \n "(_truck distance [3524.16,5436.42,0]) < 34 " \n "}; " \n "{ " \n "[_x] allowGetIn false; " \n "_x spawn { " \n "_this allowDamage false; " \n "waitUntil {isNull objectParent _this}; " \n "_this allowDamage true; " \n "}; " \n "_x action [""Eject"", vehicle _x]; " \n "} forEach units _suppGroup; " \n "private _wp =_suppGroup addWaypoint [[3242.71,5397.77,0], 0]; " \n "_wp setWaypointType ""SAD""; " \n "_wp setWaypointSpeed ""FULL""; " \n "_wp setWaypointCombatMode ""RED""; " \n " " \n "sleep 30; " \n "deleteVehicle _truck; " \n "};}";
-				sizeA=343.40201;
-				sizeB=239.784;
+				sizeA=344.0231;
+				sizeB=238.33527;
 				timeout[]={20,40,80};
 				repeatable=1;
 				activationType="NOT PRESENT";
@@ -127011,7 +127011,7 @@ class Mission
 			};
 			id=3769;
 			type="EmptyDetectorAreaR250";
-			atlOffset=0.026999474;
+			atlOffset=-0.012331009;
 		};
 		class Item264
 		{
@@ -127097,329 +127097,12 @@ class Mission
 		};
 		class Item266
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3087.3931,16.565191,5542.8027};
-				angles[]={0.0049914722,5.95296,6.2332273};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-			};
-			id=4742;
-			type="3AS_FieldCannon";
-			atlOffset=-0.00017166138;
-		};
-		class Item267
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3087.3049,14.888151,5546.7217};
-				angles[]={6.2432065,3.3915668,6.2581916};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=4748;
-			type="3as_Barricade_2_C_prop";
-			atlOffset=3.528595e-005;
-		};
-		class Item268
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3083.6912,15.046115,5545.4819};
-				angles[]={0.0050033992,2.2252078,6.2132993};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=4749;
-			type="3as_Barricade_2_C_prop";
-			atlOffset=3.4332275e-005;
-		};
-		class Item269
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3082.8687,15.4036,5545.9019};
-				angles[]={0.0050033992,2.811367,6.2132993};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=4750;
-			type="CUP_b_AmygdalusN1s_EP1";
-			atlOffset=3.4332275e-005;
-		};
-		class Item270
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3087.3103,15.259222,5547.4336};
-				angles[]={6.2432065,2.811367,6.2581916};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=4751;
-			type="CUP_ker_buxus";
-			atlOffset=3.528595e-005;
-		};
-		class Item271
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3084.2102,15.576365,5547.1816};
-				angles[]={6.268187,2.811367,6.2332273};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=4752;
-			type="CUP_ker_pichlavej";
-			atlOffset=3.528595e-005;
-		};
-		class Item272
-		{
 			dataType="Layer";
 			name="CIS Proton Canon Emplacement";
-			class Entities
-			{
-				items=5;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3081.6323,17.878834,5543.6763};
-						angles[]={6.2531939,2.811367,6.2631865};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=4744;
-					type="CUP_Krovi2";
-					atlOffset=3.4332275e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3090.8494,16.674095,5547.4346};
-						angles[]={0.014998405,2.811367,6.183517};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=4745;
-					type="CUP_str_fikovnik_ker";
-					atlOffset=3.4332275e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3095.1248,15.562119,5539.0742};
-						angles[]={0.09471602,2.811367,0.074859224};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=4746;
-					type="442_barrel1_cis";
-					atlOffset=-0.0051279068;
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3095.0798,15.687407,5537.7349};
-						angles[]={0.049958061,1.1244664,0.054944519};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=4747;
-					type="442_barrel1_cis";
-					atlOffset=-0.0071086884;
-				};
-				class Item4
-				{
-					dataType="Group";
-					side="East";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={3087.2673,14.634144,5542.8428};
-								angles[]={0.0049914722,5.95296,6.2332273};
-							};
-							side="East";
-							flags=7;
-							class Attributes
-							{
-							};
-							id=4741;
-							type="ls_cis_b1_standard";
-							atlOffset=3.6239624e-005;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male12ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.05;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					class CrewLinks
-					{
-						class LinkIDProvider
-						{
-							nextID=1;
-						};
-						class Links
-						{
-							items=1;
-							class Item0
-							{
-								linkID=0;
-								item0=4741;
-								item1=4742;
-								class CustomData
-								{
-									role=2;
-									turretPath[]={0};
-								};
-							};
-						};
-					};
-					id=4740;
-					atlOffset=-0.00017166138;
-				};
-			};
 			id=4753;
 			atlOffset=0.20159817;
 		};
-		class Item273
+		class Item267
 		{
 			dataType="Object";
 			class PositionInfo
@@ -127436,7 +127119,7 @@ class Mission
 			type="3AS_FieldCannon";
 			atlOffset=-0.039306641;
 		};
-		class Item274
+		class Item268
 		{
 			dataType="Object";
 			class PositionInfo
@@ -127476,7 +127159,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item275
+		class Item269
 		{
 			dataType="Object";
 			class PositionInfo
@@ -127492,7 +127175,7 @@ class Mission
 			id=4762;
 			type="3as_Barricade_2_C_prop";
 		};
-		class Item276
+		class Item270
 		{
 			dataType="Object";
 			class PositionInfo
@@ -127508,7 +127191,7 @@ class Mission
 			id=4763;
 			type="3as_Barricade_2_C_prop";
 		};
-		class Item277
+		class Item271
 		{
 			dataType="Object";
 			class PositionInfo
@@ -127525,7 +127208,7 @@ class Mission
 			type="CUP_b_AmygdalusN1s_EP1";
 			atlOffset=-7.6293945e-006;
 		};
-		class Item278
+		class Item272
 		{
 			dataType="Object";
 			class PositionInfo
@@ -127541,7 +127224,7 @@ class Mission
 			id=4765;
 			type="CUP_ker_buxus";
 		};
-		class Item279
+		class Item273
 		{
 			dataType="Object";
 			class PositionInfo
@@ -127557,7 +127240,7 @@ class Mission
 			id=4766;
 			type="CUP_ker_pichlavej";
 		};
-		class Item280
+		class Item274
 		{
 			dataType="Layer";
 			name="CIS Proton Canon Emplacement";
@@ -127778,7 +127461,7 @@ class Mission
 			id=4767;
 			atlOffset=-0.12112427;
 		};
-		class Item281
+		class Item275
 		{
 			dataType="Layer";
 			name="CIS Roadblock C (Empty)";
@@ -128447,7 +128130,7 @@ class Mission
 			id=4848;
 			atlOffset=-0.0066533089;
 		};
-		class Item282
+		class Item276
 		{
 			dataType="Layer";
 			name="CIS Fuel Bay";
@@ -129939,21 +129622,21 @@ class Mission
 			id=5028;
 			atlOffset=-0.047757149;
 		};
-		class Item283
+		class Item277
 		{
 			dataType="Layer";
 			name="Prison CIS [SL]";
 			id=5504;
 			atlOffset=41.009998;
 		};
-		class Item284
+		class Item278
 		{
 			dataType="Layer";
 			name="Prison CIS [SL]";
 			id=5743;
 			atlOffset=41.009998;
 		};
-		class Item285
+		class Item279
 		{
 			dataType="Layer";
 			name="CIS Outpost  (212thFC)";
@@ -130582,7 +130265,7 @@ class Mission
 			id=5947;
 			atlOffset=0.31745529;
 		};
-		class Item286
+		class Item280
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130599,7 +130282,7 @@ class Mission
 			type="3as_prop_fob_modular_wall_straight_logo_cis";
 			atlOffset=1.335144e-005;
 		};
-		class Item287
+		class Item281
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130616,7 +130299,7 @@ class Mission
 			type="3as_prop_fob_modular_wall_straight_logo_cis";
 			atlOffset=-1.4305115e-005;
 		};
-		class Item288
+		class Item282
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130633,7 +130316,7 @@ class Mission
 			type="3as_prop_fob_modular_wall_straight_logo_cis";
 			atlOffset=1.2397766e-005;
 		};
-		class Item289
+		class Item283
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130650,7 +130333,7 @@ class Mission
 			type="3as_prop_fob_modular_wall_straight_logo_cis";
 			atlOffset=1.9073486e-006;
 		};
-		class Item290
+		class Item284
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130667,7 +130350,7 @@ class Mission
 			type="3as_prop_fob_modular_wall_straight_logo_cis";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item291
+		class Item285
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130684,7 +130367,7 @@ class Mission
 			type="3as_prop_fob_modular_wall_straight_logo_cis";
 			atlOffset=3.8146973e-006;
 		};
-		class Item292
+		class Item286
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130701,7 +130384,7 @@ class Mission
 			type="3as_prop_fob_modular_wall_straight_logo_cis";
 			atlOffset=-1.335144e-005;
 		};
-		class Item293
+		class Item287
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130925,7 +130608,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item294
+		class Item288
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130940,8 +130623,9 @@ class Mission
 			};
 			id=5969;
 			type="3AS_FieldCannon";
+			atlOffset=-0.0052871704;
 		};
-		class Item295
+		class Item289
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130982,7 +130666,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item296
+		class Item290
 		{
 			dataType="Object";
 			class PositionInfo
@@ -130998,7 +130682,7 @@ class Mission
 			id=5975;
 			type="3as_Barricade_2_C_prop";
 		};
-		class Item297
+		class Item291
 		{
 			dataType="Object";
 			class PositionInfo
@@ -131015,7 +130699,7 @@ class Mission
 			type="3as_Barricade_2_C_prop";
 			atlOffset=-7.6293945e-006;
 		};
-		class Item298
+		class Item292
 		{
 			dataType="Object";
 			class PositionInfo
@@ -131031,7 +130715,7 @@ class Mission
 			id=5977;
 			type="CUP_b_AmygdalusN1s_EP1";
 		};
-		class Item299
+		class Item293
 		{
 			dataType="Object";
 			class PositionInfo
@@ -131047,7 +130731,7 @@ class Mission
 			id=5978;
 			type="CUP_ker_buxus";
 		};
-		class Item300
+		class Item294
 		{
 			dataType="Object";
 			class PositionInfo
@@ -131063,7 +130747,7 @@ class Mission
 			id=5979;
 			type="CUP_ker_pichlavej";
 		};
-		class Item301
+		class Item295
 		{
 			dataType="Layer";
 			name="CIS Proton Canon Emplacement";
@@ -131167,6 +130851,7 @@ class Mission
 					};
 					id=5973;
 					type="442_barrel1_cis";
+					atlOffset=-0.001701355;
 				};
 				class Item3
 				{
@@ -131183,6 +130868,7 @@ class Mission
 					};
 					id=5974;
 					type="442_barrel1_cis";
+					atlOffset=-0.0070343018;
 				};
 				class Item4
 				{
@@ -131276,10 +130962,32 @@ class Mission
 						};
 					};
 					id=5967;
+					atlOffset=-0.0052871704;
 				};
 			};
 			id=5980;
-			atlOffset=0.51896667;
+			atlOffset=0.52021027;
+		};
+		class Item296
+		{
+			dataType="Trigger";
+			position[]={3268.2971,12.474711,5365.2822};
+			class Attributes
+			{
+				name="trigger_support_2";
+				condition="call{this}";
+				onActivation="call{0 spawn { " \n "private _truck = ""3as_SAC_Trade"" createVehicle ([3754.02,5465.09,0]); " \n "private _blockgroup = [""ls_cis_b1SquadLead_standard"", ""ls_cis_b1_standard"", ""ls_cis_b1Heavy_standard"", ""ls_cis_b1Marksman_standard"", ""ls_cis_b1_standard"", ""ls_cis_b1At_standard"", ""ls_cis_b1_standard"", ""ls_cis_b1Heavy_standard""]; " \n "private _suppGroup = [[3754.02,5465.09,0], east, (_blockgroup)] call BIS_fnc_spawnGroup; " \n "private _leader = leader _suppGroup; " \n "private _unitsCargo = units _suppGroup - [_leader]; " \n "_leader moveInDriver _truck; " \n "{_x moveInCargo _truck} forEach _unitsCargo; " \n "_suppGroup move [3524.16,5436.42,0]; " \n " " \n "killed = { " \n "     sleep 10; " \n "     deletevehicle (_this select 0); " \n "}; " \n " " \n "{_x addEventHandler [""killed"", ""_this spawn killed""]} foreach units _suppGroup; " \n "{_x addEventHandler [""killed"", ""_this spawn killed""]} foreach units _truck; " \n " " \n "waitUntil { " \n "sleep 1; " \n "(_truck distance [3524.16,5436.42,0]) < 34 " \n "}; " \n "{ " \n "[_x] allowGetIn false; " \n "_x spawn { " \n "_this allowDamage false; " \n "waitUntil {isNull objectParent _this}; " \n "_this allowDamage true; " \n "}; " \n "_x action [""Eject"", vehicle _x]; " \n "} forEach units _suppGroup; " \n "private _wp =_suppGroup addWaypoint [[3242.71,5397.77,0], 0]; " \n "_wp setWaypointType ""SAD""; " \n "_wp setWaypointSpeed ""FULL""; " \n "_wp setWaypointCombatMode ""RED""; " \n " " \n "sleep 30; " \n "deleteVehicle _truck; " \n "};}";
+				sizeA=344.02301;
+				sizeB=238.33501;
+				timeout[]={20,40,80};
+				repeatable=1;
+				activationType="NOT PRESENT";
+				activationBy="WEST";
+				isServerOnly=1;
+			};
+			id=5981;
+			type="EmptyDetectorAreaR250";
+			atlOffset=4.7683716e-006;
 		};
 	};
 	class Connections
